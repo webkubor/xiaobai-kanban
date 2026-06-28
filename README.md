@@ -26,9 +26,29 @@ else
   echo "❌ glab 未安装 → 看下面「第一步」"
 fi
 
-# 3. 登录状态
+# 3. 登录状态 & 账户信息
 if glab auth status > /dev/null 2>&1; then
   echo "✅ glab 已登录"
+  echo ""
+  echo "===== 账户信息 ====="
+  glab api user 2>/dev/null | python3 -c "
+import sys,json
+u=json.load(sys.stdin)
+print(f'  用户名: {u.get(\"username\",\"?\")}')
+print(f'  邮箱:   {u.get(\"email\",\"?\")}')
+print(f'  姓名:   {u.get(\"name\",\"?\")}')
+"
+  echo ""
+  echo "===== 群组权限 ====="
+  glab api groups/hym-company 2>/dev/null | python3 -c "
+import sys,json
+g=json.load(sys.stdin)
+if g.get('message')=='401 Unauthorized' or g.get('message')=='404 Group Not Found':
+  print('  ❌ 没有 hym-company 群组权限 → 联系管理员加你进组')
+else:
+  print(f'  ✅ 群组: {g.get(\"full_name\",\"?\")}')
+  print(f'  权限:  {g.get(\"access_level\",\"?\")} (10=Guest 20=Reporter 30=Developer 40=Maintainer 50=Owner)')
+" 2>&1 || echo "  ⚠️  网络异常，跳过权限检查"
 else
   echo "❌ glab 未登录 → 看下面「第二步」"
 fi
@@ -47,7 +67,7 @@ fi
 |--------|---------|---------|
 | Git | 跳过 | [安装 Git](https://git-scm.com) |
 | glab | 跳过 | 看第一步 ↓ |
-| 登录 | 跳过 | 看第二步 ↓ |
+| 登录+权限 | 显示用户名和群组权限 | 看第二步 ↓ |
 | Node.js | 跳过 | [安装 Node.js LTS](https://nodejs.org) |
 
 ---

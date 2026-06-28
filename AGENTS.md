@@ -28,8 +28,24 @@ git --version || { echo "❌ git 不可用"; exit 1; }
 # 3. glab 是否安装？
 glab version || { echo "❌ glab 未安装 → brew install glab"; exit 1; }
 
-# 4. glab 是否登录？
+# 4. glab 是否登录？如果没有，停止并要求用户配置
 glab auth status || { echo "❌ glab 未登录 → 需要引导用户执行 glab auth login"; exit 1; }
+
+# 5. 查账户信息和群组权限
+echo "===== 账户 ====="
+glab api user 2>/dev/null | python3 -c "import sys,json; u=json.load(sys.stdin); print(f'{u.get(\"username\")} | {u.get(\"email\")}')"
+
+echo "===== 权限 ====="
+glab api groups/hym-company 2>/dev/null | python3 -c "
+import sys,json
+g=json.load(sys.stdin)
+if g.get('access_level',0) >= 30:
+    print(f'✅ Developer → 可以推送代码')
+elif g.get('access_level',0) >= 20:
+    print(f'⚠️  Reporter → 只读，不能推送，需要升级到 Developer')
+else:
+    print(f'❌ 无权限 → 联系管理员加你进 hym-company 群组')
+"
 ```
 
 | 检查项 | 通过标准 | 不通过怎么办 |
@@ -38,8 +54,9 @@ glab auth status || { echo "❌ glab 未登录 → 需要引导用户执行 glab
 | Git | `git --version` 正常输出 | 安装 Git |
 | glab | `glab version` 正常输出 | `brew install glab`（macOS）或 `winget install GitLab.GitLabCLI`（Windows） |
 | 登录 | `glab auth status` 输出 `✓` | 引导用户去 gitlab.com 创建 Token → 粘贴登录 |
+| 群组权限 | `glab api groups/hym-company` 返回 `access_level >= 30` | 联系管理员将用户加入 hym-company 群组并授予 Developer 权限 |
 
-四项全绿才继续，缺一项就停下来先把环境补齐。
+五项全绿才继续，缺一项就停下来先把环境补齐。
 
 ---
 
