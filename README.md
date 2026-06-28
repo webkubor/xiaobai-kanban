@@ -5,7 +5,56 @@
 
 ---
 
+## 第零步：自检（先跑这个，30 秒搞定）
+
+打开终端，复制粘贴下面整段：
+
+```bash
+echo "===== 检查环境 ====="
+
+# 1. Git
+if git --version > /dev/null 2>&1; then
+  echo "✅ Git 已安装: $(git --version)"
+else
+  echo "❌ Git 未安装 → 去 https://git-scm.com 下载"
+fi
+
+# 2. GitLab CLI
+if glab version > /dev/null 2>&1; then
+  echo "✅ glab 已安装: $(glab version 2>&1 | head -1)"
+else
+  echo "❌ glab 未安装 → 看下面「第一步」"
+fi
+
+# 3. 登录状态
+if glab auth status > /dev/null 2>&1; then
+  echo "✅ glab 已登录"
+else
+  echo "❌ glab 未登录 → 看下面「第二步」"
+fi
+
+# 4. Node.js（前端项目需要）
+if node --version > /dev/null 2>&1; then
+  echo "✅ Node.js: $(node --version)"
+else
+  echo "⚠️  Node.js 未安装 → https://nodejs.org (LTS 版)"
+fi
+```
+
+根据输出结果，缺哪个补哪个：
+
+| 检查项 | ✅ 结果 | ❌ 结果 |
+|--------|---------|---------|
+| Git | 跳过 | [安装 Git](https://git-scm.com) |
+| glab | 跳过 | 看第一步 ↓ |
+| 登录 | 跳过 | 看第二步 ↓ |
+| Node.js | 跳过 | [安装 Node.js LTS](https://nodejs.org) |
+
+---
+
 ## 第一步：安装 GitLab CLI
+
+> 💡 第零步显示 `✅ glab` 就跳过这里。
 
 ```bash
 # macOS
@@ -18,18 +67,37 @@ winget install GitLab.GitLabCLI
 glab version
 ```
 
-## 第二步：申请个人 Access Token
+---
+
+## 第二步：登录 GitLab
+
+> 💡 第零步显示 `✅ glab 已登录` 就跳过这里。
+
+### 2.1 申请 Token
 
 1. 打开 https://gitlab.com/-/user_settings/personal_access_tokens
 2. Token name: `HYM-Dev`
 3. 勾选权限: `api`, `read_repository`, `write_repository`
 4. 点 Create personal access token
 5. ⚠️ **立刻复制 token**（关掉页面就看不到了）
-6. 登录 CLI：
+
+### 2.2 登录
+
 ```bash
 glab auth login --hostname gitlab.com
-# 粘贴你的 token
+# 粘贴你刚才复制的 token
 ```
+
+### 2.3 验证
+
+```bash
+glab auth status
+# 输出类似: ✓ Logged in to gitlab.com as webkubor
+```
+
+不显示 `✓` 就是没登成功，重做 2.1。
+
+---
 
 ## 第三步：克隆项目
 

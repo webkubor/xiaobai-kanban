@@ -14,6 +14,35 @@
 
 ---
 
+## 前置自检（每次动手前跑一遍）
+
+收到任务后，先确认下面四项，缺一个就别往下走：
+
+```bash
+# 1. GitLab Token 是否存在？
+#    从 secret://gitlab/personal-pat 读取，拿不到 → 停止，向用户要 Token
+
+# 2. Git 是否可用？
+git --version || { echo "❌ git 不可用"; exit 1; }
+
+# 3. glab 是否安装？
+glab version || { echo "❌ glab 未安装 → brew install glab"; exit 1; }
+
+# 4. glab 是否登录？
+glab auth status || { echo "❌ glab 未登录 → 需要引导用户执行 glab auth login"; exit 1; }
+```
+
+| 检查项 | 通过标准 | 不通过怎么办 |
+|--------|---------|-------------|
+| Token | 能从 `secret://gitlab/personal-pat` 读到 | 向用户索要 Personal Access Token（权限：api + read_repository + write_repository） |
+| Git | `git --version` 正常输出 | 安装 Git |
+| glab | `glab version` 正常输出 | `brew install glab`（macOS）或 `winget install GitLab.GitLabCLI`（Windows） |
+| 登录 | `glab auth status` 输出 `✓` | 引导用户去 gitlab.com 创建 Token → 粘贴登录 |
+
+四项全绿才继续，缺一项就停下来先把环境补齐。
+
+---
+
 ## 推送代码到 GitLab
 
 ### 前置条件
