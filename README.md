@@ -93,13 +93,14 @@ glab version
 
 > 💡 第零步显示 `✅ glab 已登录` 就跳过这里。
 
-### 2.1 申请 Token
+### 2.1 申请 Token（每人自己申请，不共享）
 
 1. 打开 https://gitlab.com/-/user_settings/personal_access_tokens
 2. Token name: `HYM-Dev`
 3. 勾选权限: `api`, `read_repository`, `write_repository`
 4. 点 Create personal access token
 5. ⚠️ **立刻复制 token**（关掉页面就看不到了）
+6. **告诉你的 Agent 把 token 存到** `secret://gitlab/personal-pat`
 
 ### 2.2 登录
 

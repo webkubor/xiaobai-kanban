@@ -65,9 +65,11 @@ else:
 ### 前置条件
 
 - GitLab 群组：`https://gitlab.com/hym-company`
-- 认证方式：Personal Access Token（从 `secret://gitlab/personal-pat` 获取）
+- 认证方式：Personal Access Token（**每人自己的**，不共享）
+  - Token 跟人走：谁的 Agent 就用谁的 Token
+  - 从 `secret://gitlab/personal-pat` 读取（在自己的机器上配置）
+  - 权限：`api`, `read_repository`, `write_repository`
 - Git 远程地址格式：`https://oauth2:TOKEN@gitlab.com/hym-company/项目名.git`
-  - Token 可以是 Personal Access Token（权限：`api`, `read_repository`, `write_repository`）
 
 ### 标准推送流程
 
@@ -183,6 +185,24 @@ git push -u origin main
 | [Smart Router](https://github.com/webkubor/smart-router-skills) | 省钱路由 | 简单任务（翻译/格式化/摘要）自动切免费模型，复杂任务才用付费主模型 |
 
 > ⚠️ **绝对不要把 Token 写死在代码注释里。** 用 Keyring 别名，或者从 `secret://` 路径读取。
+
+---
+
+## 常见问题
+
+### Q: Agent 推送时报 Permission denied？
+
+**原因**：用了别人的 Token。Token 跟人绑定，不是群组共享的。
+
+**解决**：
+1. 确认当前 Agent 用的是谁的 Token：`glab auth status` 看登录用户名
+2. 如果不是自己的账户 → 去 gitlab.com 创建自己的 Personal Access Token，重新 `glab auth login`
+3. 如果 `glab auth status` 没登录 → 看 README「第二步」创建 Token
+
+### Q: 提示 403 或 404？
+
+- 403 → Token 权限不够，创建时确保勾选 `api` + `read_repository` + `write_repository`
+- 404 → 仓库名写错，或者仓库还不存在（先去 GitLab 网页创建空仓库）
 
 ---
 
