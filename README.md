@@ -138,22 +138,60 @@ glab auth status
 
 ---
 
-## 第三步：克隆项目
+## 第三步：GitLab 项目管理入门
+
+学会这四件事，你就能自己管理任何项目了。**你和你的 Agent 都要会。**
+
+### 3.1 创建新项目
 
 ```bash
-# 客户端（前端）
-git clone https://gitlab.com/hym-company/hym-concerts.git
+# 方式 A：命令行创建
+glab repo create 项目名 --group hym-company --visibility private
 
-# 管理端（后台）
-git clone https://gitlab.com/hym-company/hym-admin.git
-
-# 进目录装依赖
-cd hym-concerts
-npm install
-npm run dev    # 启动本地开发
+# 方式 B：网页创建
+# 打开 https://gitlab.com/hym-company → New project → Create blank project
 ```
 
-## 第四步：GitFlow 工作流
+### 3.2 把本地代码推上去
+
+假设你电脑上已经有一个项目文件夹：
+
+```bash
+cd ~/我的项目
+
+# 初始化 git（如果还没有）
+git init
+
+# 关联 GitLab 远程仓库
+git remote add origin https://gitlab.com/hym-company/我的项目.git
+
+# 提交并推送
+git add -A
+git commit -m "feat: 初始化项目"
+git push -u origin main
+```
+
+> ⚠️ 如果 `origin` 已存在：`git remote set-url origin https://gitlab.com/hym-company/我的项目.git`
+
+### 3.3 克隆已有项目
+
+```bash
+# 语法：git clone https://gitlab.com/群组名/项目名.git
+git clone https://gitlab.com/hym-company/项目名.git
+cd 项目名
+```
+
+### 3.4 装依赖跑起来
+
+```bash
+npm install        # 装依赖
+npm run dev        # 启动本地开发服务器
+# 浏览器打开 http://localhost:5173 就能看到效果
+```
+
+---
+
+## 第四步：GitFlow 工作流（每天用的）
 
 ```
 main ──────────────────────────── 线上生产环境
@@ -240,7 +278,9 @@ glab issue list         # 看 Issue
 
 > ⚠️ 邮箱在 GitLab 上默认不公开。需要联系谁，在飞书群「栖洲的 AI 团队」里 @ 对方。
 
-## 我们的项目
+## 我们的项目（参考）
+
+> 📋 这是 HYM 现有的项目，新人接手时按「第三步」克隆即可。
 
 | 项目 | 地址 |
 |------|------|
@@ -254,31 +294,7 @@ glab issue list         # 看 Issue
 | 客户端 | https://hym.webkubor.online |
 | 管理端 | https://hym-admin.webkubor.online |
 
-## 第六步：把本地项目推到公司群组
-
-如果你已经在本地写好了代码，想推到 `hym-company` 群组：
-
-```bash
-# 1. 进入你的项目目录
-cd 你的项目
-
-# 2. 初始化 git（如果还没有）
-git init
-
-# 3. 添加远程仓库
-git remote add origin https://gitlab.com/hym-company/你的项目名.git
-
-# 4. 提交所有代码
-git add -A
-git commit -m "feat: 初始化项目"
-
-# 5. 推送到 GitLab
-git push -u origin main
-```
-
-如果仓库还不存在，先去 https://gitlab.com/hym-company → New project 创建空项目，再执行上面步骤。
-
-## 第七步：遇到 Bug 怎么提
+## 提 Bug / 反馈
 
 不要私聊说"出问题了"，去 GitLab 提 Issue，方便追踪：
 
@@ -312,7 +328,7 @@ glab issue create \
 
 ---
 
-## 第八步：配套工具
+## 配套工具
 
 HYM 生态还有这些工具，开箱即用：
 
