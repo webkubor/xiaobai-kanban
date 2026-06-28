@@ -111,6 +111,16 @@ git push origin feat/功能描述
 | 管理端 | `hym-company/hym-admin` | `~/hym-admin` | Vue 3 + Naive UI + CF Pages Functions |
 | 客户端 | `hym-company/hym-concerts` | `~/hym-concerts` | Vue 3 + Naive UI |
 
+## 团队成员（权限不够时找谁）
+
+| 用户名 | 角色 | 能做什么 |
+|--------|------|---------|
+| `webkubor` | Owner | 加人进组、改权限、删仓库 |
+| `achun0511` | Developer | 推送代码 |
+| `dayin` | Developer | 推送代码 |
+
+> 当用户说「我推送不了」→ 检查权限表：不是 Developer 就没法 push，让 Owner 去 GitLab 后台改权限。
+
 ---
 
 ## 项目通用规则
