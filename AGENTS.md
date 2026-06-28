@@ -5,6 +5,27 @@
 
 ---
 
+## 先认清你是谁
+
+收到这个文档后，先自检你是什么 Agent 框架。不同框架执行模型不同，用错模式会卡死。
+
+### 怎么判断
+
+| 信号 | 你是 |
+|------|------|
+| 系统提示里有 `Hermes Agent` 或 `Nous Research` | **Hermes Agent** |
+| 系统提示里有 `openclaw` 或工具列表里有 `delegate_task` | **可能是 OpenCLAW** |
+| 运行在 Claude Code CLI 下，有 `Bash`/`Edit`/`Write` 工具 | **Claude Code** |
+| 运行在 Codex CLI 下 | **Codex** |
+
+不确定就问用户：「我是什么 Agent？」
+
+### 专项引导
+
+见文档末尾的 [平台专项指引](#平台专项指引)。跳过不相关的，只读你那份。
+
+---
+
 ## 第零步：安装密钥工具（必须先做）
 
 收到任何任务，第一件事是装 [Keyring](https://github.com/webkubor/agent-secret-skills)：
@@ -237,6 +258,82 @@ pip install keyring-cli
 # 如果 pip 找不到：py -m pip install keyring-cli
 kyi
 ```
+
+---
+
+## 平台专项指引
+
+根据「先认清你是谁」的判断结果，只读你那份。
+
+---
+
+### Hermes Agent
+
+**核心模式：主会话统筹 + 子 agent 并行执行。**
+
+- ✅ **主会话**不做重活，只做决策、规划、汇总
+- ✅ **子 agent** 负责执行：`delegate_task` 分派独立任务，多个子 agent 并行跑
+- ✅ 子 agent 之间不互相依赖，各自收各自的结果
+- ❌ 不要在主会话里顺序执行——一个任务卡住，全链路堵死
+
+**典型流程：**
+
+```
+你收到：「帮我把 xxx 功能加上并部署」
+
+第 1 步：读代码 → 确认改动范围（主会话，快）
+第 2 步：分派任务（delegate_task 并行）
+  ├── 子 agent A：改前端组件
+  ├── 子 agent B：改后端 API
+  └── 子 agent C：更新文档
+第 3 步：汇总结果 → 构建验证 → 推送（主会话）
+```
+
+**推送代码时：**
+```bash
+# 子 agent 执行完后，主会话集中推送
+cd ~/项目名 && git add -A && git commit -m "feat: xxx"
+kyr --env GITLAB_TOKEN=gitlab_token -- git push origin feat/xxx
+```
+
+---
+
+### OpenCLAW
+
+**核心模式：类似 Hermes，有 `delegate_task` 则并行分派。**
+
+- 如果你有 `delegate_task` 工具 → 跟 Hermes 一样，主会话统筹 + 子 agent 并行
+- 如果没有 → 顺序执行即可，注意不卡死
+
+**推送代码同 Hermes。**
+
+---
+
+### Claude Code
+
+**核心模式：单线程顺序执行。**
+
+- 所有操作在当前会话内完成，不开子进程
+- 注意：耗时操作（npm install / build）可能超时，加 `timeout`
+- 推送前确认构建通过
+
+---
+
+### Codex
+
+**核心模式：单线程 + `background` 异步任务。**
+
+- 非阻塞操作用 `background=true` 异步跑
+- 推送代码前确保所有异步任务已完成
+
+---
+
+### 通用铁律（所有平台适用）
+
+1. **Token 不暴露**：永远走 `kyr --env TOKEN=别名 -- 命令`
+2. **改完必构建**：`npm run build` 通过才推送
+3. **不改无关代码**：一个分支只做一个功能
+4. **真人 Review**：推送后等真人确认，不自作主张合并 MR
 
 ---
 
