@@ -1,3 +1,5 @@
+![logo](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/xiaobai-kanban/cs-token4ai-1784193753287750000.png)
+
 # 🧭 小白看板 — 让 Agent 帮你写代码
 
 > **你只说话，Agent 搞定一切。** 不需要懂代码、不需要懂命令行。
