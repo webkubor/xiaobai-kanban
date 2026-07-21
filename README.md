@@ -58,14 +58,21 @@
 
 ## 🧰 配套工具箱
 
-这些工具让你的 Agent 更强大。**对 Agent 说「帮我装 xxx」就行。**
+### 🏭 社区成熟工具
 
 | 工具 | 一句话 | 安装 |
 |------|--------|------|
-| 🔐 [**Keyring**](https://github.com/webkubor/keyring) | 安全管理密码/Token，告别 .env 泄露 | `pip install keyring-cli && kyi` |
-| 👀 [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 实时看到前端报错，自动修复 | `npm install -D vite-plugin-agent-eyes` |
-| 🎤 [**Voice Editor**](https://github.com/webkubor/voice-editor) | 本地中文 TTS 语音编辑器 | 见仓库 README |
-| 🎨 [**Agent Skills**](https://github.com/webkubor/agent-skills) | 26 个出图/开发 skill，Agent 装上就会 | 见仓库 README |
+| 🦸 [**Superpowers**](https://github.com/obra/superpowers) | 258K⭐ Agent 技能框架，研发必备 | `npx superpowers install` |
+| 🤖 [**Claude Code**](https://docs.anthropic.com/en/docs/claude-code) | Anthropic 官方 Agent，写代码最稳 | `npm install -g @anthropic-ai/claude-code` |
+| 🔧 [**Codex**](https://github.com/openai/codex) | OpenAI 官方 CLI Agent，后台异步不卡 | `npm install -g @openai/codex` |
+
+### 🔧 webkubor 生态
+
+| 工具 | 一句话 | 安装 |
+|------|--------|------|
+| 🔐 [**Keyring**](https://github.com/webkubor/keyring) | Token 加密存储，告别 .env 泄露 | `pip install keyring-cli && kyi` |
+| 👀 [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 实时看到前端报错 | `npm install -D vite-plugin-agent-eyes` |
+| 🎨 [**Agent Skills**](https://github.com/webkubor/agent-skills) | 26 个出图/开发 skill，装上就会 | 见仓库 README |
 
 ---
 
@@ -168,14 +175,14 @@ glab version && gh --version
 
 | 你遇到的问题 | 对 Agent 说 | 实际用的 |
 |-------------|------------|---------|
+| 「我想写代码，但不知道从哪开始」 | 「用 Superpowers 帮我搭项目骨架」 | [Superpowers](https://github.com/obra/superpowers)（258K⭐ 研发技能框架） |
 | 「我想做图，但不会设计」 | 「帮我去 agent-skills 找合适的出图 skill」 | [agent-skills](https://github.com/webkubor/agent-skills)（26 个出图/开发 skill） |
 | 「前端报错了，我看不懂」 | 「装 agent-eyes」 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
 | 「Token 存哪才安全」 | 「装 Keyring，帮我把 Token 加密存好」 | [keyring](https://github.com/webkubor/keyring) |
 | 「代码提交老被拦」 | 「装 ts-prebuild-check skill」 | [agent-skills](https://github.com/webkubor/agent-skills) → `ts-prebuild-check` |
-| 「项目太乱不知道怎么理」 | 「帮我跑项目成熟度审计」 | [agent-skills](https://github.com/webkubor/agent-skills) → `project-maturity-audit` |
-| 「我想克隆一个网站的样式」 | 「用 clone-website skill 帮我复刻这个网站」 | [agent-skills](https://github.com/webkubor/agent-skills) → `clone-website` |
+| 「我想复刻一个网站的样式」 | 「用 clone-website skill」 | [agent-skills](https://github.com/webkubor/agent-skills) → `clone-website` |
 
-> 💡 [agent-skills](https://github.com/webkubor/agent-skills) 里有 26 个实战验证过的 skill，Agent 读一下 SKILL.md 就能用。不用你学，Agent 学会就行。
+> 💡 研发主力用 [Superpowers](https://github.com/obra/superpowers)（258K⭐ 社区标准），出图/密钥/前端监控用 webkubor 生态补位。
 
 ---
 
@@ -226,9 +233,15 @@ Agent 会说：「Token 有问题」
 |------|---------|
 | [keyring](https://github.com/webkubor/keyring) | Agent 密钥安全 |
 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 前端监控 |
-| [voice-editor](https://github.com/webkubor/voice-editor) | 中文语音编辑器 |
 | [agent-skills](https://github.com/webkubor/agent-skills) | 26 个 Agent skill |
 | [typora-Bloom-theme](https://github.com/webkubor/typora-Bloom-theme) | Typora 写作主题 |
+
+推荐的开源工具：
+
+| 工具 | 做什么的 |
+|------|---------|
+| [Superpowers](https://github.com/obra/superpowers) | 258K⭐ Agent 研发技能框架 |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Anthropic 官方 Agent |
 
 ---
 
