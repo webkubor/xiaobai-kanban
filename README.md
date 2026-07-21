@@ -1,6 +1,4 @@
-![logo](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/xiaobai-kanban/cs-token4ai-1784193753287750000.png)
-
-![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/xiaobai-kanban-banner/cs-token4ai-1784197731848395000.png)
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/xiaobai-kanban/cs-token4ai-1784193753287750000.png" width="120" alt="logo"/></p>
 
 # 🧭 小白看板 — 让 Agent 帮你写代码
 
