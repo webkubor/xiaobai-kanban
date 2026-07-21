@@ -65,7 +65,7 @@
 | 🔐 [**Keyring**](https://github.com/webkubor/keyring) | 安全管理密码/Token，告别 .env 泄露 | `pip install keyring-cli && kyi` |
 | 👀 [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 实时看到前端报错，自动修复 | `npm install -D vite-plugin-agent-eyes` |
 | 🎤 [**Voice Editor**](https://github.com/webkubor/voice-editor) | 本地中文 TTS 语音编辑器 | 见仓库 README |
-| 🧭 [**Smart Router**](https://github.com/webkubor/smart-router-skills) | Agent 自动省钱，简单任务用免费模型 | 见仓库 README |
+| 🎨 [**Agent Skills**](https://github.com/webkubor/agent-skills) | 26 个出图/开发 skill，Agent 装上就会 | 见仓库 README |
 
 ---
 
@@ -164,20 +164,18 @@ glab version && gh --version
 
 ## 🧩 开发场景 × Skills
 
-遇到这些情况，直接对 Agent 说对应的指令。Skill 就是 Agent 的「能力包」——装上就会。
+遇到这些情况，直接对 Agent 说。Skill 就是 Agent 的「能力包」——装上就会。
 
-| 你遇到的问题 | 对 Agent 说 | 用的 Skill |
-|-------------|------------|-----------|
-| 「我想做图，但不会设计」 | 「用 AI 帮我做张封面图」 | [agent-skills](https://github.com/webkubor/agent-skills) → `social-cover` / `wuxia-cinematic` |
-| 「前端报错了，我看不懂红字」 | 「装 agent-eyes，以后报错自动告诉我」 | [agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
-| 「我想抄一个网站的风格」 | 「帮我克隆这个网站的首页」 | [clone-website](https://github.com/webkubor/agent-skills) |
-| 「我要做项目但不知道怎么组织」 | 「帮我审计一下这个项目」 | [project-maturity-audit](https://github.com/webkubor/agent-skills) |
-| 「我想发开源项目，不知道怎么写 README」 | 「帮我准备 GitHub 发布包」 | [github-launch-kit](https://github.com/webkubor/agent-skills) |
-| 「AI 太费钱了，有没有便宜的」 | 「装 smart-router，简单任务用免费模型」 | [smart-router-skills](https://github.com/webkubor/smart-router-skills) |
-| 「代码提交老是被拦截」 | 「装 ts-prebuild-check，提交前自动检查」 | [ts-prebuild-check](https://github.com/webkubor/agent-skills) |
-| 「Token 怎么存才安全」 | 「装 Keyring，帮我把 Token 存好」 | [keyring](https://github.com/webkubor/keyring) |
+| 你遇到的问题 | 对 Agent 说 | 实际用的 |
+|-------------|------------|---------|
+| 「我想做图，但不会设计」 | 「帮我去 agent-skills 找合适的出图 skill」 | [agent-skills](https://github.com/webkubor/agent-skills)（26 个出图/开发 skill） |
+| 「前端报错了，我看不懂」 | 「装 agent-eyes」 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
+| 「Token 存哪才安全」 | 「装 Keyring，帮我把 Token 加密存好」 | [keyring](https://github.com/webkubor/keyring) |
+| 「代码提交老被拦」 | 「装 ts-prebuild-check skill」 | [agent-skills](https://github.com/webkubor/agent-skills) → `ts-prebuild-check` |
+| 「项目太乱不知道怎么理」 | 「帮我跑项目成熟度审计」 | [agent-skills](https://github.com/webkubor/agent-skills) → `project-maturity-audit` |
+| 「我想克隆一个网站的样式」 | 「用 clone-website skill 帮我复刻这个网站」 | [agent-skills](https://github.com/webkubor/agent-skills) → `clone-website` |
 
-> 💡 完整 26 个 skill：[agent-skills 仓库](https://github.com/webkubor/agent-skills)——每个 skill 都是一份 Agent 能直接读的「能力说明书」。
+> 💡 [agent-skills](https://github.com/webkubor/agent-skills) 里有 26 个实战验证过的 skill，Agent 读一下 SKILL.md 就能用。不用你学，Agent 学会就行。
 
 ---
 
@@ -229,7 +227,7 @@ Agent 会说：「Token 有问题」
 | [keyring](https://github.com/webkubor/keyring) | Agent 密钥安全 |
 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 前端监控 |
 | [voice-editor](https://github.com/webkubor/voice-editor) | 中文语音编辑器 |
-| [smart-router-skills](https://github.com/webkubor/smart-router-skills) | Agent 省钱路由 |
+| [agent-skills](https://github.com/webkubor/agent-skills) | 26 个 Agent skill |
 | [typora-Bloom-theme](https://github.com/webkubor/typora-Bloom-theme) | Typora 写作主题 |
 
 ---
