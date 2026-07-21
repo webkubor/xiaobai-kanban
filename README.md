@@ -72,6 +72,7 @@
 |------|--------|------|
 | 🔐 [**Keyring**](https://github.com/webkubor/keyring) | Token 加密存储，告别 .env 泄露 | `pip install keyring-cli && kyi` |
 | 👀 [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 实时看到前端报错 | `npm install -D vite-plugin-agent-eyes` |
+| 🎤 [**Voice Editor**](https://github.com/webkubor/voice-editor) | 本地中文 TTS，Agent 也能调用 | 见仓库 README |
 | 🎨 [**Agent Skills**](https://github.com/webkubor/agent-skills) | 26 个出图/开发 skill，装上就会 | 见仓库 README |
 
 ---
