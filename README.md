@@ -65,6 +65,7 @@
 | 🦸 [**Superpowers**](https://github.com/obra/superpowers) | 258K⭐ Agent 技能框架，研发必备 | `npx superpowers install` |
 | 🤖 [**Claude Code**](https://docs.anthropic.com/en/docs/claude-code) | Anthropic 官方 Agent，写代码最稳 | `npm install -g @anthropic-ai/claude-code` |
 | 🔧 [**Codex**](https://github.com/openai/codex) | OpenAI 官方 CLI Agent，后台异步不卡 | `npm install -g @openai/codex` |
+| 📝 [**Typora**](https://typora.io) | Markdown 写作首选，所见即所得 | [下载](https://typora.io) → 装 [Bloom 主题](https://github.com/webkubor/typora-Bloom-theme) |
 
 ### 🔧 webkubor 生态
 
