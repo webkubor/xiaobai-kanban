@@ -162,6 +162,25 @@ glab version && gh --version
 
 ---
 
+## 🧩 开发场景 × Skills
+
+遇到这些情况，直接对 Agent 说对应的指令。Skill 就是 Agent 的「能力包」——装上就会。
+
+| 你遇到的问题 | 对 Agent 说 | 用的 Skill |
+|-------------|------------|-----------|
+| 「我想做图，但不会设计」 | 「用 AI 帮我做张封面图」 | [agent-skills](https://github.com/webkubor/agent-skills) → `social-cover` / `wuxia-cinematic` |
+| 「前端报错了，我看不懂红字」 | 「装 agent-eyes，以后报错自动告诉我」 | [agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
+| 「我想抄一个网站的风格」 | 「帮我克隆这个网站的首页」 | [clone-website](https://github.com/webkubor/agent-skills) |
+| 「我要做项目但不知道怎么组织」 | 「帮我审计一下这个项目」 | [project-maturity-audit](https://github.com/webkubor/agent-skills) |
+| 「我想发开源项目，不知道怎么写 README」 | 「帮我准备 GitHub 发布包」 | [github-launch-kit](https://github.com/webkubor/agent-skills) |
+| 「AI 太费钱了，有没有便宜的」 | 「装 smart-router，简单任务用免费模型」 | [smart-router-skills](https://github.com/webkubor/smart-router-skills) |
+| 「代码提交老是被拦截」 | 「装 ts-prebuild-check，提交前自动检查」 | [ts-prebuild-check](https://github.com/webkubor/agent-skills) |
+| 「Token 怎么存才安全」 | 「装 Keyring，帮我把 Token 存好」 | [keyring](https://github.com/webkubor/keyring) |
+
+> 💡 完整 26 个 skill：[agent-skills 仓库](https://github.com/webkubor/agent-skills)——每个 skill 都是一份 Agent 能直接读的「能力说明书」。
+
+---
+
 ## 🕳️ 常见踩坑
 
 ### 推 main 报权限错误
