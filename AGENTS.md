@@ -30,20 +30,20 @@
 
 ## 第零步：安装密钥工具（必须先做）
 
-收到任何任务，第一件事是装 [Keyring](https://github.com/webkubor/agent-secret-skills)：
+收到任何任务，第一件事是装 [kyvault](https://github.com/webkubor/kyvault)：
 
 ```bash
 # macOS
-pip install keyring-cli
-kyi
+pipx install git+https://github.com/webkubor/kyvault.git
+kyvault init
 
 # Windows（Git Bash）
-pip install keyring-cli
-# 如果 pip 找不到：py -m pip install keyring-cli
-kyi
+pipx install git+https://github.com/webkubor/kyvault.git
+# 如果 pip 找不到：py -m pipx install git+https://github.com/webkubor/kyvault.git
+kyvault init
 
 # 验证
-ky --version
+kyvault --version
 ```
 
 装完再往下走。Token 明文出现在代码里是红线。
@@ -55,8 +55,8 @@ ky --version
 收到任务后，先判断用户说的是 GitLab 还是 GitHub，然后只查对应的。两个都装了就都查。
 
 ```bash
-# 1. Keyring 是否可用？
-ky --version || { echo "❌ Keyring 未安装 → pip install keyring-cli && kyi"; exit 1; }
+# 1. kyvault 是否可用？
+kyvault --version || { echo "❌ kyvault 未安装 → pipx install git+https://github.com/webkubor/kyvault.git && kyvault init"; exit 1; }
 
 # 2. Git 是否可用？
 git --version || { echo "❌ git 不可用"; exit 1; }
@@ -80,7 +80,7 @@ import sys,json
 g=json.load(sys.stdin)
 lv=g.get('access_level',0)
 print(f'权限: {lv} ({\"✅ Developer\" if lv>=30 else \"⚠️ 只读\" if lv>=20 else \"❌ 无权限\"})')"
-  kya list gitlab 2>/dev/null | grep -q . || echo "⚠️ Keyring 无 gitlab token → kyk set gitlab <token>"
+  kyvault key list gitlab 2>/dev/null | grep -q . || echo "⚠️ kyvault 无 gitlab token → kyvault key set gitlab <token>"
 fi
 
 # 5. GitHub 检查（如果装了）
@@ -88,19 +88,19 @@ if $HAS_GH; then
   echo "===== GitHub ====="
   gh auth status > /dev/null 2>&1 || { echo "❌ gh 未登录"; exit 1; }
   gh api user 2>/dev/null | python3 -c "import sys,json; u=json.load(sys.stdin); print(f'用户: {u.get(\"login\")}')"
-  kya list github 2>/dev/null | grep -q . || echo "⚠️ Keyring 无 github token → kyk set github <token>"
+  kyvault key list github 2>/dev/null | grep -q . || echo "⚠️ kyvault 无 github token → kyvault key set github <token>"
 fi
 ```
 
 | 检查项 | 通过标准 | 不通过怎么办 |
 |--------|---------|-------------|
-| Keyring | `ky --version` 正常 | `pip install keyring-cli && kyi`（Windows: `py -m pip install keyring-cli && kyi`） |
+| kyvault | `kyvault --version` 正常 | `pipx install git+https://github.com/webkubor/kyvault.git && kyvault init`（Windows: `py -m pipx install git+https://github.com/webkubor/kyvault.git && kyvault init`） |
 | Git | `git --version` 正常 | [下载 Git](https://git-scm.com) |
 | glab | `glab version` 正常 | macOS: `brew install glab` / Windows: `winget install GitLab.GitLabCLI` |
 | gh | `gh --version` 正常 | macOS: `brew install gh` / Windows: `winget install GitHub.cli` |
 | GitLab 登录+权限 | `glab auth status` ✓ + Developer 权限 | 引导用户去 gitlab.com 创建 Token → `glab auth login` |
 | GitHub 登录 | `gh auth status` ✓ | 引导用户去 github.com 创建 Token → `gh auth login --with-token` |
-| Keyring Token | `kya list gitlab` 或 `kya list github` 有内容 | `kyk set gitlab <token>` 或 `kyk set github <token>` |
+| kyvault Token | `kyvault key list gitlab` 或 `kyvault key list github` 有内容 | `kyvault key set gitlab <token>` 或 `kyvault key set github <token>` |
 
 ---
 
@@ -112,7 +112,7 @@ fi
 - GitHub 组织：`https://github.com/webkubor`
 - 认证方式：Personal Access Token（**每人自己的**，不共享）
   - Token 跟人走：谁的 Agent 就用谁的 Token
-  - **Token 必须通过 Keyring 别名注入**，绝不硬编码
+  - **Token 必须通过 kyvault 别名注入**，绝不硬编码
   - GitLab 权限：`api`, `read_repository`, `write_repository`
   - GitHub 权限：`repo`（全部）
 
@@ -124,21 +124,21 @@ git checkout main && git pull origin main         # 拉最新
 git checkout -b feat/功能描述                      # 开分支
 git add -A && git commit -m "feat: 简短描述"      # 提交
 
-# GitLab 推送（Keyring 别名注入）
-kyr --env GITLAB_TOKEN=gitlab_token -- git push origin feat/功能描述
+# GitLab 推送（kyvault 别名注入）
+kyvault run --env GITLAB_TOKEN=gitlab_token -- git push origin feat/功能描述
 
 # GitHub 推送
-kyr --env GITHUB_TOKEN=github_token -- git push origin feat/功能描述
+kyvault run --env GITHUB_TOKEN=github_token -- git push origin feat/功能描述
 ```
 
 ### 设置远程地址（新项目）
 
 ```bash
 # GitLab
-kyr --env TOKEN=gitlab_token -- git remote add origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
+kyvault run --env TOKEN=gitlab_token -- git remote add origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
 
 # GitHub
-kyr --env TOKEN=github_token -- git remote add origin https://oauth2:$TOKEN@github.com/webkubor/项目名.git
+kyvault run --env TOKEN=github_token -- git remote add origin https://oauth2:$TOKEN@github.com/webkubor/项目名.git
 ```
 
 ### Commit 规范
@@ -199,11 +199,11 @@ kyr --env TOKEN=github_token -- git remote add origin https://oauth2:$TOKEN@gith
 git clone https://github.com/用户/项目名.git
 cd 项目名
 
-# 2. 设置 GitLab 远程（Token 走 Keyring，不暴露）
-kyr --env TOKEN=gitlab_token -- git remote set-url origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
+# 2. 设置 GitLab 远程（Token 走 kyvault，不暴露）
+kyvault run --env TOKEN=gitlab_token -- git remote set-url origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
 
 # 3. 推送
-kyr --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
+kyvault run --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
 ```
 
 ### 纯本地项目上传
@@ -212,10 +212,10 @@ kyr --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
 cd ~/项目名
 git init
 
-kyr --env TOKEN=gitlab_token -- git remote add origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
+kyvault run --env TOKEN=gitlab_token -- git remote add origin https://oauth2:$TOKEN@gitlab.com/hym-company/项目名.git
 git add -A
 git commit -m "feat: 初始化项目"
-kyr --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
+kyvault run --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
 ```
 
 > ⚠️ 如果 GitLab 上还没有这个仓库，先去 `https://gitlab.com/hym-company` → **New project** → 创建空项目，再推送。
@@ -226,8 +226,8 @@ kyr --env GITLAB_TOKEN=gitlab_token -- git push -u origin main
 
 | 工具 | 用途 | Agent 怎么用 |
 |------|------|-------------|
-| [Keyring](https://github.com/webkubor/agent-secret-skills) | 密钥管理 | `kyr --env TOKEN=gitlab_token -- git push` — 别名注入，明文不暴露 |
-| [Smart Router](https://github.com/webkubor/smart-router-skills) | 省钱路由 | 简单任务（翻译/格式化/摘要）自动切免费模型，复杂任务才用付费主模型 |
+| [kyvault](https://github.com/webkubor/kyvault) | 密钥管理 | `kyvault run --env TOKEN=gitlab_token -- git push` — 别名注入，明文不暴露 |
+| [contrast-guard](https://github.com/webkubor/contrast-guard) | 配色 / 视觉护栏 | `contrast-guard check` 查对比度并算出该改成多少；`contrast-guard measure <url>` 量页面视觉质量 |
 | [Agent Eyes](https://github.com/webkubor/vite-plugin-agent-eyes) | 前端监控 | `npm install -D vite-plugin-agent-eyes` + `autoInstrument()` — Agent 实时看到前端报错 |
 
 ---
@@ -273,8 +273,8 @@ git push origin feat/功能描述
 
 **解决**：
 1. 确认当前 Agent 用的是谁的 Token：`glab auth status` 看登录用户名
-2. 如果不是自己的账户 → 去 gitlab.com 创建自己的 Personal Access Token → `kyk set gitlab <新的token>`
-3. 如果 Keyring 里没有 token → `kyk set gitlab <token>`
+2. 如果不是自己的账户 → 去 gitlab.com 创建自己的 Personal Access Token → `kyvault key set gitlab <新的token>`
+3. 如果 kyvault 里没有 token → `kyvault key set gitlab <token>`
 
 ---
 
@@ -287,13 +287,13 @@ git push origin feat/功能描述
 
 ```bash
 # macOS
-pip install keyring-cli
-kyi
+pipx install git+https://github.com/webkubor/kyvault.git
+kyvault init
 
 # Windows（Git Bash）
-pip install keyring-cli
-# 如果 pip 找不到：py -m pip install keyring-cli
-kyi
+pipx install git+https://github.com/webkubor/kyvault.git
+# 如果 pip 找不到：py -m pipx install git+https://github.com/webkubor/kyvault.git
+kyvault init
 ```
 
 ---
@@ -330,7 +330,7 @@ kyi
 ```bash
 # 子 agent 执行完后，主会话集中推送
 cd ~/项目名 && git add -A && git commit -m "feat: xxx"
-kyr --env GITLAB_TOKEN=gitlab_token -- git push origin feat/xxx
+kyvault run --env GITLAB_TOKEN=gitlab_token -- git push origin feat/xxx
 ```
 
 ---
@@ -367,7 +367,7 @@ kyr --env GITLAB_TOKEN=gitlab_token -- git push origin feat/xxx
 
 ### 通用铁律（所有平台适用）
 
-1. **Token 不暴露**：永远走 `kyr --env TOKEN=别名 -- 命令`
+1. **Token 不暴露**：永远走 `kyvault run --env TOKEN=别名 -- 命令`
 2. **改完必构建**：`npm run build` 通过才推送
 3. **不改无关代码**：一个分支只做一个功能
 4. **真人 Review**：推送后等真人确认，不自作主张合并 MR

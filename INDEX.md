@@ -35,10 +35,13 @@
 
 | 工具 | 用途 | 地址 |
 |------|------|------|
-| **Keyring** | 安全管理密码/Token | [webkubor/keyring](https://github.com/webkubor/keyring) |
+| **kyvault** | 安全管理密码 / Token | [webkubor/kyvault](https://github.com/webkubor/kyvault) |
 | **Agent Eyes** | Agent 实时监控前端报错 | [webkubor/vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
-| **Voice Editor** | 本地中文 TTS 语音编辑器 | [webkubor/voice-editor](https://github.com/webkubor/voice-editor) |
-| **Smart Router** | Agent 自动省钱 | [webkubor/smart-router-skills](https://github.com/webkubor/smart-router-skills) |
+| **contrast-guard** | 配色对比度 + 视觉质量护栏 | [webkubor/contrast-guard](https://github.com/webkubor/contrast-guard) |
+| **VoxFlow** | AI 声音到 AI 音乐 | [webkubor/voxflow](https://github.com/webkubor/voxflow) |
+| **scorecard** | 开源项目八维度质检 | [scorecard.webkubor.online](https://scorecard.webkubor.online) |
+
+> 完整工具箱与「把这些仓库当上游」的维护规则见 [README](./README.md#-给-agent把这些仓库当成上游)。
 
 ## 🧑‍💼 角色指南
 

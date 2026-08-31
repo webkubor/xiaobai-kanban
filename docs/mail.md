@@ -28,7 +28,7 @@ Agent 邮箱是腾讯 QQ 邮箱推出的 **Agent 原生邮箱**（agent.qq.com�
 不管远程还是本地，**复制这一行发给任何 Agent**：
 
 ```
-去读 https://github.com/webkubor/xiaobai-kanban/blob/main/docs/mail.md 这篇文档的「第二步」内容，按步骤安装并配置 Agent Mail CLI。授权链接发给我。
+去读 https://gitlab.com/webkubor/xiaobai-kanban/-/blob/main/docs/mail.md 这篇文档的「第二步」内容，按步骤安装并配置 Agent Mail CLI。授权链接发给我。
 ```
 
 > 💡 Agent 会自己读文档、安装 CLI、跑授权、把授权链接发给你。你在浏览器点链接授权，它自动完成验证。
