@@ -27,10 +27,11 @@
 
 | 编号 | 章节 | 你能学到什么 |
 |:--:|------|-------------|
-| 10 | [从零到上线：一条完整心智链](./docs/from-zero-to-shipped.md) | GitLab/GitHub 区别 · 提交代码 · 认识代码 · 开发循环 · 写需求 · 说命令 |
-| 11 | [Agent 邮箱](./docs/mail.md) | 申请 Agent 邮箱 + 收发邮件 |
-| 12 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
-| 13 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
+| 10 | [从零到上线：一条完整心智链](./docs/from-zero-to-shipped.md) | Agent 是什么 · GitLab/GitHub 区别 · 提交代码 · 认识代码 · Web/代码工程 · 开发循环 · 说命令 |
+| 11 | [怎么把需求讲清楚](./docs/how-to-write-requirements.md) | ⭐ 最重要：背景+目标+范围+验收，填空模板 + 自检清单 |
+| 12 | [Agent 邮箱](./docs/mail.md) | 申请 Agent 邮箱 + 收发邮件 |
+| 13 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
+| 14 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
 
 ## 🧰 配套工具
 
@@ -64,7 +65,8 @@ xiaobai-kanban/
     ├── why-agent.md             我为什么要用 Agent
     ├── first-project.md         3 分钟第一次实战
     ├── how-to-speak-to-agent.md 怎么跟 Agent 说话
-    ├── from-zero-to-shipped.md  从零到上线（GitLab/GitHub 区别、提交、读代码、开发、写需求、说命令）
+    ├── from-zero-to-shipped.md  从零到上线（Agent 是什么、GitLab/GitHub 区别、提交、读代码、Web/代码工程、开发、说命令）
+    ├── how-to-write-requirements.md 怎么把需求讲清楚（最重要的一课）
     ├── glossary.md              术语大白话词典
     └── mail.md                  邮件能力配置指南
 ```
