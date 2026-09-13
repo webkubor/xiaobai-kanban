@@ -18,20 +18,21 @@
 
 | 编号 | 章节 | 你能学到什么 |
 |:--:|------|-------------|
-| 06 | [环境自检](./README.md#第零步自检) | 30 秒检查你的电脑准备好了没 |
-| 07 | [安装工具](./README.md#第一步安装-cli-工具) | 装 Git、GitLab CLI、GitHub CLI |
-| 08 | [登录配置](./README.md#第二步登录) | Token 申请 + 安全存储 |
-| 09 | [Git 工作流](./README.md#第三步gitflow-工作流) | 每天怎么用 Git 干活 |
+| 06 | [认识 CLI：AI 的手脚](./docs/about-cli.md) | CLI 是什么、为什么 AI 离不了它、GitLab/GitHub/飞书三个 CLI 各管什么 |
+| 07 | [环境自检](./README.md#第零步自检) | 30 秒检查你的电脑准备好了没 |
+| 08 | [安装工具](./README.md#第一步安装-cli-工具) | 装 Git、GitLab CLI、GitHub CLI |
+| 09 | [登录配置](./README.md#第二步登录) | Token 申请 + 安全存储 |
+| 10 | [Git 工作流](./README.md#第三步gitflow-工作流) | 每天怎么用 Git 干活 |
 
 ## 🛠️ 进阶技能
 
 | 编号 | 章节 | 你能学到什么 |
 |:--:|------|-------------|
-| 10 | [从零到上线：一条完整心智链](./docs/from-zero-to-shipped.md) | Agent 是什么 · GitLab/GitHub 区别 · 提交代码 · 认识代码 · Web/代码工程 · 开发循环 · 说命令 |
-| 11 | [怎么把需求讲清楚](./docs/how-to-write-requirements.md) | ⭐ 最重要：背景+目标+范围+验收，填空模板 + 自检清单 |
-| 12 | [Agent 邮箱](./docs/mail.md) | 申请 Agent 邮箱 + 收发邮件 |
-| 13 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
-| 14 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
+| 11 | [从零到上线：一条完整心智链](./docs/from-zero-to-shipped.md) | Agent 是什么 · GitLab/GitHub 区别 · 提交代码 · 认识代码 · Web/代码工程 · 开发循环 · 说命令 |
+| 12 | [怎么把需求讲清楚](./docs/how-to-write-requirements.md) | ⭐ 最重要：背景+目标+范围+验收，填空模板 + 自检清单 |
+| 13 | [Agent 邮箱](./docs/mail.md) | 申请 Agent 邮箱 + 收发邮件 |
+| 14 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
+| 15 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
 
 ## 🧰 配套工具
 
@@ -65,6 +66,7 @@ xiaobai-kanban/
     ├── why-agent.md             我为什么要用 Agent
     ├── first-project.md         3 分钟第一次实战
     ├── how-to-speak-to-agent.md 怎么跟 Agent 说话
+    ├── about-cli.md            认识 CLI：AI 的手脚（CLI vs MCP、GitLab/GitHub/飞书三个 CLI）
     ├── from-zero-to-shipped.md  从零到上线（Agent 是什么、GitLab/GitHub 区别、提交、读代码、Web/代码工程、开发、说命令）
     ├── how-to-write-requirements.md 怎么把需求讲清楚（最重要的一课）
     ├── glossary.md              术语大白话词典
