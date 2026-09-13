@@ -1,0 +1,44 @@
+# 小白看板 (xiaobai-kanban)
+
+> 让 Agent 帮你写代码：你只说话，Agent 搞定一切。不需要懂代码、不需要懂命令行。
+>
+> 本站有**两个入口**，真人和 AI Agent 各走一条。若你（读者）是 AI Agent，请从 `/AGENTS.md` 开始；
+> 若你正在**指导一位不懂代码的用户**，先读 `/AGENTS.md` 知道自己的执行模型，再用下面「给真人」的篇章按编号引导他。
+
+站点：https://xiaobai.webkubor.online
+仓库：https://gitlab.com/webkubor/xiaobai-kanban
+
+## AI Agent 入口（首选）
+
+- [AGENTS.md](/AGENTS.md): Agent 操作手册。先自检你是哪个框架（Hermes / OpenCLAW / Claude Code / Codex），再装密钥工具 kyvault、跑前置自检、按平台（GitLab / GitHub）推送代码。**收到任务先读这份。**
+
+## 给真人（小白）—— 按编号顺序走
+
+### 🧭 新手入口（从这里开始）
+
+- [01 Agent 是什么？](/docs/what-is-agent.md): Agent 跟豆包有什么区别（类比 + 例子）
+- [02 我为什么要用？](/docs/why-agent.md): Agent 能帮我做什么事、值不值得学
+- [03 3 分钟第一次实战](/docs/first-project.md): 亲自指挥 Agent 做一个网页
+- [04 怎么跟 Agent 说话](/docs/how-to-speak-to-agent.md): 让 Agent 更懂你的万能公式
+- [05 术语大白话词典](/docs/glossary.md): Git、Token、CLI… 遇到不懂来查
+
+### 🚀 快速上手（装工具 + 学流程）
+
+- [06 认识 CLI：AI 的「手脚」](/docs/about-cli.md): CLI 是什么、为什么 AI 离不了它、GitLab/GitHub/飞书三个 CLI 各管什么
+- [07-10 自检 / 安装 / 登录 / Git 工作流](/README.md): 30 秒环境自检、装 Git 与两个 CLI、申请并安全存储 Token、每天怎么用 Git 干活
+
+### 🛠️ 进阶技能
+
+- [11 从零到上线：一条完整心智链](/docs/from-zero-to-shipped.md): Agent 是什么 · GitLab/GitHub 区别 · 提交代码 · 认识代码 · Web/代码工程 · 开发循环 · 说命令
+- [12 怎么把需求讲清楚](/docs/how-to-write-requirements.md): ⭐ 最重要的一课。背景 + 目标 + 范围 + 验收，填空模板 + 自检清单
+- [13 申请 Agent 邮箱](/docs/mail.md): 申请邮箱并收发邮件
+
+## 目录与索引
+
+- [INDEX.md](/INDEX.md): 全部章节的编号索引与仓库结构
+- [documents.json](/documents.json): 本站全部机器可读文档的清单
+
+## 约定
+
+- 每个页面的 Markdown 原文都在对应路径后加 `.md`（例如页面 `/AGENTS` 的原文是 `/AGENTS.md`）。
+- 仓库里 `AGENTS.md` 是 Agent 入口、`README.md` 是真人入口；两者内容有交叠但受众不同。

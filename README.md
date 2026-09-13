@@ -4,7 +4,7 @@
 
 > **你只说话，Agent 搞定一切。** 不需要懂代码、不需要懂命令行。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitlab.com/webkubor/xiaobai-kanban/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#提-bug--反馈)
 
 ---

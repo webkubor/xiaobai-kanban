@@ -1,0 +1,5 @@
+# Cloudflare Pages 配置 —— 与 blog 仓同套路：一个站点一个 Pages 项目。
+# 项目名 xiaobai-kanban，自定义域 xiaobai.webkubor.online。
+name = "xiaobai-kanban"
+compatibility_date = "2026-04-24"
+pages_build_output_dir = ".vitepress/dist"

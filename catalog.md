@@ -57,10 +57,14 @@
 
 ```
 xiaobai-kanban/
+├── index.md           🏠 站点首页（两条入口：小白 / Agent）
 ├── README.md          👤 小白入口（学习路径 + 工具箱 + 安装步骤）
 ├── AGENTS.md          🤖 Agent 入口（操作手册 + 平台指引）
-├── INDEX.md           📑 本文件（目录索引）
+├── catalog.md         📑 本文件（目录索引）
 ├── LICENSE            📄 MIT 开源协议
+├── .vitepress/        ⚙️ 站点配置（VitePress）
+├── public/llms.txt    🤖 给 LLM 的站点索引
+├── scripts/           🔧 构建辅助（把原文复制进产物）
 └── docs/              📝 教程文档
     ├── what-is-agent.md         Agent 是什么（跟豆包的区别）
     ├── why-agent.md             我为什么要用 Agent

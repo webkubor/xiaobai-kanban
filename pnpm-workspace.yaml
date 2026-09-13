@@ -1,0 +1,10 @@
+# pnpm 11 默认不允许依赖执行安装脚本（防供应链劫持），于是
+# esbuild（VitePress 的打包器）与 workerd（wrangler 的运行时）拿不到本机二进制，
+# 直接 ERR_PNPM_IGNORED_BUILDS 失败。这两个是构建链的必需品，逐个放行。
+#
+# 语法与 webkubor/blog 的 pnpm-workspace.yaml 保持一致。
+#
+# 本仓是单包（不声明 packages），所以这里只承载安装策略。
+allowBuilds:
+  esbuild: true
+  workerd: true

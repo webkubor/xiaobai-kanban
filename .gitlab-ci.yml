@@ -1,0 +1,38 @@
+# 小白看板 —— push main 后自动构建并发布到 Cloudflare Pages
+# （项目 xiaobai-kanban → xiaobai.webkubor.online）
+#
+# 与 webkubor/blog 的配色一致：同一个 Cloudflare 账户、同一个部署方式，
+# 只是这里不需要预渲染，所以不装 chromium。
+stages:
+  - deploy
+
+variables:
+  CLOUDFLARE_ACCOUNT_ID: "916ebb1b9f240bf4c8826021dd161692"
+  # wrangler 4.120 起 engines 要求 node >= 22
+  NODE_VERSION: "22"
+
+cloudflare-pages-deploy:
+  stage: deploy
+  image: node:22
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store/
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@11.20.0 --activate
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --frozen-lockfile
+  script:
+    # CLOUDFLARE_API_TOKEN 是 GitLab 的 CI 变量（Settings → CI/CD → Variables），
+    # 类型需为 Masked；缺失时这里直接失败，而不是让 wrangler 报一句含糊的鉴权错。
+    - test -n "$CLOUDFLARE_API_TOKEN"
+    - pnpm run build
+    - pnpm exec wrangler pages deploy .vitepress/dist --project-name xiaobai-kanban --branch main --commit-dirty=true
+
+# 部署失败告警：成功与否若要推送通知，接上飞书 webhook（与 blog 仓同款）即可；
+# 这里先留空实现，避免在没有 webhook 变量时把流水线卡住。
