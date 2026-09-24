@@ -127,7 +127,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 | 📊 [**scorecard**](https://github.com/webkubor/scorecard) | 粘一个 GitHub 链接，出八维度质检雷达图和整改清单 | 直接开 [scorecard.webkubor.online](https://scorecard.webkubor.online) |
 | 📉 [**usage-statusline**](https://github.com/webkubor/usage-statusline) | Claude Code 状态栏显示：花了多少钱、还剩多少额度、什么时候重置 | 见仓库 README |
 | 🎤 [**VoxFlow**](https://github.com/webkubor/voxflow) | AI 声音到 AI 音乐，一套工作流做到自动上架 | 见仓库 README |
-| 😀 [**微信表情投稿**](https://github.com/webkubor/wechat-sticker-submit) | 一张 IP 正面照 → 整套可提交的微信表情素材 | 见仓库 README |
+| 😀 [**微信表情投稿**](https://github.com/webkubor/charmoji) | 一张 IP 正面照 → 整套可提交的微信表情素材 | 见仓库 README |
 
 #### 开始写代码之后再看
 
