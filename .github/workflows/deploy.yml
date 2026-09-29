@@ -1,0 +1,71 @@
+name: deploy
+
+# push main 后自动构建并发布到 Cloudflare Pages
+# （项目 xiaobai-kanban → xiaobai.webkubor.online）
+#
+# 与 webkubor/blog 的配色一致：同一个 Cloudflare 账户、同一个部署方式，
+# 只是这里不需要预渲染，所以不装 chromium。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# 同一分支排队中的旧 run 直接取消，省分钟。
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '22'
+  CLOUDFLARE_ACCOUNT_ID: '916ebb1b9f240bf4c8826021dd161692'
+
+jobs:
+  cloudflare-pages-deploy:
+    name: build + deploy to Cloudflare Pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.20.0
+          run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      # CLOUDFLARE_API_TOKEN 是仓库的 Actions Secret
+      # （Settings → Secrets and variables → Actions → New repository secret），
+      # 缺失时这里直接失败，而不是让 wrangler 报一句含糊的鉴权错。
+      - name: Check Cloudflare token present
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN secret 未配置，无法部署"
+            exit 1
+          fi
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: pnpm exec wrangler pages deploy .vitepress/dist --project-name xiaobai-kanban --branch main --commit-dirty=true
+
+# 部署失败告警：成功与否若要推送通知，接上飞书 webhook 即可；
+# 这里先留空实现，避免在没有 webhook 变量时把流水线卡住。

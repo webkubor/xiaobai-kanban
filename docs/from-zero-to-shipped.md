@@ -73,7 +73,7 @@ Agent 收到你的需求，永远是这四步循环：
 
 ### 这个看板用哪个？
 
-这个看板的主仓库在 **GitLab**（`gitlab.com/webkubor/xiaobai-kanban`）。但你**不需要记**——你只要对 Agent 说「帮我提交到 GitLab」或「帮我提交到 GitHub」，Agent 自己知道去哪个网址。
+这个看板的主仓库在 **GitHub**（`github.com/webkubor/xiaobai-kanban`）。但你**不需要记**——你只要对 Agent 说「帮我提交到 GitLab」或「帮我提交到 GitHub」，Agent 自己知道去哪个网址。
 
 ---
 

@@ -6,7 +6,7 @@
 > 若你正在**指导一位不懂代码的用户**，先读 `/AGENTS.md` 知道自己的执行模型，再用下面「给真人」的篇章按编号引导他。
 
 站点：https://xiaobai.webkubor.online
-仓库：https://gitlab.com/webkubor/xiaobai-kanban
+仓库：https://github.com/webkubor/xiaobai-kanban
 
 ## AI Agent 入口（首选）
 

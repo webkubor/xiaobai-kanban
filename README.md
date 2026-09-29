@@ -4,7 +4,7 @@
 
 > **你只说话，Agent 搞定一切。** 不需要懂代码、不需要懂命令行。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitlab.com/webkubor/xiaobai-kanban/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#提-bug--反馈)
 
 ---
@@ -125,7 +125,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 |------|--------|--------|
 | 🔐 [**kyvault**](https://github.com/webkubor/kyvault) | Token / 密码加密存本地，AI 只拿到别名，永远看不到明文 | `pipx install git+https://github.com/webkubor/kyvault.git` |
 | 📊 [**scorecard**](https://github.com/webkubor/scorecard) | 粘一个 GitHub 链接，出八维度质检雷达图和整改清单 | 直接开 [scorecard.webkubor.online](https://scorecard.webkubor.online) |
-| 📉 [**usage-statusline**](https://github.com/webkubor/usage-statusline) | Claude Code 状态栏显示：花了多少钱、还剩多少额度、什么时候重置 | 见仓库 README |
+| 📉 [**usage-statusline**](https://github.com/webkubor/claude-usage-statusline) | Claude Code 状态栏显示：花了多少钱、还剩多少额度、什么时候重置 | 见仓库 README |
 | 🎤 [**VoxFlow**](https://github.com/webkubor/voxflow) | AI 声音到 AI 音乐，一套工作流做到自动上架 | 见仓库 README |
 | 😀 [**微信表情投稿**](https://github.com/webkubor/charmoji) | 一张 IP 正面照 → 整套可提交的微信表情素材 | 见仓库 README |
 
@@ -249,7 +249,7 @@ glab version && gh --version
 | 「这个配色是不是看不清」 | 「用 contrast-guard 检查对比度」 | [contrast-guard](https://github.com/webkubor/contrast-guard) |
 | 「我的页面为什么这么丑」 | 「用 contrast-guard measure 量一下，跟 linear.app 比」 | [contrast-guard](https://github.com/webkubor/contrast-guard) `measure` |
 | 「这个开源项目靠谱吗」 | 「用 scorecard 给它打个分」 | [scorecard.webkubor.online](https://scorecard.webkubor.online) |
-| 「我这个月 AI 花了多少钱」 | 「装 usage-statusline」 | [usage-statusline](https://github.com/webkubor/usage-statusline) |
+| 「我这个月 AI 花了多少钱」 | 「装 usage-statusline」 | [usage-statusline](https://github.com/webkubor/claude-usage-statusline) |
 
 > 💡 研发主力用 [Superpowers](https://github.com/obra/superpowers)（258K⭐ 社区标准），密钥 / 前端监控 / 视觉质量用 webkubor 生态补位。
 
@@ -366,7 +366,7 @@ gh issue create --repo webkubor/<仓库名> \
 
 ## 提 Bug / 反馈
 
-看板本身的问题，在 [Issues](https://gitlab.com/webkubor/xiaobai-kanban/-/issues) 里提。
+看板本身的问题，在 [Issues](https://github.com/webkubor/xiaobai-kanban/issues) 里提。
 **具体某个工具的问题，直接提到那个工具自己的仓库**（见上一节），不要都堆在这里——
 提对地方才有人能修。
 

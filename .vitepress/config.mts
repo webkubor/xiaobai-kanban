@@ -22,7 +22,7 @@ export default defineConfig({
   // 输出 /AGENTS 而不是 /AGENTS.html
   cleanUrls: true,
   // 这些目录不是站点内容，别当页面处理
-  srcExclude: ['node_modules/**', 'scripts/**', 'README.en.md', '.gitlab-ci.yml'],
+  srcExclude: ['node_modules/**', 'scripts/**', 'README.en.md', '.github/**'],
 
   // ⚠️ 为什么目录页叫 catalog.md 而不是 INDEX.md：
   // macOS 的文件系统默认大小写不敏感，而首页必须是 index.md —— 于是
@@ -96,10 +96,10 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/webkubor' }],
 
-    // 仓库在 GitLab，每页给一个「在 GitLab 编辑」入口
+    // 仓库在 GitHub，每页给一个「在 GitHub 编辑」入口
     editLink: {
-      pattern: 'https://gitlab.com/webkubor/xiaobai-kanban/-/edit/main/:path',
-      text: '在 GitLab 上编辑此页'
+      pattern: 'https://github.com/webkubor/xiaobai-kanban/edit/main/:path',
+      text: '在 GitHub 上编辑此页'
     },
 
     footer: {
