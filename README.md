@@ -367,8 +367,12 @@ Agent 会说：「Token 有问题」
 
 ```bash
 npm view <包名> version                       # npm 包
+cargo search <crate名> --limit 1              # Rust 工具（如 kyvault）
 curl -s https://api.github.com/repos/webkubor/<仓库> | grep -m1 pushed_at   # 仓库活跃度
 ```
+
+> kyvault 已从 Python 迁到 Rust、发布在 crates.io，用 `cargo install kyvault` 装，
+> 不再是 `pipx`。看到旧文档写 pipx 的一律按这条走。
 
 **2. 发现新版本主动升，并说明升了什么。**
 
