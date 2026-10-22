@@ -34,17 +34,25 @@
 | 14 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
 | 15 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
 
-## 🧰 配套工具
+## 🧰 配套工具：遇到这个场景就装这个
 
-| 工具 | 用途 | 地址 |
+> 完整清单（含安装命令）见 [README 的工具箱](./README.md#-我做的工具按你会遇到的场景挑)。
+
+| 你遇到 | 用这个 | 直接打开 / 安装 |
 |------|------|------|
-| **kyvault** | 安全管理密码 / Token | [webkubor/kyvault](https://github.com/webkubor/kyvault) |
-| **Agent Eyes** | Agent 实时监控前端报错 | [webkubor/vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
-| **contrast-guard** | 配色对比度 + 视觉质量护栏 | [webkubor/contrast-guard](https://github.com/webkubor/contrast-guard) |
-| **VoxFlow** | AI 声音到 AI 音乐 | [webkubor/voxflow](https://github.com/webkubor/voxflow) |
-| **scorecard** | 开源项目八维度质检 | [scorecard.webkubor.online](https://scorecard.webkubor.online) |
+| Token、密码不知道该放哪 | **kyvault** | [官网](https://webkubor.github.io/kyvault/) · `cargo install kyvault` |
+| 不知道项目还有哪些要补 | **scorecard** | [网页直接用](https://scorecard.webkubor.online)，不用装 |
+| 要出封面 / 配图 / 表情包 | **MUSE AV** | [museav.top](https://museav.top) 注册即用 |
+| 想把微信聊天做成效果图 | **chat-mood-gen** | [wechat.webkubor.online](https://wechat.webkubor.online) |
+| Agent 改完代码看不出对不对 | **Agent Eyes** | `npm i -D vite-plugin-agent-eyes` |
+| 配色对比度总被说看不清 | **contrast-guard** | `npm i -g contrast-guard` |
+| 发新版后用户还在用旧页面 | **refresh-guard** | `npm i -D vite-plugin-refresh-guard` |
+| 想批量做竖版短视频 | **reel-kit** | `npm i -g @kubor/reel-kit` |
+| 想在 Mac 上做语音 / 播客 / BGM | **VoxFlow** | [仓库](https://github.com/webkubor/voxflow) |
+| 写长文嫌 Typora 默认主题累 | **Bloom** | [bloom.webkubor.online](https://bloom.webkubor.online/) |
 
-> 完整工具箱与「把这些仓库当上游」的维护规则见 [README](./README.md#-给-agent把这些仓库当成上游)。
+> 看不懂 `npm i` / `cargo install`？先看 [认识 CLI：AI 的手脚](./docs/about-cli.md)。
+> 或者直接把命令丢给你的 Agent：「帮我装这个」。
 
 ## 🧑‍💼 角色指南
 

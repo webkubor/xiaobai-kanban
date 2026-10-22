@@ -4,8 +4,14 @@
 
 > **你只说话，Agent 搞定一切。** 不需要懂代码、不需要懂命令行。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#提-bug--反馈)
+
+<p align="center">
+  <a href="https://github.com/webkubor/xiaobai-kanban#提-bug--反馈"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="欢迎 PR"></a>
+  <a href="https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE"><img src="https://img.shields.io/github/license/webkubor/xiaobai-kanban?style=for-the-badge&color=gold" alt="License"></a>
+  <a href="https://github.com/webkubor/xiaobai-kanban/actions/workflows/deploy.yml"><img src="https://img.shields.io/github/actions/workflow/status/webkubor/xiaobai-kanban/deploy.yml?style=for-the-badge&color=4c9a6b" alt="CI"></a>
+  <a href="https://github.com/webkubor/xiaobai-kanban"><img src="https://img.shields.io/github/stars/webkubor/xiaobai-kanban?style=for-the-badge&color=coral" alt="Stars"></a>
+  <a href="https://github.com/webkubor/xiaobai-kanban"><img src="https://img.shields.io/badge/Tutorial-333333?style=for-the-badge" alt="技术栈"></a>
+</p>
 
 ---
 
@@ -117,30 +123,63 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 
 </details>
 
-### 🔧 webkubor 生态
+### 🔧 我做的工具：按你会遇到的场景挑
 
-#### 不用写代码就能用
+> 下面每条都是「**你遇到这个麻烦** → 装这个」。没遇到就别装，装了也不用。
 
-| 工具 | 一句话 | 怎么用 |
-|------|--------|--------|
-| 🔐 [**kyvault**](https://github.com/webkubor/kyvault) | Token / 密码加密存本地，AI 只拿到别名，永远看不到明文 | `pipx install git+https://github.com/webkubor/kyvault.git` |
-| 📊 [**scorecard**](https://github.com/webkubor/scorecard) | 粘一个 GitHub 链接，出八维度质检雷达图和整改清单 | 直接开 [scorecard.webkubor.online](https://scorecard.webkubor.online) |
-| 📉 [**usage-statusline**](https://github.com/webkubor/claude-usage-statusline) | Claude Code 状态栏显示：花了多少钱、还剩多少额度、什么时候重置 | 见仓库 README |
-| 🎤 [**VoxFlow**](https://github.com/webkubor/voxflow) | AI 声音到 AI 音乐，一套工作流做到自动上架 | 见仓库 README |
-| 😀 [**微信表情投稿**](https://github.com/webkubor/charmoji) | 一张 IP 正面照 → 整套可提交的微信表情素材 | 见仓库 README |
+#### 🆘 场景一：Token / 密码不知道往哪放
 
-#### 开始写代码之后再看
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| 密码、API Key 写在 `.env` 里，怕被 AI 读进上下文 | [**kyvault**](https://webkubor.github.io/kyvault/) | `cargo install kyvault`<br>（没有 Rust？用 [一条命令装](https://github.com/webkubor/kyvault#-30-秒上手)） |
+| 不知道这个月 Claude Code 花了多少钱 | [**usage-statusline**](https://github.com/webkubor/claude-usage-statusline) | 见仓库 README（单文件 Python，零依赖） |
 
-| 工具 | 一句话 | 安装 |
-|------|--------|------|
-| 👀 [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 实时看到前端报错，不用你截图描述 | `npm i -D vite-plugin-agent-eyes` |
-| 🛡️ [**contrast-guard**](https://github.com/webkubor/contrast-guard) | 配色对比度不达标时直接算出该改成多少；还能量页面视觉质量 | `npm i -g contrast-guard` |
-| 🔄 [**refresh-guard**](https://github.com/webkubor/vite-plugin-refresh-guard) | 发新版后让用户自动刷到最新，不用喊「清缓存」 | `npm i -D vite-plugin-refresh-guard` |
-| 📮 [**im-notify-kit**](https://github.com/webkubor/im-notify-kit) | 飞书 / 企微群机器人通知，带重试和去重 | `npm i im-notify-kit` |
-| 🌊 [**ai-sse-kit**](https://github.com/webkubor/ai-sse-kit) | AI 流式对话（打字机效果）的传输层 | `npm i ai-sse-kit` |
+#### 📊 场景二：想让别人（或自己）看看项目做得怎么样
 
-> 主题党另外看：[Typora Bloom](https://github.com/webkubor/typora-Bloom-theme)（95⭐，写作主题）、
-> [DSH Bloom](https://github.com/webkubor/dsh-bloom-theme)（终端 Agent 配色）。
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| 不知道自己的开源项目还有哪些该补的 | [**scorecard**](https://scorecard.webkubor.online) | **不用装**，网页粘个 GitHub 链接就出报告 |
+| 配色对比度总被说看不清 | [**contrast-guard**](https://github.com/webkubor/contrast-guard) | `npm i -g contrast-guard` |
+
+#### 🎨 场景三：出图、做封面、做表情
+
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| 要做封面 / 配图 / 表情包，但不会设计 | [**MUSE AV**](https://museav.top) | **不用装**，网页注册就能出图（手册：[docs.museav.top](https://docs.museav.top)） |
+| 想把微信聊天做成好看的效果图 | [**chat-mood-gen**](https://wechat.webkubor.online) | **不用装**，网页直接做 |
+| 一张 IP 照片要做整套微信表情 | [**charmoji**](https://github.com/webkubor/charmoji-sticker-skill) | 这是个 Agent skill，让 Agent 读仓库说明装 |
+
+#### 💻 场景四：开始写代码了，让 Agent 少踩坑
+
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| Agent 改完代码，你看不出对不对，只能截图问它 | [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | `npm i -D vite-plugin-agent-eyes` |
+| 发了新版，用户还在用旧页面 | [**refresh-guard**](https://github.com/webkubor/vite-plugin-refresh-guard) | `npm i -D vite-plugin-refresh-guard` |
+| 想让 Agent 打字机式地流式回答 | [**ai-sse-kit**](https://github.com/webkubor/ai-sse-kit) | `npm i ai-sse-kit` |
+| 想让程序自己往飞书 / 企微群里发通知 | [**im-notify-kit**](https://github.com/webkubor/im-notify-kit) | `npm i im-notify-kit` |
+
+#### ✍️ 场景五：写东西（写文档、写公众号）
+
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| 用 Typora 写长文，默认主题看久了累 | [**Bloom**](https://bloom.webkubor.online/) | 网页看效果 → 下载主题文件放进 Typora 主题目录 |
+| 想把 Markdown 一键变成 PDF / 长图 / 演讲页 | [**facet**](https://github.com/webkubor/facet) | 见仓库 README（`npx` 直接跑） |
+
+#### 🎬 场景六：做短视频 / 搞音频
+
+| 你遇到 | 工具 | 怎么装 |
+|---|---|---|
+| 要批量做竖版短视频（素材+文案+配音） | [**reel-kit**](https://github.com/webkubor/reel-kit) | `npm i -g @kubor/reel-kit` |
+| 想在 Mac 上做语音克隆、播客、生成 BGM | [**VoxFlow**](https://github.com/webkubor/voxflow) | 见仓库 README |
+
+> 💡 **看不懂「npm i」「cargo install」是什么？** 先看 [认识 CLI：AI 的手脚](./docs/about-cli.md)。
+> 或者直接把命令丢给你的 Agent，说「帮我装这个」。
+
+#### 主题美化（可选）
+
+- [**Typora Bloom**](https://github.com/webkubor/typora-Bloom-theme) — 24 套明暗主题，写长文舒服
+- [**DSH Bloom**](https://github.com/webkubor/dsh-bloom-theme) — 终端 Agent 的配色主题
+
 
 ---
 
@@ -161,8 +200,8 @@ glab version 2>/dev/null && echo "✅ glab 已安装" || echo "⚠️ glab 未�
 gh --version 2>/dev/null && echo "✅ gh 已安装" || echo "⚠️ gh 未安装 → brew install gh"
 # 4. Node.js
 node --version 2>/dev/null && echo "✅ Node.js: $(node --version)" || echo "⚠️ Node.js 未安装 → https://nodejs.org"
-# 5. kyvault
-kyvault --version 2>/dev/null && echo "✅ kyvault 已安装" || echo "❌ kyvault 未安装 → pipx install git+https://github.com/webkubor/kyvault.git && kyvault init"
+# 5. kyvault（Rust 写的，用 cargo 装）
+kyvault --version 2>/dev/null && echo "✅ kyvault 已安装" || echo "❌ kyvault 未安装 → cargo install kyvault"
 ```
 
 </details>
@@ -305,7 +344,7 @@ Agent 会说：「Token 有问题」
 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 前端监控 |
 | [contrast-guard](https://github.com/webkubor/contrast-guard) | 配色对比度 + 视觉质量护栏 |
 | [voxflow](https://github.com/webkubor/voxflow) | AI 声音到 AI 音乐 |
-| [scorecard](https://github.com/webkubor/scorecard) | 开源项目八维度质检 |
+| [scorecard](https://github.com/webkubor/scorecard) | 开源项目九维度质检 |
 
 推荐的开源工具：
 
