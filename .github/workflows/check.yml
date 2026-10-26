@@ -10,6 +10,10 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # 同时作为可复用 workflow：deploy.yml 用 needs 引用本 workflow 的门禁。
+  # GitHub 的 needs 只能引用**同一个 workflow 文件**里的 job，跨文件必须走
+  # workflow_call —— 直接写 needs: check 会让 deploy 立刻失败（找不到那个 job）。
+  workflow_call:
 
 jobs:
   check:

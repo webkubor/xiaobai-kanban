@@ -23,6 +23,10 @@ env:
   CLOUDFLARE_ACCOUNT_ID: '916ebb1b9f240bf4c8826021dd161692'
 
 jobs:
+  # 门禁先跑（复用 check.yml），过了才部署。
+  check:
+    uses: ./.github/workflows/check.yml
+
   cloudflare-pages-deploy:
     name: build + deploy to Cloudflare Pages
     runs-on: ubuntu-latest
