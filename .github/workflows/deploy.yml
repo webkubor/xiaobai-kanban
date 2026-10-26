@@ -27,6 +27,9 @@ jobs:
     name: build + deploy to Cloudflare Pages
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # 先过 check 门禁（同一份 build）再部署：门禁没过的东西不许上线。
+    # 之前这里直接 build 完就 deploy，坏 Markdown 会跟着推到线上。
+    needs: check
 
     steps:
       - name: Checkout

@@ -1,0 +1,37 @@
+name: check
+
+# xiaobai-kanban 的门禁：把站点构建一遍。
+#
+# 这个仓没有单元测试，vitepress build 就是最诚实的那道门：Markdown 写坏了、
+# 链接指错了、组件 import 崩了，build 会当场失败，而不是等到部署之后才发现
+# 线上少了一块。
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.20.0
+          run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
