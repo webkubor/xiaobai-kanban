@@ -1,4 +1,4 @@
-![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/xiaobai-kanban-banner/cs-token4ai-1784197731848395000.png)
+![banner](https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/blog/projects/xiaobai-kanban-banner/banner.webp)
 
 # 🧭 小白看板 — 让 Agent 帮你写代码
 
