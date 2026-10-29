@@ -72,7 +72,7 @@ jobs:
       - name: Deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: pnpm exec wrangler pages deploy .vitepress/dist --project-name xiaobai-kanban --branch main --commit-dirty=true
+        run: pnpm exec wrangler pages deploy .vitepress/site-dist --project-name xiaobai-kanban --branch main --commit-dirty=true
 
 # 部署失败告警：成功与否若要推送通知，接上飞书 webhook 即可；
 # 这里先留空实现，避免在没有 webhook 变量时把流水线卡住。

@@ -59,6 +59,9 @@
 
 ## 🧰 配套工具：遇到这个场景就装这个
 
+全部 38 个公开仓库、中文关键词和单独介绍页见 [开源工具箱](./docs/tools/index.md)。
+想找图片托管？直接看 [免费图床 free-imgbed](./docs/tools/free-imgbed.md)。
+
 > 完整清单（含安装命令）见 [README 的工具箱](./README.md#🔧-我做的工具-按你会遇到的场景挑)。
 
 | 你遇到 | 用这个 | 直接打开 / 安装 |
@@ -84,6 +87,15 @@
 | 👤 小白用户 | [README.md](./README.md) | 从头开始看，跟着步骤走 |
 | 🎵 会用 AI 写代码的人 | [vibe coding 主线](./docs/vibe-coding-path.md) | 已经能写代码，想学怎么写得又快又准 |
 | 🤖 AI Agent | [AGENTS.md](./AGENTS.md) | Agent 读这个，知道怎么干活 |
+| 💬 卡住想找人问 | [关于我们 / 加客服](./docs/about.md) | 答疑免费，不绑定任何工具 |
+
+## 💬 关于我们
+
+| 想知道 | 去哪看 |
+|--------|--------|
+| 这个站是谁做的、为什么免费 | [关于我们](./docs/about.md) |
+| 我们靠什么活着（哪些收费、哪些永远免费） | [关于我们 · 收入来源](./docs/about.md#这些内容为什么免费) |
+| 装不上 / 报错看不懂，想找人看 | [加客服答疑](./docs/about.md#卡住了-直接问) |
 
 ## 📁 仓库结构
 
@@ -95,6 +107,8 @@ xiaobai-kanban/
 ├── catalog.md         📑 本文件（目录索引）
 ├── LICENSE            📄 MIT 开源协议
 ├── .vitepress/        ⚙️ 站点配置（VitePress）
+│   ├── config.mts     导航 / 侧边栏 / SEO
+│   └── theme/         自定义主题（配色、排版、悬浮客服入口）
 ├── public/llms.txt    🤖 给 LLM 的站点索引
 ├── scripts/           🔧 构建辅助（把原文复制进产物）
 └── docs/              📝 教程文档

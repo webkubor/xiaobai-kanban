@@ -15,6 +15,10 @@
 
 ---
 
+> 🧭 **第一次来？** 往下看「⚡ 10 秒开始」就够，不用先读完全文。
+> 想知道这个站为什么全免费 → [关于我们](./docs/about.md)；
+> 已经卡住了 → [直接问客服](./docs/about.md#卡住了-直接问)，答疑不收费。
+
 ## ⚡ 10 秒开始
 
 对你的 Agent 说：
@@ -336,7 +340,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 | 你遇到 | 工具 | 解决什么 | 怎么装 |
 |---|---|---|---|
 | Agent 改完代码，你看不出对不对，只能截图问它 | [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | 自愈遥测 + 截图 + DOM 快照，不靠猜代码定位问题 | `npm i -D vite-plugin-agent-eyes` |
-| 配色对比度总被说看不清 | [**contrast-guard**](https://github.com/webkubor/contrast-guard) | 量化对比度，把「看不清」变成可验证的数字 | `npm i -g contrast-guard` |
+| 配色对比度总被说看不清 | [**contrast-guard**](https://github.com/webkubor/frontend-contrast-guard) | 量化对比度，把「看不清」变成可验证的数字 | `npm i -g contrast-guard` |
 | 配色改了，但界面结构也乱了 | [**frontend-contrast-guard**](https://github.com/webkubor/frontend-contrast-guard) | CSS 采样 + 评审证据留档 | 见仓库 README |
 | 发了新版，用户还在用旧页面 | [**refresh-guard**](https://github.com/webkubor/vite-plugin-refresh-guard) | 版本更新检测：静默 / 提示 / 弹窗阻断，三档 | `npm i -D vite-plugin-refresh-guard` |
 | 想让 Agent 打字机式地流式回答 | [**ai-sse-kit**](https://github.com/webkubor/ai-sse-kit) | SSE 分帧 / 协议适配 / 取消生命周期，框架无关 | `npm i ai-sse-kit` |
@@ -358,7 +362,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 
 | 你遇到 | 工具 | 解决什么 | 怎么装 |
 |---|---|---|---|
-| 写文档 / 写公众号，没个章法 | [**agent-skills**](https://github.com/webkubor/agent-skills) | 写作、评审、排版的一整套 skill | 见仓库 README |
+| 写文档 / 写公众号，没个章法 | [**writing-standard-skills**](https://github.com/webkubor/writing-standard-skills) | 写作、评审、排版的一整套 skill | 见仓库 README |
 | 想让程序自己往飞书 / 企微群里发通知 | [**im-notify-kit**](https://github.com/webkubor/im-notify-kit) | 统一的通知出口 | `npm i im-notify-kit` |
 | 用 Typora 写长文，默认主题看久了累 | [**Bloom**](https://bloom.webkubor.online/) | 24 套明暗主题 | 网页看效果 → 下载放进 Typora 主题目录 |
 | 想给终端 Agent 换配色 | [**DSH Bloom**](https://github.com/webkubor/dsh-bloom-theme) | 终端 Agent 的配色主题 | `npm i dsh-bloom-theme` |
@@ -391,7 +395,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 | 你遇到 | 工具 | 解决什么 | 怎么装 |
 |---|---|---|---|
 | 想统一管理一整套 CLI | [**SuperCLI**](https://github.com/webkubor/supercli) | 一站式 CLI 工具箱 | `pnpm install` |
-| 想自己搭 GitHub 图床 | [**free-imgbed**](https://github.com/webkubor/free-imgbed) | fork 即用的免费图床方案 | 见仓库 README |
+| 想自己搭免费图床、托管 Markdown 图片 | [**免费图床 free-imgbed**](./docs/tools/free-imgbed.md) | fork GitHub 仓库管理图片，配合 jsDelivr CDN 获取图片直链；[开源仓库](https://github.com/webkubor/free-imgbed) | 见仓库 README |
 | 想快速启动 AI 助手 | [**webkubor**](https://webkubor.online) | 个人 AI 工具入口站 | **不用装**，网页直接用 |
 
 > 💡 **看不懂「npm i」「cargo install」是什么？** 先看 [认识 CLI：AI 的手脚](./docs/about-cli.md)。
@@ -510,8 +514,8 @@ glab version && gh --version
 | 「我想写代码，但不知道从哪开始」 | 「用 Superpowers 帮我搭项目骨架」 | [Superpowers](https://github.com/obra/superpowers)（258K⭐ 研发技能框架） |
 | 「前端报错了，我看不懂」 | 「装 agent-eyes，然后读日志告诉我哪坏了」 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) |
 | 「Token 存哪才安全」 | 「装 kyvault，帮我把 Token 加密存好」 | [kyvault](https://github.com/webkubor/kyvault) |
-| 「这个配色是不是看不清」 | 「用 contrast-guard 检查对比度」 | [contrast-guard](https://github.com/webkubor/contrast-guard) |
-| 「我的页面为什么这么丑」 | 「用 contrast-guard measure 量一下，跟 linear.app 比」 | [contrast-guard](https://github.com/webkubor/contrast-guard) `measure` |
+| 「这个配色是不是看不清」 | 「用 contrast-guard 检查对比度」 | [contrast-guard](https://github.com/webkubor/frontend-contrast-guard) |
+| 「我的页面为什么这么丑」 | 「用 contrast-guard measure 量一下，跟 linear.app 比」 | [contrast-guard](https://github.com/webkubor/frontend-contrast-guard) `measure` |
 | 「这个开源项目靠谱吗」 | 「用 scorecard 给它打个分」 | [scorecard.webkubor.online](https://scorecard.webkubor.online) |
 | 「我这个月 AI 花了多少钱」 | 「装 usage-statusline」 | [usage-statusline](https://github.com/webkubor/claude-usage-statusline) |
 
@@ -541,15 +545,23 @@ Agent 会说：「Token 有问题」
 
 ---
 
-## 🆘 卡住了？找客服
+## 🆘 卡住了？找客服（答疑免费）
 
 <div align="center">
-<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="客服二维码：扫码加客服答疑" width="180" />
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="客服二维码：扫码加客服答疑" width="200" />
 
-**扫码加客服 · 有问题直接问**
+**扫码加客服** · 加好友请注明「来自小白看板」+ 你卡在哪一步
 </div>
 
-> 💡 **为什么在这里放客服？**
+### 三种情况，三种解法
+
+| 你遇到的事 | 怎么处理 | 花不花钱 |
+|---|---|:--:|
+| 报错看不懂、命令跑不通、装不上 | 截图发过来，帮你看是哪一环断了 | **免费** |
+| 不知道该装哪个模型、要不要买套餐 | 说下你的用途和预算，给具体建议 | **免费** |
+| 想让人陪着把第一个项目做完 | 说下目标，我们评估能不能接 | 按项目谈 |
+
+> 💡 **为什么把客服放在这么显眼的地方？**
 >
 > 这个看板教的是**装工具、上手写代码**——而这两件事天然容易卡住：
 >
@@ -564,7 +576,8 @@ Agent 会说：「Token 有问题」
 > 这些问题**自己反复试错很费时间**，有人看一眼截图就能定位。
 > 所以我们把客服放在这里——**卡住了就问，比自己瞎试快。**
 >
-> 💬 客服答疑不收费，也不绑定任何工具，**问一句不亏**。
+> 💬 答疑不收费，也不绑定任何工具，**问一句不亏**。
+> 想知道我们是谁、靠什么活着 → [关于我们](./docs/about.md)。
 
 ---
 
@@ -594,7 +607,7 @@ Agent 会说：「Token 有问题」
 | [typora-Bloom-theme](https://github.com/webkubor/typora-Bloom-theme) | Typora 写作主题（95⭐） |
 | [kyvault](https://github.com/webkubor/kyvault) | Agent 密钥安全 |
 | [vite-plugin-agent-eyes](https://github.com/webkubor/vite-plugin-agent-eyes) | Agent 前端监控 |
-| [contrast-guard](https://github.com/webkubor/contrast-guard) | 配色对比度 + 视觉质量护栏 |
+| [contrast-guard](https://github.com/webkubor/frontend-contrast-guard) | 配色对比度 + 视觉质量护栏 |
 | [voxflow](https://github.com/webkubor/voxflow) | AI 声音到 AI 音乐 |
 | [scorecard](https://github.com/webkubor/scorecard) | 开源项目九维度质检 |
 

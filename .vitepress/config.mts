@@ -15,14 +15,19 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: '小白看板',
-  description: '让 Agent 帮你写代码 —— 你只说话，Agent 搞定一切。不需要懂代码、不需要懂命令行。',
+  description: '从低成本的 AI 上手教程和开源工具开始，学会做出、验收并发布自己的作品。',
 
   // Cloudflare Pages 挂在子域根路径上
   base: '/',
   // 输出 /AGENTS 而不是 /AGENTS.html
   cleanUrls: true,
+  // 使用专用构建目录，避免清理旧 dist 时被批量删除保护拦截。
+  outDir: '.vitepress/site-dist',
   // 这些目录不是站点内容，别当页面处理
   srcExclude: ['node_modules/**', 'scripts/**', 'README.en.md', '.github/**'],
+
+  // 让搜索引擎发现教程与 38 个公开仓库的独立介绍页。
+  sitemap: { hostname: 'https://xiaobai.webkubor.online' },
 
   // ⚠️ 为什么目录页叫 catalog.md 而不是 INDEX.md：
   // macOS 的文件系统默认大小写不敏感，而首页必须是 index.md —— 于是
@@ -32,10 +37,24 @@ export default defineConfig({
   // 会触发「Cannot find module .temp/catalog.md.js」的内部解析错误。
 
   head: [
-    ['meta', { name: 'theme-color', content: '#3c8772' }],
+    ['meta', { name: 'theme-color', content: '#f5821f' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '小白看板 —— 让 Agent 帮你写代码' }],
-    ['meta', { property: 'og:description', content: '从零开始，跟着编号走，一步步学会用 Agent 写代码。' }]
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content:
+          '从免费的 AI 教程与开源工具起步，学着把自己的想法做成、验收并发布。'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'AI 编程教程,Agent 教程,vibe coding,免费 AI 编程,magpie,小白学 AI'
+      }
+    ]
   ],
 
   themeConfig: {
@@ -49,7 +68,10 @@ export default defineConfig({
     nav: [
       { text: '🏠 首页', link: '/' },
       { text: '👤 小白入口', link: '/README' },
-      { text: '🤖 Agent 入口', link: '/AGENTS' },
+      { text: '🎵 vibe coding', link: '/docs/vibe-coding-path' },
+      { text: '💰 不花钱', link: '/docs/magpie' },
+      { text: '💬 关于我们', link: '/docs/about' },
+      { text: '🧰 工具箱', link: '/docs/tools/index' },
       { text: '📑 目录', link: '/catalog' }
     ],
 
@@ -101,13 +123,35 @@ export default defineConfig({
         ]
       },
       {
+        text: '🧰 开源工具箱（38 个项目）',
+        collapsed: false,
+        items: [
+          { text: '📦 工具总目录', link: '/docs/tools/index' },
+          { text: '🖼️ 免费图床', link: '/docs/tools/free-imgbed' },
+          { text: '🔐 密钥库 kyvault', link: '/docs/tools/kyvault' },
+          { text: '🔍 PATH 诊断', link: '/docs/tools/path-guard' },
+          { text: '👁️ 前端自愈遥测', link: '/docs/tools/vite-plugin-agent-eyes' },
+          { text: '🩺 项目体检', link: '/docs/tools/scorecard' },
+          { text: '🌐 浏览器自动化', link: '/docs/tools/lite-browser' },
+          { text: '📇 CLI 工具目录', link: '/docs/tools/supercli' }
+        ]
+      },
+      {
         text: '🧑‍💼 角色指南',
         collapsed: false,
         items: [
           { text: '🏠 首页（我是哪一类？）', link: '/' },
           { text: '👤 小白用户 → README', link: '/README' },
           { text: '🤖 AI Agent → AGENTS.md', link: '/AGENTS' },
-          { text: '📑 目录索引 → INDEX', link: '/catalog' }
+          { text: '📑 目录索引 → catalog', link: '/catalog' }
+        ]
+      },
+      {
+        text: '💬 关于我们 / 答疑',
+        collapsed: false,
+        items: [
+          { text: '我们是谁、靠什么活着', link: '/docs/about' },
+          { text: '卡住了？加客服（答疑免费）', link: '/docs/about#卡住了-直接问' }
         ]
       }
     ],
@@ -121,7 +165,8 @@ export default defineConfig({
     },
 
     footer: {
-      message: '以 MIT 协议开源 · 内容会随反馈持续更新',
+      message:
+        '以 MIT 协议开源 · 让每个人都能便宜甚至免费用上 AI · <a href="/docs/about">关于我们</a>',
       copyright: '小白看板 · xiaobai.webkubor.online'
     },
 

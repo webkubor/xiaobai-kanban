@@ -8,7 +8,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build && node scripts/copy-markdown.mjs",
     "preview": "vitepress preview",
-    "deploy": "pnpm build && CLOUDFLARE_ACCOUNT_ID=916ebb1b9f240bf4c8826021dd161692 wrangler pages deploy .vitepress/dist --project-name xiaobai-kanban --branch main --commit-dirty=true"
+    "deploy": "pnpm build && CLOUDFLARE_ACCOUNT_ID=916ebb1b9f240bf4c8826021dd161692 wrangler pages deploy .vitepress/site-dist --project-name xiaobai-kanban --branch main --commit-dirty=true"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",

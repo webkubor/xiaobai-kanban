@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# 机器可读入口，对爬虫开放
+Allow: /llms.txt
+Allow: /documents.json
+Allow: /AGENTS.md
+Allow: /catalog.md
+
+Sitemap: https://xiaobai.webkubor.online/sitemap.xml

@@ -4,7 +4,7 @@ layout: home
 hero:
   name: 🧭 小白看板
   text: 让 Agent 帮你写代码
-  tagline: 你只说话，Agent 搞定一切。不需要懂代码、不需要懂命令行。
+  tagline: 从免费工具和入门教程开始，学着指挥 Agent 做出、验收并发布自己的作品。
   actions:
     - theme: brand
       text: 👤 我是小白，从头开始
@@ -13,8 +13,8 @@ hero:
       text: 🎵 我会用 AI 写代码，想学 vibe coding
       link: /docs/vibe-coding-path
     - theme: alt
-      text: 🤖 我是 Agent，读操作手册
-      link: /AGENTS
+      text: 💰 从免费额度开始
+      link: /docs/magpie
     - theme: alt
       text: 📑 先看目录
       link: /catalog
@@ -25,26 +25,31 @@ features:
     details: 从「Agent 是什么」开始，跟着 01→13 的编号走。每篇 3~10 分钟，看完能自己指挥 Agent 做一个网页、把代码推上线。
     link: /README
     linkText: 从小白入口开始
+  - icon: 💰
+    title: 给不想花钱的人
+    details: AI 编程可以先用可用的免费额度。了解 magpie 本地网关怎么配置，再根据用量和当前活动决定是否付费。
+    link: /docs/magpie
+    linkText: 看怎么不花钱
   - icon: 🎵
     title: 给会用 AI 写代码的人
     details: 四篇主线讲透 vibe coding：一轮该做多小、不会写代码怎么验收、跑偏了怎么拉回来、项目变大怎么不失控。
     link: /docs/vibe-coding-path
     linkText: 进 vibe coding 主线
-  - icon: 💰
-    title: 给不想花钱的人
-    details: AI 编程一定要订阅 Claude / Codex 吗？不用。国内一线模型都有免费额度，配合 magpie 本地网关，一分钱不花。
-    link: /docs/magpie
-    linkText: 看怎么不花钱
+  - icon: 🧰
+    title: 配套工具
+    details: kyvault 管密钥、Agent Eyes 盯前端报错、contrast-guard 做视觉护栏……38 个开源工具，按你会遇到的场景挑。
+    link: /docs/tools/index
+    linkText: 打开工具箱
+  - icon: 💬
+    title: 卡住了能问人
+    details: 装不上、跑不通或不知道怎么选模型，可以带上步骤和截图扫码咨询。教程和工具可直接使用。
+    link: /docs/about
+    linkText: 怎么找到我们
   - icon: 🤖
     title: 给 AI Agent
     details: AGENTS.md 是操作手册：先自检你是哪个框架（Hermes / OpenCLAW / Claude Code / Codex），再装密钥工具、跑前置自检、按平台推送代码。
     link: /AGENTS
     linkText: 读 AGENTS.md
-  - icon: 🧰
-    title: 配套工具
-    details: kyvault 管密钥、Agent Eyes 盯前端报错、contrast-guard 做视觉护栏……完整工具箱与维护规则见 README。
-    link: /README
-    linkText: 打开工具箱
 ---
 
 ## 你是哪一类读者？
@@ -58,6 +63,22 @@ features:
 | 💰 **不想花钱用 AI 编程** | [装上 magpie](/docs/magpie) | 以为必须订阅 Claude / Codex？不用。国内一线模型有免费额度，一分钱不花。 |
 | 🤖 **AI Agent** | [Agent 入口 → AGENTS.md](/AGENTS) | 收到任务先读这份，它会告诉你怎么自检、怎么干活。 |
 | 🧑‍💻 **正在带一个不懂代码的用户** | 先读 [AGENTS.md](/AGENTS)，再按编号引导他 | Agent 自己读完操作手册，再去带人。 |
+
+<div class="xb-mission">
+  <p class="xb-mission__kicker">关于我们</p>
+  <p class="xb-mission__title">让每个小白从<em>便宜、免费的 AI 教程</em>起步，完成自己的作品闭环。</p>
+  <p class="xb-mission__body">
+    我们从「Agent 是什么」讲起，带你走过想法、需求、制作、验收和发布。
+    教程与开源工具可以直接使用；遇到具体卡点，可以带着步骤和截图来问。
+  </p>
+  <a class="xb-mission__link" href="/docs/about">了解我们与服务方式 →</a>
+</div>
+
+## 想找免费图床或开源工具？
+
+不知道工具叫什么，就按问题找：[**打开 38 个开源项目的工具箱**](/docs/tools/index)。
+例如图片托管与 Markdown 配图，直接看 [免费图床 free-imgbed](/docs/tools/free-imgbed)：
+一个 GitHub 仓库管理图片，配合 CDN 提供图片链接。
 
 ## 学习路径一览
 
@@ -100,6 +121,27 @@ AI 编程一定要订阅 Claude Code / Codex 吗？**不用。** 国内一线模
 | V4 | [人机分工与长期不失控](/docs/vibe-coding-boundary) | 10 分钟 | 分工表、三条红线、上下文管理 |
 
 👉 **[看主线地图 →](/docs/vibe-coding-path)**
+
+## 卡住了？别自己硬扛
+
+代理、开关、额度、版本差异都可能让安装步骤卡住。如果自助排查后仍没解决，带上操作步骤和报错截图联系我们，更方便一起找原因。
+
+<div class="xb-cta">
+  <img class="xb-cta__qr" src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="客服二维码：扫码加客服答疑" />
+  <div>
+    <p class="xb-cta__title">扫码加客服 <span class="xb-badge">答疑免费</span></p>
+    <p class="xb-cta__desc">加好友请注明「来自小白看板」+ 你卡在哪一步，我们好直接看问题。</p>
+    <ul class="xb-cta__list">
+      <li>报错看不懂 —— 截图发来，帮你看是哪一环断了</li>
+      <li>不知道装哪个模型、要不要花钱 —— 按你的用途给建议</li>
+      <li>想让人陪着做完第一个项目 —— 说下目标，我们评估能不能接</li>
+    </ul>
+    <p class="xb-cta__note">不推销、不绑定工具。问一句不亏，答不上来我们会直说。</p>
+  </div>
+</div>
+
+> 💡 为什么把客服放在首页：装工具和第一次跑通，天然会卡在环境和额度上，
+> 而**文字永远描述不清你屏幕上那行红字**。把入口藏起来，只会让你多试错两小时。
 
 ## 给 Agent 的一句话指引
 

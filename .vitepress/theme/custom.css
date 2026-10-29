@@ -1,0 +1,887 @@
+/**
+ * 小白看板 · 主题层
+ *
+ * 品牌色取自本站 banner（blog/projects/xiaobai-kanban-banner/banner.webp）：
+ *   主色  橙 #F5821F —— 大标题、按钮、强调、图标底
+ *   辅色  深橙 #D9690B —— 悬停、渐变暗端
+ *   底色  奶油 #FFF8F0 —— 页面背景，呼应 banner 的暖白
+ *   文字  深墨 #26262B —— banner 上的深灰字
+ *
+ * 设计取向：这是一份「给完全不懂代码的人」的教程，所以
+ *   - 暖色底 + 橙色高亮，像一张纸质看板，不像冷冰冰的文档站
+ *   - 字号偏大、行高偏松，中文长段落读起来不费劲
+ *   - 卡片、表格、引用块都有明确边界和橙色投影，扫读时能一眼抓住重点
+ *   - 暗色模式单独校色，不用默认主题的灰蓝
+ */
+
+/* ================= 浅色：奶油纸感 ================= */
+:root {
+  --xb-orange: #f5821f;
+  --xb-orange-deep: #d9690b;
+  --xb-orange-light: #ffa64d;
+  --xb-cream: #fff8f0;
+  --xb-cream-2: #fdf1e3;
+  --xb-ink: #26262b;
+
+  --vp-c-brand-1: #d9690b;
+  --vp-c-brand-2: #f5821f;
+  --vp-c-brand-3: #ffa64d;
+  --vp-c-brand-soft: rgba(245, 130, 31, 0.14);
+
+  --vp-c-bg: #fffdfa;
+  --vp-c-bg-alt: #fff8f0;
+  --vp-c-bg-soft: #fdf3e7;
+  --vp-c-bg-elv: #ffffff;
+
+  --vp-c-text-1: #26262b;
+  --vp-c-text-2: #55555f;
+  --vp-c-text-3: #8a8a95;
+
+  --vp-c-divider: rgba(217, 105, 11, 0.16);
+  --vp-c-gutter: #f0e6d9;
+
+  --vp-c-default-1: #f5821f;
+  --vp-c-default-2: #d9690b;
+  --vp-c-default-3: #b8560a;
+  --vp-c-default-soft: rgba(245, 130, 31, 0.14);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: var(--xb-orange);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: var(--xb-orange-deep);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: var(--xb-orange-deep);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(115deg, #d9690b 0%, #f5821f 45%, #ff9e42 100%);
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(245, 130, 31, 0.3) 0%,
+    rgba(255, 166, 77, 0.16) 45%,
+    transparent 72%
+  );
+
+  --vp-font-family-base: 'PingFang SC', 'HarmonyOS Sans SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Source Han Sans SC', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+
+  --xb-radius: 16px;
+  --xb-radius-sm: 10px;
+  --xb-shadow: 0 2px 4px rgba(217, 105, 11, 0.05), 0 10px 28px -14px rgba(217, 105, 11, 0.28);
+  --xb-shadow-lg: 0 4px 10px rgba(217, 105, 11, 0.08), 0 18px 40px -18px rgba(217, 105, 11, 0.35);
+}
+
+/* ================= 暗色：暖棕夜色 ================= */
+html.dark {
+  --vp-c-brand-1: #ffa64d;
+  --vp-c-brand-2: #f5821f;
+  --vp-c-brand-3: #d9690b;
+  --vp-c-brand-soft: rgba(245, 130, 31, 0.18);
+
+  --vp-c-bg: #1e1915;
+  --vp-c-bg-alt: #241e19;
+  --vp-c-bg-soft: #2b241d;
+  --vp-c-bg-elv: #322a22;
+
+  --vp-c-text-1: #f2e9df;
+  --vp-c-text-2: #c2b6a9;
+  --vp-c-text-3: #8d8177;
+
+  --vp-c-divider: rgba(245, 130, 31, 0.2);
+  --vp-c-gutter: #2b241d;
+
+  --vp-c-default-1: #f5821f;
+  --vp-c-default-2: #ffa64d;
+  --vp-c-default-3: #ffb870;
+  --vp-c-default-soft: rgba(245, 130, 31, 0.18);
+
+  --vp-button-brand-bg: #f5821f;
+  --vp-button-brand-hover-bg: #ffa64d;
+  --vp-button-brand-active-bg: #ffa64d;
+
+  --vp-home-hero-name-background: linear-gradient(115deg, #ffa64d 0%, #f5821f 45%, #ff8a5c 100%);
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(245, 130, 31, 0.26) 0%,
+    rgba(217, 105, 11, 0.14) 45%,
+    transparent 72%
+  );
+
+  --xb-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 12px 30px -16px rgba(0, 0, 0, 0.7);
+  --xb-shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.36), 0 22px 48px -20px rgba(0, 0, 0, 0.8);
+}
+
+/* 暗色下按钮用亮橙底 + 深色字，才够清晰 */
+html.dark {
+  --vp-button-brand-text: #2b1a08;
+  --vp-button-brand-hover-text: #2b1a08;
+  --vp-button-brand-active-text: #2b1a08;
+}
+
+/* ================= 导航栏 ================= */
+.VPNavBar {
+  background-color: rgba(255, 253, 250, 0.82) !important;
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+html.dark .VPNavBar {
+  background-color: rgba(26, 22, 19, 0.82) !important;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarTitle .logo {
+  border-radius: 8px;
+}
+
+/* 导航链接：橙色高亮 */
+.VPNavBarMenuLink {
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1);
+}
+
+.VPNavBarMenuLink.active {
+  font-weight: 700;
+}
+
+/* ================= 侧边栏 ================= */
+.VPSidebar {
+  background-color: var(--vp-c-bg-alt) !important;
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem.is-active > .item .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* 激活项左侧一段橙色竖条 */
+.VPSidebarItem.is-active > .item .link::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 18px;
+  border-radius: 0 3px 3px 0;
+  background: var(--xb-orange);
+}
+
+/* ================= 正文阅读体验 ================= */
+.vp-doc {
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.vp-doc p,
+.vp-doc li {
+  font-size: 15.5px;
+}
+
+.vp-doc h1 {
+  letter-spacing: -0.015em;
+  font-weight: 800;
+}
+
+.vp-doc h2 {
+  margin-top: 2.8rem;
+  padding-top: 0;
+  border-top: none;
+  letter-spacing: -0.01em;
+  font-weight: 750;
+}
+
+/* 二级标题前一段橙色竖条，长文里当视觉锚点 */
+.vp-doc h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 0.92em;
+  margin-right: 0.5em;
+  vertical-align: -0.08em;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--xb-orange), var(--xb-orange-light));
+}
+
+.vp-doc h3 {
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+/* 引用块：教程里大量用 💡 / ⚠️ 提示，橙色左边条 + 奶油底 */
+.vp-doc blockquote {
+  margin: 1.5rem 0;
+  padding: 0.95rem 1.15rem;
+  border-left: 4px solid var(--xb-orange);
+  border-radius: 0 var(--xb-radius-sm) var(--xb-radius-sm) 0;
+  background: var(--vp-c-brand-soft);
+  box-shadow: inset 0 0 0 1px rgba(245, 130, 31, 0.08);
+}
+
+.vp-doc blockquote > p {
+  font-size: 14.5px;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote > p:first-child {
+  margin-top: 0;
+}
+
+.vp-doc blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+/* 表格：教程的核心信息载体，圆角 + 斑马纹 + 橙色表头 */
+.vp-doc table {
+  display: block;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: var(--xb-radius);
+  overflow-x: auto;
+  box-shadow: var(--xb-shadow);
+}
+
+.vp-doc th {
+  background: linear-gradient(180deg, var(--xb-orange) 0%, var(--xb-orange-deep) 100%);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc tr:hover {
+  background: var(--vp-c-brand-soft);
+}
+
+.vp-doc td,
+.vp-doc th {
+  border-color: var(--vp-c-divider);
+  padding: 0.62rem 0.95rem;
+}
+
+.vp-doc td code {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* 行内代码 */
+.vp-doc :not(pre) > code {
+  border-radius: 6px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 0.88em;
+  font-weight: 600;
+  padding: 0.1rem 0.32rem;
+}
+
+/* 代码块圆角 + 阴影 */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--xb-radius);
+  box-shadow: var(--xb-shadow);
+  border: 1px solid var(--vp-c-divider);
+}
+
+/* 列表标记用橙色 */
+.vp-doc ul > li::marker {
+  color: var(--xb-orange);
+}
+
+.vp-doc ol > li::marker {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* 分隔线改成虚线橙色 */
+.vp-doc hr {
+  margin: 2.6rem 0;
+  border: none;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+
+/* ================= 首页：沿用橙色品牌横幅的图形语言 ================= */
+.VPHome {
+  background:
+    radial-gradient(circle at 82% 4%, rgba(245, 130, 31, 0.12), transparent 26rem),
+    linear-gradient(180deg, var(--vp-c-bg-alt), var(--vp-c-bg) 34rem);
+}
+
+.VPHero {
+  padding-top: calc(var(--vp-nav-height) + 76px) !important;
+}
+
+/* 默认主题给插槽图片固定了 320×320 的方形容器，横向横幅会被撑爆。
+   这里把容器改成横幅比例并加上 !important，压过组件的 scoped 样式。 */
+.VPHero.has-image .image-container {
+  position: relative;
+  width: min(100%, 430px) !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  transform: none !important;
+}
+
+/* 默认主题用负外边距把图片拉出容器，横向横幅会溢出屏幕 —— 这里清掉 */
+.VPHero.has-image .image {
+  margin: 0 !important;
+}
+
+.VPHero.has-image .image-bg {
+  width: 120% !important;
+  height: 120% !important;
+  border-radius: 50%;
+}
+
+.VPHero.has-image .name,
+.VPHero.has-image .text {
+  max-width: 600px;
+}
+
+/* 插槽插入的品牌横幅：完整显示原始宽高比，不裁切 */
+.xb-hero-banner {
+  position: static;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain;
+  border: 7px solid var(--vp-c-bg-elv);
+  border-radius: 23px;
+  box-shadow: var(--xb-shadow-lg);
+}
+
+@media (max-width: 959px) {
+  .VPHero {
+    padding-top: calc(var(--vp-nav-height) + 40px) !important;
+    padding-right: 20px !important;
+    padding-bottom: 48px !important;
+    padding-left: 20px !important;
+  }
+
+  .VPHero .container {
+    flex-direction: column !important;
+    gap: 28px;
+    max-width: 100% !important;
+  }
+
+  .VPHero .main {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  /* 防止长英文词撑破屏幕 */
+  .VPHero .name,
+  .VPHero .text,
+  .VPHero .tagline {
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+
+  .VPHero .actions {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .VPHero .action {
+    padding: 6px 0;
+    width: 100%;
+  }
+
+  .VPHero .actions .VPButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .VPHero .name,
+  .VPHero .text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* 标题字号随屏幕收窄，避免长标题溢出 */
+  .VPHero .name,
+  .VPHero .text {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .VPHero .tagline {
+    max-width: 100%;
+  }
+
+  .VPHero .actions {
+    justify-content: center;
+  }
+
+  /* 移动端横幅放在标题上方，不要覆盖文字 */
+  .VPHero.has-image .image-container {
+    order: -1;
+    width: 100% !important;
+    aspect-ratio: auto !important;
+  }
+
+  .VPHero.has-image .image-bg {
+    display: none;
+  }
+}
+
+.VPHero .name {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.VPHero .text {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .tagline {
+  max-width: 36em;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+.VPHero .actions {
+  margin-top: 1.8rem;
+}
+
+.VPHero .actions .VPButton {
+  border-radius: 999px;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  box-shadow: var(--xb-shadow);
+}
+
+.VPHero .actions .VPButton.brand {
+  box-shadow: 0 8px 22px -10px rgba(217, 105, 11, 0.75);
+}
+
+/* alt 按钮在浅色下也要看得清：深墨字 + 奶油底 + 橙色描边 */
+.VPHero .actions .VPButton.alt {
+  color: var(--vp-c-text-1) !important;
+  border-color: var(--vp-c-divider) !important;
+  background: var(--vp-c-bg-elv) !important;
+  box-shadow: var(--xb-shadow);
+}
+
+.VPHero .actions .VPButton.alt:hover {
+  border-color: var(--xb-orange) !important;
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPHero .image-bg {
+  opacity: 0.9;
+}
+
+/* 特性卡片：白底 + 橙色图标 + 悬停抬升 */
+.VPFeature {
+  border-radius: var(--xb-radius);
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-elv);
+  box-shadow: var(--xb-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+html.dark .VPFeature {
+  background: var(--vp-c-bg-soft);
+}
+
+.VPFeature:hover {
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-2);
+  box-shadow: var(--xb-shadow-lg);
+}
+
+.VPFeature .icon {
+  background: linear-gradient(135deg, var(--xb-orange) 0%, var(--xb-orange-light) 100%);
+  border-radius: 14px;
+  box-shadow: 0 6px 16px -8px rgba(217, 105, 11, 0.7);
+}
+
+.VPFeature .title {
+  font-weight: 700;
+}
+
+.VPFeature .details {
+  line-height: 1.7;
+}
+
+.VPFeature .link-text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* ================= 自定义区块 ================= */
+
+/* 使命横幅 */
+.xb-mission {
+  position: relative;
+  margin: 3rem 0 0;
+  padding: 2.1rem 1.9rem;
+  border-radius: 22px;
+  border: 1px solid var(--vp-c-divider);
+  background:
+    radial-gradient(120% 150% at 0% 0%, rgba(245, 130, 31, 0.16) 0%, transparent 58%),
+    var(--vp-c-bg-alt);
+  box-shadow: var(--xb-shadow);
+  overflow: hidden;
+}
+
+.xb-mission::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 130, 31, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.xb-mission__kicker {
+  margin: 0 0 0.5rem;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1);
+}
+
+.xb-mission__title {
+  margin: 0 0 0.85rem;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.xb-mission__title em {
+  font-style: normal;
+  background: linear-gradient(120deg, var(--xb-orange) 0%, var(--xb-orange-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.xb-mission__body {
+  margin: 0;
+  max-width: 46em;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--vp-c-text-2);
+}
+
+.xb-mission__link {
+  display: inline-block;
+  margin-top: 1.1rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--xb-orange) 0%, var(--xb-orange-deep) 100%);
+  box-shadow: 0 6px 16px -8px rgba(217, 105, 11, 0.7);
+  transition: transform 0.15s ease;
+}
+
+.xb-mission__link:hover {
+  transform: translateY(-1px);
+}
+
+/* 转化区：客服 + 服务 */
+.xb-cta {
+  display: grid;
+  grid-template-columns: 208px 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2.6rem 0;
+  padding: 1.9rem;
+  border-radius: 22px;
+  border: 1px solid var(--vp-c-divider);
+  background:
+    radial-gradient(100% 130% at 100% 0%, rgba(245, 130, 31, 0.12) 0%, transparent 55%),
+    var(--vp-c-bg-alt);
+  box-shadow: var(--xb-shadow);
+}
+
+.xb-cta__qr {
+  width: 100%;
+  max-width: 208px;
+  border-radius: 14px;
+  border: 1px solid var(--vp-c-divider);
+  background: #fff;
+  padding: 10px;
+  box-shadow: var(--xb-shadow);
+}
+
+.xb-cta__title {
+  margin: 0 0 0.4rem;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.xb-cta__desc {
+  margin: 0 0 1rem;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+.xb-cta__list {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--vp-c-text-2);
+}
+
+.xb-cta__list > li::marker {
+  color: var(--xb-orange);
+}
+
+.xb-cta__note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+}
+
+.xb-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  vertical-align: 2px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--xb-orange) 0%, var(--xb-orange-light) 100%);
+}
+
+/* 三栏服务卡 */
+.xb-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.xb-card {
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--xb-radius);
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-elv);
+  box-shadow: var(--xb-shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.xb-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand-2);
+}
+
+.xb-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.xb-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+}
+
+/* ================= 悬浮客服 ================= */
+.xb-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.xb-fab__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--xb-orange) 0%, var(--xb-orange-deep) 100%);
+  box-shadow: 0 8px 22px -8px rgba(217, 105, 11, 0.8);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.xb-fab__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px rgba(217, 105, 11, 0.9);
+}
+
+.xb-fab__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff3e0;
+  box-shadow: 0 0 0 0 rgba(255, 243, 224, 0.8);
+  animation: xb-pulse 2.2s infinite;
+}
+
+@keyframes xb-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 243, 224, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 243, 224, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 243, 224, 0);
+  }
+}
+
+.xb-fab__panel {
+  position: relative;
+  width: 238px;
+  padding: 16px 16px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-elv);
+  box-shadow: 0 20px 44px -18px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: xb-pop 0.18s ease-out;
+}
+
+@keyframes xb-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.xb-fab__close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--vp-c-text-3);
+  cursor: pointer;
+}
+
+.xb-fab__qr {
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.xb-fab__title {
+  margin: 9px 0 3px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--vp-c-brand-1);
+}
+
+.xb-fab__desc {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--vp-c-text-2);
+}
+
+.xb-fab__hint {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--vp-c-text-3);
+}
+
+/* ================= 响应式 ================= */
+@media (max-width: 720px) {
+  .xb-cta {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+    text-align: center;
+  }
+
+  .xb-cta__qr {
+    margin: 0 auto;
+    max-width: 176px;
+  }
+
+  .xb-cta__list {
+    text-align: left;
+  }
+
+  .xb-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .xb-mission {
+    padding: 1.6rem 1.3rem;
+  }
+
+  .xb-mission__title {
+    font-size: 20px;
+  }
+
+  .xb-fab {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .xb-fab__btn {
+    padding: 9px 14px;
+    font-size: 12.5px;
+  }
+
+  .xb-fab__panel {
+    width: 206px;
+  }
+}
+
+@media print {
+  .xb-fab {
+    display: none;
+  }
+}

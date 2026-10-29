@@ -2,6 +2,9 @@
 
 > 让 Agent 帮你写代码：你只说话，Agent 搞定一切。不需要懂代码、不需要懂命令行。
 >
+> 使命：让每一个普通人都能**便宜甚至免费**地用上 AI，并跑完属于自己的闭环。
+> 教程、开源工具、答疑都不收费；只有「一对一陪跑」和「企业内训」收费，价格提前说清。
+>
 > 本站有**两个入口**，真人和 AI Agent 各走一条。若你（读者）是 AI Agent，请从 `/AGENTS.md` 开始；
 > 若你正在**指导一位不懂代码的用户**，先读 `/AGENTS.md` 知道自己的执行模型，再用下面「给真人」的篇章按编号引导他。
 
@@ -45,9 +48,19 @@
 
 - [装上 magpie：不花钱用 AI 编程](/docs/magpie.md): 三阶段装好 magpie → 开脱敏隐私模式 → 挂 Agent → 挂免费模型（MiniMax/DeepSeek/GLM/Kimi）。**国内一线模型有免费额度，一分钱不用花。**
 
+## 开源工具箱（38 个公开仓库）
+
+- [工具目录](/docs/tools/index.md): 按场景查找全部公开仓库，每个项目有独立介绍页和中文搜索词
+- [免费图床 free-imgbed](/docs/tools/free-imgbed.md): GitHub 图片托管与 jsDelivr 图片链接；仓库 https://github.com/webkubor/free-imgbed
+
+## 关于我们 / 答疑
+
+- [关于我们](/docs/about.md): 这个站是谁做的、相信什么、为什么免费、靠什么活着（哪些收费哪些永远免费）
+- [加客服答疑](/docs/about.md): 装不上、报错看不懂、不知道装哪个模型 → 扫码问。答疑免费，不绑定任何工具
+
 ## 目录与索引
 
-- [INDEX.md](/INDEX.md): 全部章节的编号索引与仓库结构
+- [catalog.md](/catalog.md): 全部章节的编号索引与仓库结构
 - [documents.json](/documents.json): 本站全部机器可读文档的清单
 
 ## 约定

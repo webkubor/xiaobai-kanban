@@ -2,4 +2,4 @@
 # 项目名 xiaobai-kanban，自定义域 xiaobai.webkubor.online。
 name = "xiaobai-kanban"
 compatibility_date = "2026-04-24"
-pages_build_output_dir = ".vitepress/dist"
+pages_build_output_dir = ".vitepress/site-dist"
