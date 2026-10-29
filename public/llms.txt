@@ -33,6 +33,18 @@
 - [12 怎么把需求讲清楚](/docs/how-to-write-requirements.md): ⭐ 最重要的一课。背景 + 目标 + 范围 + 验收，填空模板 + 自检清单
 - [13 申请 Agent 邮箱](/docs/mail.md): 申请邮箱并收发邮件
 
+### 🎵 vibe coding 主线（给「会用 AI 写代码但没掌握协作方式」的人）
+
+- [主线地图](/docs/vibe-coding-path.md): 这条线讲什么、怎么走、只读一篇该读哪篇
+- [V1 什么是 vibe coding](/docs/vibe-coding-what.md): 与「让 AI 写代码」的根本区别、三种失控、为什么小步更重要
+- [V2 一轮该做多小](/docs/vibe-coding-loop.md): 粒度参照表、每轮四步、每轮必问的三句话、什么时候该打断
+- [V3 不会写代码怎么验收](/docs/vibe-coding-review.md): ⭐ 三个信号、红线信号表、纠偏三招
+- [V4 人机分工与长期不失控](/docs/vibe-coding-boundary.md): 分工表、三条红线、上下文管理四招
+
+### 💰 省钱与配置（给「不想花钱」的人）
+
+- [装上 magpie：不花钱用 AI 编程](/docs/magpie.md): 三阶段装好 magpie → 开脱敏隐私模式 → 挂 Agent → 挂免费模型（MiniMax/DeepSeek/GLM/Kimi）。**国内一线模型有免费额度，一分钱不用花。**
+
 ## 目录与索引
 
 - [INDEX.md](/INDEX.md): 全部章节的编号索引与仓库结构

@@ -44,6 +44,23 @@
 | [3 分钟第一次实战](./docs/first-project.md) | 3 分钟 | 亲自指挥 Agent 做出一个网页！ |
 | [怎么跟 Agent 说话](./docs/how-to-speak-to-agent.md) | 5 分钟 | 万能公式，让 Agent 更懂你 |
 
+### 💰 第三步之二：不想花钱？先看这个
+
+| 看这篇 | 花多久 | 看完你会 |
+|--------|:------:|---------|
+| [装上 magpie：不花钱用 AI 编程](./docs/magpie.md) | 15 分钟 | 用免费模型额度，**一分钱不花**让 Agent 干活 |
+
+> 💡 **为什么这篇放在这里？**
+> 「AI 编程要花多少钱」是小白**第一个会问、也最容易误解**的问题。
+> 很多人以为必须订阅 Claude Code 或 Codex（每月十几二十美元），
+> 于是还没开始就劝退了。
+>
+> 实际上：**国内一线模型（MiniMax / DeepSeek / GLM / Kimi）都有免费额度**，
+> 配上 magpie 这个本地网关，一分钱不用花。
+>
+> 📌 顺带一提：纯按量付费的话，一个月花掉 ¥1756、¥2162 是很常见的——
+> **不是模型贵，是用错了付费方式。**
+
 ### 🛠️ 第三步：装工具、学流程
 
 | 看这篇 | 花多久 | 看完你会 |
@@ -67,6 +84,22 @@
 |--------|------|
 | [Agent 邮箱](./docs/mail.md) | 申请 Agent 邮箱 + 收发邮件 |
 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
+
+### 🎵 第五步之二：会用 AI 写代码了？进 vibe coding 主线
+
+**如果你已经能让 AI 生成代码、改样式、修报错，但总觉得来回改很多轮还是差点意思——**
+你不是缺工具，是缺**节奏感**。这条主线专门讲这个。
+
+| 看这篇 | 花多久 | 看完你会 |
+|--------|:------:|---------|
+| [vibe coding 主线地图](./docs/vibe-coding-path.md) | 1 分钟 | 这条线讲什么、怎么走 |
+| [什么是 vibe coding](./docs/vibe-coding-what.md) | 8 分钟 | 它和「让 AI 写代码」的根本区别；为什么小步更重要 |
+| [一轮该做多小](./docs/vibe-coding-loop.md) | 10 分钟 | 粒度参照表、什么时候打断、**每轮必问的三句话** |
+| [不会写代码，怎么验收](./docs/vibe-coding-review.md) | 12 分钟 | 三个信号、**红线信号表**、纠偏三招 ⭐ |
+| [人机分工与长期不失控](./docs/vibe-coding-boundary.md) | 10 分钟 | 分工表、**三条红线**、上下文管理四招 |
+
+> 💡 **没时间？** 只读 👉 [不会写代码，怎么验收？](./docs/vibe-coding-review.md) 一篇就够。
+> 大多数人翻车都翻在「做完了却没发现已经歪了」。
 
 ---
 
@@ -125,61 +158,253 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 
 ### 🔧 我做的工具：按你会遇到的场景挑
 
-> 下面每条都是「**你遇到这个麻烦** → 装这个」。没遇到就别装，装了也不用。
+> **下面这些全是「装完就能解决问题」的东西**——每个都写清了：
+> **解决什么问题 → 地址 → 怎么装**。
+>
+> 不用一次全装。按场景挑，用到哪个装哪个，没遇到就别装。
 
+#### 🖼️ 工具一览（认脸用）
+
+> 下面是**有正式品牌标识**的 21 个主力工具，先混个脸熟。
+> 每个都通过了图床的品牌校验（32px 可辨、四边留白均衡、明暗两版各自适配底色）。
+> 想知道具体能干什么，往下翻对应场景 👇
+
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px;margin:18px 0 26px">
+
+<a href="https://github.com/webkubor/kyvault" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<span style="height:38px;display:flex;align-items:center;justify-content:center;font-size:22px">🔑</span>
+<span style="font-size:12.5px;font-weight:600">kyvault</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">密钥加密存<br/>用环境变量注入</span>
+</a>
+
+<a href="https://github.com/webkubor/scorecard" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/scorecard/mark-v3.svg" alt="scorecard" height="38" />
+<span style="font-size:12.5px;font-weight:600">scorecard</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">开源项目<br/>体检报告</span>
+</a>
+
+<a href="https://github.com/webkubor/claude-usage-statusline" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/claude-usage-statusline/mark-v3.svg" alt="usage-statusline" height="38" />
+<span style="font-size:12.5px;font-weight:600">usage-statusline</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">终端看<br/>Claude 用量花费</span>
+</a>
+
+<a href="https://github.com/webkubor/device-passport" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/device-passport/mark-v3.svg" alt="device-passport" height="38" />
+<span style="font-size:12.5px;font-weight:600">device-passport</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">设备身份<br/>能力证明</span>
+</a>
+
+<a href="https://github.com/webkubor/supercli" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/supercli/mark-v3.svg" alt="supercli" height="38" />
+<span style="font-size:12.5px;font-weight:600">SuperCLI</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">一站式<br/>CLI 工具箱</span>
+</a>
+
+<a href="https://github.com/webkubor/facet" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/facet/mark-v3.svg" alt="facet" height="38" />
+<span style="font-size:12.5px;font-weight:600">facet</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">Markdown 转<br/>PDF / 长图 / 演讲页</span>
+</a>
+
+<a href="https://github.com/webkubor/chat-mood-gen" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/chat-mood-gen/mark-v3.svg" alt="chat-mood-gen" height="38" />
+<span style="font-size:12.5px;font-weight:600">chat-mood-gen</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">微信聊天<br/>转效果图</span>
+</a>
+
+<a href="https://github.com/webkubor/wallpaper-generator" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/wallpaper-generator/mark-v3.svg" alt="wallpaper-generator" height="38" />
+<span style="font-size:12.5px;font-weight:600">wallpaper-gen</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">氛围壁纸<br/>工坊</span>
+</a>
+
+<a href="https://github.com/webkubor/reel-kit" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/reel-kit/mark-v3.svg" alt="reel-kit" height="38" />
+<span style="font-size:12.5px;font-weight:600">reel-kit</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">批量做<br/>竖版短视频</span>
+</a>
+
+<a href="https://github.com/webkubor/voxflow" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/voxflow/mark-v3.svg" alt="voxflow" height="38" />
+<span style="font-size:12.5px;font-weight:600">VoxFlow</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">语音克隆 / 播客<br/>生成 BGM</span>
+</a>
+
+<a href="https://github.com/webkubor/dsh-llm-hub" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-llm-hub/mark-v3.svg" alt="dsh-llm-hub" height="38" />
+<span style="font-size:12.5px;font-weight:600">dsh-llm-hub</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">DSH 的<br/>LLM 接入层</span>
+</a>
+
+<a href="https://github.com/webkubor/free-imgbed" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/free-imgbed/mark-v3.svg" alt="free-imgbed" height="38" />
+<span style="font-size:12.5px;font-weight:600">free-imgbed</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">fork 即用的<br/>免费图床</span>
+</a>
+
+<a href="https://github.com/webkubor/vite-plugin-agent-eyes" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/vite-plugin-agent-eyes/mark-v3.svg" alt="agent-eyes" height="38" />
+<span style="font-size:12.5px;font-weight:600">Agent Eyes</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">前端自愈<br/>遥测与截图</span>
+</a>
+
+<a href="https://github.com/webkubor/lite-browser" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/lite-browser/mark-v3.svg" alt="lite-browser" height="38" />
+<span style="font-size:12.5px;font-weight:600">lite-browser</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">零常驻<br/>AI 浏览器操控</span>
+</a>
+
+<a href="https://github.com/webkubor/meridian" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/meridian/mark-v3.svg" alt="meridian" height="38" />
+<span style="font-size:12.5px;font-weight:600">meridian</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">macOS<br/>Git 图形客户端</span>
+</a>
+
+<a href="https://github.com/webkubor/museav-cli" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/museav-cli/mark-v3.svg" alt="museav-cli" height="38" />
+<span style="font-size:12.5px;font-weight:600">museav-cli</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">终端里<br/>调用出图</span>
+</a>
+
+<a href="https://github.com/webkubor/plugins" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/plugins/mark-v3.svg" alt="plugins" height="38" />
+<span style="font-size:12.5px;font-weight:600">plugins</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">magpie<br/>社区插件集</span>
+</a>
+
+<a href="https://github.com/webkubor/logo-brand-designer" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/logo-brand-designer/mark-v3.svg" alt="logo-brand-designer" height="38" />
+<span style="font-size:12.5px;font-weight:600">logo-designer</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">给项目做<br/>品牌标识</span>
+</a>
+
+<a href="https://github.com/webkubor/pr-contributor-skill" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/pr-contributor-skill/mark-v3.svg" alt="pr-contributor" height="38" />
+<span style="font-size:12.5px;font-weight:600">pr-contributor</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">提 PR / MR<br/>交付规范</span>
+</a>
+
+<a href="https://github.com/webkubor/dsh-museav-assets" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/dsh-museav-assets/mark-v3.svg" alt="dsh-museav-assets" height="38" />
+<span style="font-size:12.5px;font-weight:600">dsh-assets</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">DSH 里<br/>看得见素材库</span>
+</a>
+
+<a href="https://github.com/webkubor/typora-Bloom-theme" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/typora-Bloom-theme/mark-v3.svg" alt="typora-bloom" height="38" />
+<span style="font-size:12.5px;font-weight:600">Bloom</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">24 套<br/>写作主题</span>
+</a>
+
+<a href="https://github.com/webkubor" style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid var(--vp-c-divider);border-radius:12px;text-decoration:none;color:inherit">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/webkubor/mark-v3.svg" alt="webkubor" height="38" />
+<span style="font-size:12.5px;font-weight:600">webkubor</span>
+<span style="font-size:10.5px;opacity:.7;text-align:center;line-height:1.5">个人 AI 工具<br/>入口总站</span>
+</a>
+
+</div>
 #### 🆘 场景一：Token / 密码不知道往哪放
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| 密码、API Key 写在 `.env` 里，怕被 AI 读进上下文 | [**kyvault**](https://webkubor.github.io/kyvault/) | `cargo install kyvault`<br>（没有 Rust？用 [一条命令装](https://github.com/webkubor/kyvault#-30-秒上手)） |
-| 不知道这个月 Claude Code 花了多少钱 | [**usage-statusline**](https://github.com/webkubor/claude-usage-statusline) | 见仓库 README（单文件 Python，零依赖） |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 密码、API Key 写在 `.env` 里，怕被 AI 读进上下文 | [**kyvault**](https://github.com/webkubor/kyvault) | 加密存密钥，用环境变量注入子进程，不落盘明文 | `cargo install kyvault`<br>（没 Rust？[一条命令装](https://github.com/webkubor/kyvault#-30-秒上手)） |
+| 想知道这台机器到底跑的是哪个程序 | [**path-guard**](https://github.com/webkubor/path-guard) | 查清「装了什么 / 跑的是什么 / 被谁挡着」，别再装错版本 | 见仓库 README |
+| 不知道这个月 Claude Code 花了多少钱 | [**usage-statusline**](https://github.com/webkubor/claude-usage-statusline) | 终端状态栏实时显示用量与花费 | 见仓库 README（单文件 Python，零依赖） |
 
 #### 📊 场景二：想让别人（或自己）看看项目做得怎么样
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| 不知道自己的开源项目还有哪些该补的 | [**scorecard**](https://scorecard.webkubor.online) | **不用装**，网页粘个 GitHub 链接就出报告 |
-| 配色对比度总被说看不清 | [**contrast-guard**](https://github.com/webkubor/contrast-guard) | `npm i -g contrast-guard` |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 不知道自己的开源项目还缺什么 | [**scorecard**](https://scorecard.webkubor.online) | 粘个 GitHub 链接就出体检报告 | **不用装**，网页直接用 |
+| 代码写多了，死代码堆成山 | [**deadcode-reaper**](https://github.com/webkubor/deadcode-reaper-skill) | 扫出死代码并清理，还你干净的上下文 | 让 Agent 读仓库说明装 |
+| 想给项目做品牌标识 | [**logo-brand-designer**](https://github.com/webkubor/logo-brand-designer) | 设计 / 重设计 / 验收 logo，出透明底 SVG + 评审页 | Agent skill，见仓库 README |
+| 界面好不好看，说不清 | [**facet**](https://github.com/webkubor/facet) | 把 Markdown 一键变成 PDF / 长图 / 演讲页，也能给界面做结构化体检 | `npx` 直接跑 |
 
 #### 🎨 场景三：出图、做封面、做表情
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| 要做封面 / 配图 / 表情包，但不会设计 | [**MUSE AV**](https://museav.top) | **不用装**，网页注册就能出图（手册：[docs.museav.top](https://docs.museav.top)） |
-| 想把微信聊天做成好看的效果图 | [**chat-mood-gen**](https://wechat.webkubor.online) | **不用装**，网页直接做 |
-| 一张 IP 照片要做整套微信表情 | [**charmoji**](https://github.com/webkubor/charmoji-sticker-skill) | 这是个 Agent skill，让 Agent 读仓库说明装 |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 要做封面 / 配图 / 表情包，但不会设计 | [**MUSE AV**](https://museav.top) | 网页注册就能出图 | **不用装**，[手册](https://docs.museav.top) |
+| 想在终端里出图 | [**museav-cli**](https://github.com/webkubor/museav-cli) | MUSE AV 的命令行版 | `npm i -g @museav/cli` |
+| 想把微信聊天做成好看的效果图 | [**chat-mood-gen**](https://wechat.webkubor.online) | 微信聊天截图转成精美效果图 | **不用装**，网页直接做 |
+| 一张 IP 照片要做整套微信表情 | [**charmoji**](https://github.com/webkubor/charmoji-sticker-skill) | 一套表情包自动生成 | 让 Agent 读仓库说明装 |
+| 想让桌面壁纸按心情换 | [**wallpaper-generator**](https://github.com/webkubor/wallpaper-generator) | 氛围壁纸工坊，做完直接设桌面 | **不用装**，网页直接做 |
 
 #### 💻 场景四：开始写代码了，让 Agent 少踩坑
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| Agent 改完代码，你看不出对不对，只能截图问它 | [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | `npm i -D vite-plugin-agent-eyes` |
-| 发了新版，用户还在用旧页面 | [**refresh-guard**](https://github.com/webkubor/vite-plugin-refresh-guard) | `npm i -D vite-plugin-refresh-guard` |
-| 想让 Agent 打字机式地流式回答 | [**ai-sse-kit**](https://github.com/webkubor/ai-sse-kit) | `npm i ai-sse-kit` |
-| 想让程序自己往飞书 / 企微群里发通知 | [**im-notify-kit**](https://github.com/webkubor/im-notify-kit) | `npm i im-notify-kit` |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| Agent 改完代码，你看不出对不对，只能截图问它 | [**Agent Eyes**](https://github.com/webkubor/vite-plugin-agent-eyes) | 自愈遥测 + 截图 + DOM 快照，不靠猜代码定位问题 | `npm i -D vite-plugin-agent-eyes` |
+| 配色对比度总被说看不清 | [**contrast-guard**](https://github.com/webkubor/contrast-guard) | 量化对比度，把「看不清」变成可验证的数字 | `npm i -g contrast-guard` |
+| 配色改了，但界面结构也乱了 | [**frontend-contrast-guard**](https://github.com/webkubor/frontend-contrast-guard) | CSS 采样 + 评审证据留档 | 见仓库 README |
+| 发了新版，用户还在用旧页面 | [**refresh-guard**](https://github.com/webkubor/vite-plugin-refresh-guard) | 版本更新检测：静默 / 提示 / 弹窗阻断，三档 | `npm i -D vite-plugin-refresh-guard` |
+| 想让 Agent 打字机式地流式回答 | [**ai-sse-kit**](https://github.com/webkubor/ai-sse-kit) | SSE 分帧 / 协议适配 / 取消生命周期，框架无关 | `npm i ai-sse-kit` |
+| 想在 Mac 上用图形界面管 Git | [**Meridian**](https://github.com/webkubor/meridian) | Tauri + Vue 的 Git 客户端，MIT 开源无遥测 | 见仓库 README |
 
-#### ✍️ 场景五：写东西（写文档、写公众号）
+#### 🤖 场景五：想让 Agent 更好用（插件 / 技能）
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| 用 Typora 写长文，默认主题看久了累 | [**Bloom**](https://bloom.webkubor.online/) | 网页看效果 → 下载主题文件放进 Typora 主题目录 |
-| 想把 Markdown 一键变成 PDF / 长图 / 演讲页 | [**facet**](https://github.com/webkubor/facet) | 见仓库 README（`npx` 直接跑） |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 想给任意 Agent 装上你的一堆 CLI | [**cs-mcp**](https://github.com/webkubor/cs-mcp) | 一条命令把个人工具链接进任意 Agent，按能力分组 | 见仓库 README |
+| 想给 DSH 装插件 | [**plugins**](https://github.com/webkubor/plugins) | magpie 社区插件：OpenCode provider / 网关中间件 | 见仓库 README |
+| 想让 Agent 看得到你的素材库 | [**dsh-museav-assets**](https://github.com/webkubor/dsh-museav-assets) | DSH 里多一个「资产」tab，素材直接复制直链 | DSH 插件 |
+| 想让 DSH 统一管各家模型 | [**dsh-llm-hub**](https://github.com/webkubor/dsh-llm-hub) | DSH 的 LLM 接入层 | `npm i @dsh-plugins/dsh-llm-hub` |
+| 写代码想有人给规范 | [**writing-standard-skills**](https://github.com/webkubor/writing-standard-skills) | 一套写作 / 评审 / 协作规范 skill | 见仓库 README |
+| 想让 Agent 提 PR 更规范 | [**pr-contributor**](https://github.com/webkubor/pr-contributor-skill) | 个人仓交付 + 外部贡献的统一流程 | 见仓库 README |
+| 想自动同步发版 | [**release-sync**](https://github.com/webkubor/release-sync-skill) | 发版流程自动化 | 见仓库 README |
 
-#### 🎬 场景六：做短视频 / 搞音频
+#### ✍️ 场景六：写东西（写文档、写公众号）
 
-| 你遇到 | 工具 | 怎么装 |
-|---|---|---|
-| 要批量做竖版短视频（素材+文案+配音） | [**reel-kit**](https://github.com/webkubor/reel-kit) | `npm i -g @kubor/reel-kit` |
-| 想在 Mac 上做语音克隆、播客、生成 BGM | [**VoxFlow**](https://github.com/webkubor/voxflow) | 见仓库 README |
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 写文档 / 写公众号，没个章法 | [**agent-skills**](https://github.com/webkubor/agent-skills) | 写作、评审、排版的一整套 skill | 见仓库 README |
+| 想让程序自己往飞书 / 企微群里发通知 | [**im-notify-kit**](https://github.com/webkubor/im-notify-kit) | 统一的通知出口 | `npm i im-notify-kit` |
+| 用 Typora 写长文，默认主题看久了累 | [**Bloom**](https://bloom.webkubor.online/) | 24 套明暗主题 | 网页看效果 → 下载放进 Typora 主题目录 |
+| 想给终端 Agent 换配色 | [**DSH Bloom**](https://github.com/webkubor/dsh-bloom-theme) | 终端 Agent 的配色主题 | `npm i dsh-bloom-theme` |
+
+#### 🎬 场景七：做短视频 / 搞音频
+
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 要批量做竖版短视频（素材+文案+配音） | [**reel-kit**](https://github.com/webkubor/reel-kit) | 批量生产短视频 | `npm i -g @kubor/reel-kit` |
+| 想在 Mac 上做语音克隆、播客、生成 BGM | [**VoxFlow**](https://github.com/webkubor/voxflow) | AI 音频一站式：克隆 / 音色 / 播客 / BGM | 见仓库 README |
+| 歌做完了，要送进发行平台 | [**suno-publisher**](https://github.com/webkubor/suno-publisher) | 填到只差最后一下，那一下留给人 | 见仓库 README |
+
+#### 🔒 场景八：安全 / 设备 / 隐私
+
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 想给设备发一个可验证的「护照」 | [**device-passport**](https://github.com/webkubor/device-passport) | 设备身份与能力证明 | `npm install device-passport` |
+| 想让 Agent 安静待命，别老弹窗 | [**ai-orb**](https://github.com/webkubor/ai-orb) | 一颗会表态的状态球：在想 / 干活中 / 等你回话 / 好了 | 见仓库 README |
+| 想用浏览器操控，但不想装 Chrome | [**lite-browser**](https://github.com/webkubor/lite-browser) | 零常驻的 AI 浏览器操控，专为 Agent 设计 | 见仓库 README |
+
+#### 🧠 场景九：AI 模型 / 图像能力
+
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 想在 Mac 本地跑视觉模型 | [**mlx-vlm-kit**](https://github.com/webkubor/mlx-vlm-kit) | Apple Silicon 本地视觉语言模型 | `pipx install mlx-vlm-kit` |
+| 想给 AI 助手配一颗状态球 | [**ai-orb**](https://github.com/webkubor/ai-orb) | 同上 | 见仓库 README |
+
+#### 🧰 场景十：自己搭一套工具链
+
+| 你遇到 | 工具 | 解决什么 | 怎么装 |
+|---|---|---|---|
+| 想统一管理一整套 CLI | [**SuperCLI**](https://github.com/webkubor/supercli) | 一站式 CLI 工具箱 | `pnpm install` |
+| 想自己搭 GitHub 图床 | [**free-imgbed**](https://github.com/webkubor/free-imgbed) | fork 即用的免费图床方案 | 见仓库 README |
+| 想快速启动 AI 助手 | [**webkubor**](https://webkubor.online) | 个人 AI 工具入口站 | **不用装**，网页直接用 |
 
 > 💡 **看不懂「npm i」「cargo install」是什么？** 先看 [认识 CLI：AI 的手脚](./docs/about-cli.md)。
 > 或者直接把命令丢给你的 Agent，说「帮我装这个」。
+>
+> 💡 **想按能力而不是按项目找？** 看 [cs-mcp](https://github.com/webkubor/cs-mcp)——
+> 它把上面这些 CLI 按「能力分组」串成一张网，**装了哪个就自动长出哪组工具，没装的不会白占上下文**。
 
-#### 主题美化（可选）
+#### ⚠️ 已弃用（别装）
 
-- [**Typora Bloom**](https://github.com/webkubor/typora-Bloom-theme) — 24 套明暗主题，写长文舒服
-- [**DSH Bloom**](https://github.com/webkubor/dsh-bloom-theme) — 终端 Agent 的配色主题
-
+| 工具 | 状态 |
+|---|---|
+| [**dsh-env-inspector**](https://github.com/webkubor/dsh-env-inspector) | 官方标注 **DEPRECATED**，已停止维护 → 改用 [path-guard](https://github.com/webkubor/path-guard) |
 
 ---
 
@@ -313,6 +538,33 @@ Agent 会说：「你的账号没有群组权限」
 Agent 会说：「Token 有问题」
 
 **你做**：去 GitLab/GitHub 个人设置重新生成 Token，发给 Agent
+
+---
+
+## 🆘 卡住了？找客服
+
+<div align="center">
+<img src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="客服二维码：扫码加客服答疑" width="180" />
+
+**扫码加客服 · 有问题直接问**
+</div>
+
+> 💡 **为什么在这里放客服？**
+>
+> 这个看板教的是**装工具、上手写代码**——而这两件事天然容易卡住：
+>
+> | 典型卡点 | 为什么文字解决不了 |
+> |---|---|
+> | 翻墙工具没开，GitHub 下不动 | 以为自己网络没问题，其实是工具没运行 |
+> | Agent 装不上目标软件 | Agent 只说「失败了」，不告诉你缺哪一步 |
+> | 工具装好了但没生效 | 要看截图才知道「开关忘开了」 |
+> | 密钥配了但连不上 | 多半是脱敏/网关/代理某一环断了 |
+> | 「我该装哪个模型、要不要花钱」 | **这类信息会变**，文档写得再好也可能过期 |
+>
+> 这些问题**自己反复试错很费时间**，有人看一眼截图就能定位。
+> 所以我们把客服放在这里——**卡住了就问，比自己瞎试快。**
+>
+> 💬 客服答疑不收费，也不绑定任何工具，**问一句不亏**。
 
 ---
 

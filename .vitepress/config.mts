@@ -83,6 +83,24 @@ export default defineConfig({
         ]
       },
       {
+        text: '🎵 vibe coding 主线（会用 AI 写代码的看这条）',
+        collapsed: false,
+        items: [
+          { text: '🗺️ 主线地图', link: '/docs/vibe-coding-path' },
+          { text: 'V1 · 什么是 vibe coding', link: '/docs/vibe-coding-what' },
+          { text: 'V2 · 一轮该做多小', link: '/docs/vibe-coding-loop' },
+          { text: 'V3 · 怎么验收与纠偏 ⭐', link: '/docs/vibe-coding-review' },
+          { text: 'V4 · 分工与长期不失控', link: '/docs/vibe-coding-boundary' }
+        ]
+      },
+      {
+        text: '💰 省钱与配置（不想花钱的看这条）',
+        collapsed: false,
+        items: [
+          { text: '🔌 装上 magpie：不花钱用 AI 编程', link: '/docs/magpie' }
+        ]
+      },
+      {
         text: '🧑‍💼 角色指南',
         collapsed: false,
         items: [

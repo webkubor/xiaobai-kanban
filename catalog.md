@@ -24,6 +24,29 @@
 | 09 | [登录配置](./README.md#第二步登录) | Token 申请 + 安全存储 |
 | 10 | [Git 工作流](./README.md#第三步gitflow-工作流) | 每天怎么用 Git 干活 |
 
+## 🎵 vibe coding 主线（会用 AI 写代码的看这条）
+
+> 前面的 01~15 教你**入门**。这条主线教你**用好**——
+> 已经能让 AI 写代码，但总觉得来回改很多轮还差点意思，你缺的是节奏感。
+
+| 编号 | 章节 | 你能学到什么 |
+|:--:|------|-------------|
+| 🗺️ | [vibe coding 主线地图](./docs/vibe-coding-path.md) | 这条线讲什么、怎么走、只读一篇该读哪篇 |
+| V1 | [什么是 vibe coding](./docs/vibe-coding-what.md) | 它和「让 AI 写代码」的根本区别；三种失控 |
+| V2 | [一轮该做多小](./docs/vibe-coding-loop.md) | 粒度参照表、每轮四步、每轮必问的三句话 |
+| V3 | [不会写代码，怎么验收](./docs/vibe-coding-review.md) | ⭐ 三个信号、红线信号表、纠偏三招 |
+| V4 | [人机分工与长期不失控](./docs/vibe-coding-boundary.md) | 分工表、三条红线、上下文管理四招 |
+
+## 💰 省钱与配置（不想花钱的看这条）
+
+| 编号 | 章节 | 你能学到什么 |
+|:--:|------|-------------|
+| M1 | [装上 magpie：不花钱用 AI 编程](./docs/magpie.md) | 三阶段装好 magpie、开脱敏隐私模式、挂 Agent、用免费模型额度 |
+
+> 💡 为什么单独列一条线：**「AI 编程要花多少钱」是小白第一个会问、也最容易误解的问题。**
+> 很多人以为必须订阅 Claude Code / Codex（每月十几二十美元），还没开始就劝退了。
+> 实际上国内一线模型都有免费额度，配合 magpie 本地网关，**一分钱不用花**。
+
 ## 🛠️ 进阶技能
 
 | 编号 | 章节 | 你能学到什么 |
@@ -36,7 +59,7 @@
 
 ## 🧰 配套工具：遇到这个场景就装这个
 
-> 完整清单（含安装命令）见 [README 的工具箱](./README.md#-我做的工具按你会遇到的场景挑)。
+> 完整清单（含安装命令）见 [README 的工具箱](./README.md#🔧-我做的工具-按你会遇到的场景挑)。
 
 | 你遇到 | 用这个 | 直接打开 / 安装 |
 |------|------|------|
@@ -59,6 +82,7 @@
 | 角色 | 入口 | 说明 |
 |------|------|------|
 | 👤 小白用户 | [README.md](./README.md) | 从头开始看，跟着步骤走 |
+| 🎵 会用 AI 写代码的人 | [vibe coding 主线](./docs/vibe-coding-path.md) | 已经能写代码，想学怎么写得又快又准 |
 | 🤖 AI Agent | [AGENTS.md](./AGENTS.md) | Agent 读这个，知道怎么干活 |
 
 ## 📁 仓库结构
@@ -82,7 +106,15 @@ xiaobai-kanban/
     ├── from-zero-to-shipped.md  从零到上线（Agent 是什么、GitLab/GitHub 区别、提交、读代码、Web/代码工程、开发、说命令）
     ├── how-to-write-requirements.md 怎么把需求讲清楚（最重要的一课）
     ├── glossary.md              术语大白话词典
-    └── mail.md                  邮件能力配置指南
+    ├── mail.md                  邮件能力配置指南
+    ├── magpie.md               💰 装上 magpie：不花钱用 AI 编程
+    │
+    └── 🎵 vibe coding 主线（进阶）
+        ├── vibe-coding-path.md      主线地图（先读这篇）
+        ├── vibe-coding-what.md      V1 什么是 vibe coding
+        ├── vibe-coding-loop.md      V2 一轮该做多小（迭代节奏）
+        ├── vibe-coding-review.md    V3 怎么验收与纠偏（红线信号表）
+        └── vibe-coding-boundary.md  V4 人机分工与长期不失控
 ```
 
 ---
