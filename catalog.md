@@ -62,6 +62,16 @@
 全部 38 个公开仓库、中文关键词和单独介绍页见 [开源工具箱](./docs/tools/index.md)。
 想找图片托管？直接看 [免费图床 free-imgbed](./docs/tools/free-imgbed.md)。
 
+| 接下来想做 | 推荐入口 |
+|---|---|
+| 第一次做 AI 配图或封面 | [MUSE 新手手册](https://docs.museav.top/start/first-image) → [网页出图](https://museav.top)；批量出图再看 [museav-cli](./docs/tools/museav-cli.md) |
+| 给 DSH 选模型、素材或主题插件 | [模型管理](./docs/tools/dsh-llm-hub.md) · [素材库](./docs/tools/dsh-museav-assets.md) · [主题](./docs/tools/dsh-bloom-theme.md) |
+| 不知道该装哪个命令行工具 | [SuperCLI 工具目录](https://supercli.site) —— 按用途和厂商搜 |
+| 配置本地模型网关 | [magpie 三阶段教程](./docs/magpie.md) |
+| 看经验与项目复盘 | [webkubor 博客文章](https://webkubor.online/articles) |
+
+> 💡 不确定该选哪个？到[关于我们页](./docs/about.md#卡住了-直接问)扫码，备注「小白看板 + 用途 + 卡点」。这里放客服是为了让工具推荐能结合你实际用的 Agent、模型和设备；教程与开源工具仍可直接使用。
+
 > 完整清单（含安装命令）见 [README 的工具箱](./README.md#🔧-我做的工具-按你会遇到的场景挑)。
 
 | 你遇到 | 用这个 | 直接打开 / 安装 |

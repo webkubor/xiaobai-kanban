@@ -75,12 +75,20 @@
   </div>
   <div class="xb-card">
     <h4>💬 一个能问人的地方</h4>
-    <p>装不上、跑不通、不知道该装哪个模型——扫码问，比对着文档反复试快得多。</p>
+    <p>出图选哪个入口、DSH 装哪个插件、命令记不住——带上目标和卡点扫码问，比对着文档反复试快得多。</p>
   </div>
 </div>
 
-工具清单见 [README 的工具箱](/README#🔧-我做的工具-按你会遇到的场景挑)，
-教程入口见 [目录](/catalog)。
+工具清单见 [开源工具箱](/docs/tools/index)，教程入口见 [目录](/catalog)，
+项目经验和复盘见 [webkubor 博客](https://webkubor.online/articles)。
+
+| 你想了解 | 先看哪里 |
+|---|---|
+| 想做第一张 AI 图或封面 | [MUSE 新手手册](https://docs.museav.top/start/first-image) → [网页出图](https://museav.top) |
+| 想用 DSH 管模型、素材或主题 | [模型管理](/docs/tools/dsh-llm-hub) · [素材库](/docs/tools/dsh-museav-assets) · [主题](/docs/tools/dsh-bloom-theme) |
+| 想统一配置本地模型网关 | [magpie 上手教程](/docs/magpie) |
+| 不知道该装哪个命令行工具 | [SuperCLI 工具目录](https://supercli.site) |
+| 想看博客和项目复盘 | [博客文章列表](https://webkubor.online/articles) |
 
 ---
 
@@ -108,11 +116,12 @@
   <img class="xb-cta__qr" src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="客服二维码：扫码加客服答疑" />
   <div>
     <p class="xb-cta__title">扫码联系，带上你的具体问题</p>
-    <p class="xb-cta__desc">加好友时请注明「来自小白看板」+ 你卡在哪一步，我们好直接看问题。</p>
+    <p class="xb-cta__desc">加好友时请注明「来自小白看板」+「出图 / DSH / 本地网关 / 其他」+ 具体卡点，我们好直接看问题。</p>
     <ul class="xb-cta__list">
-      <li>命令跑不通、报错看不懂：发截图说明操作步骤，方便排查</li>
-      <li>不知道选哪个模型：说下用途和预算，方便给建议</li>
-      <li>想了解陪跑或团队服务：说下项目目标，再沟通范围与费用</li>
+      <li>出图：说下要做封面、商品图还是批量处理，已有参考图也可以附上</li>
+      <li>DSH：说下想管理模型、素材还是主题，并附上版本与报错截图</li>
+      <li>本地网关：说下现在用的 Agent、模型与配置步骤</li>
+      <li>想了解持续陪跑或团队服务：说下项目目标，再沟通范围与费用</li>
     </ul>
     <p class="xb-cta__note">基础答疑免费。教程和开源工具可直接使用，无须先加好友。</p>
   </div>

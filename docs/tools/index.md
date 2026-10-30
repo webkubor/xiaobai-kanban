@@ -15,6 +15,20 @@ head:
 
 ---
 
+## 先选方向：出图、DSH、本地网关
+
+| 你想做什么 | 推荐阅读顺序 |
+|---|---|
+| 第一次做 AI 配图 / 封面 | [MUSE 出第一张图](https://docs.museav.top/start/first-image) → [MUSE AV 网页](https://museav.top)；要终端批量处理再看 [museav-cli](./museav-cli.md) |
+| 用 DSH 管理模型 | [DSH 模型管理插件](./dsh-llm-hub.md)，需要素材与主题再看 [素材库](./dsh-museav-assets.md)、[Bloom 主题](./dsh-bloom-theme.md) |
+| 找该装哪个命令行工具 | [SuperCLI 工具目录](https://supercli.site) —— 按用途和厂商搜，带 Stars 快照排名 |
+| 用本地网关统一接模型 | [magpie 三阶段上手教程](/docs/magpie) → [magpie 社区插件](./plugins.md) |
+| 先了解作者做过什么 | [webkubor 博客文章](https://webkubor.online/articles) → [关于我们与客服](/docs/about) |
+
+想让人根据你的设备和目标推荐工具？[到关于我们页扫码咨询](/docs/about#卡住了-直接问)，备注「来自小白看板 + 你的用途」。**基础答疑免费；选择工具不要求先加客服。**
+
+> 💡 **为什么工具目录也放客服入口？** 同叫“出图”，做一张封面和让 Agent 批量出图，合适的入口不同；DSH 插件也要按你已有的环境选。先自助看对应说明，遇到不确定的组合再带着问题咨询。
+
 ## 🔍 按你要解决的问题找
 
 | 你遇到的问题 | 工具 | 一句话 |
@@ -43,7 +57,7 @@ head:
 |---|---|
 | [**free-imgbed** 免费图床](./free-imgbed.md) | GitHub 仓库当图床，jsDelivr 做全球 CDN，CI 卡住体积红线 |
 | [**facet** Markdown 转 PDF](./facet.md) | 把长文转成排版讲究的 PDF / 长图 |
-| [**museav-cli** 终端出图](./museav-cli.md) | 命令行生成配图与封面 |
+| [**museav-cli** 终端出图](./museav-cli.md) | 命令行生成配图与封面；网页端 [museav.top](https://museav.top)，手册 [docs.museav.top](https://docs.museav.top) |
 | [**chat-mood-gen** 聊天效果图](./chat-mood-gen.md) | 生成微信聊天截图式配图 |
 | [**charmoji-sticker-skill** 表情包](./charmoji-sticker-skill.md) | 把 IP 形象做成微信表情包 |
 | [**wallpaper-generator** 壁纸编辑器](./wallpaper-generator.md) | 做桌面 / 手机壁纸，可加水印 |
@@ -73,7 +87,7 @@ head:
 | [**lite-browser** 浏览器自动化](./lite-browser.md) | 给 Agent 用的真实浏览器操控 CLI |
 | [**ai-sse-kit** 流式接收](./ai-sse-kit.md) | SSE 分帧与消息 patch，前端直接用 |
 | [**mlx-vlm-kit** 本地视觉模型](./mlx-vlm-kit.md) | 在 Apple Silicon 上离线跑视觉理解 |
-| [**supercli** CLI 目录](./supercli.md) | 按用途搜命令行工具 |
+| [**supercli** CLI 目录](./supercli.md) | 按用途搜命令行工具；站点 [supercli.site](https://supercli.site) |
 
 ### 🧩 Agent 与工作流
 

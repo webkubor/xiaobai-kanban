@@ -35,14 +35,29 @@ features:
     details: 四篇主线讲透 vibe coding：一轮该做多小、不会写代码怎么验收、跑偏了怎么拉回来、项目变大怎么不失控。
     link: /docs/vibe-coding-path
     linkText: 进 vibe coding 主线
+  - icon: 🎨
+    title: 出图与创作
+    details: 第一次出图看 MUSE 手册；有批量与自动化需求再了解 museav-cli。按用途选择网页或终端入口。
+    link: /docs/tools/museav-cli
+    linkText: 找到出图入口
   - icon: 🧰
-    title: 配套工具
-    details: kyvault 管密钥、Agent Eyes 盯前端报错、contrast-guard 做视觉护栏……38 个开源工具，按你会遇到的场景挑。
+    title: 开源工具与 DSH 插件
+    details: 38 个公开仓库按场景查找；DSH 模型管理、素材浏览、主题都有独立说明。
     link: /docs/tools/index
     linkText: 打开工具箱
+  - icon: 📇
+    title: 找命令行工具
+    details: 记不住工具叫什么？SuperCLI 按用途和厂商搜 CLI，带 GitHub Stars 快照排名，社区通过 PR 贡献。
+    link: https://supercli.site
+    linkText: 打开 SuperCLI
+  - icon: 📝
+    title: 读我的博客
+    details: 看 AI 创作、开发经验与项目复盘；教程之外的思路和踩坑记录集中在 webkubor 博客。
+    link: https://webkubor.online/articles
+    linkText: 打开博客
   - icon: 💬
     title: 卡住了能问人
-    details: 装不上、跑不通或不知道怎么选模型，可以带上步骤和截图扫码咨询。教程和工具可直接使用。
+    details: 出图、DSH 插件和本地网关选不出来？带上目标、步骤和截图扫码咨询。基础答疑免费。
     link: /docs/about
     linkText: 怎么找到我们
   - icon: 🤖
@@ -73,6 +88,29 @@ features:
   </p>
   <a class="xb-mission__link" href="/docs/about">了解我们与服务方式 →</a>
 </div>
+
+## 下一步要做什么？按目标选入口
+
+| 你现在想做的事 | 从这里开始 | 需要人帮忙时 |
+|---|---|---|
+| 做封面、配图，第一次用 AI 出图 | [MUSE 第一次出图手册](https://docs.museav.top/start/first-image) → [MUSE AV 网页出图](https://museav.top)；想让 Agent 从终端出图，再看 [museav-cli](/docs/tools/museav-cli) | [带上用途和示例图咨询](/docs/about#卡住了-直接问) |
+| 给 DeepSeek Harness（DSH）选插件 | [DSH 模型管理](/docs/tools/dsh-llm-hub)、[DSH 素材库](/docs/tools/dsh-museav-assets)、[DSH 主题](/docs/tools/dsh-bloom-theme)；按自己的卡点选 | [带上环境与报错咨询](/docs/about#卡住了-直接问) |
+| 想用本地网关统一配置模型 | [先看 magpie 上手教程](/docs/magpie)；需要扩展再看 [社区插件集](/docs/tools/plugins) | [带上目前用的 Agent 和模型咨询](/docs/about#卡住了-直接问) |
+| 不知道该装哪个命令行工具 | [SuperCLI 工具目录](https://supercli.site) → 按用途搜 CLI；装完再回来看 [CLI 认知](/docs/about-cli) | [说下你要做的事，我们帮你找命令](/docs/about#卡住了-直接问) |
+| 想看经验、复盘和更多项目 | [阅读 webkubor 博客](https://webkubor.online/articles) → [按问题查 38 个开源项目](/docs/tools/index) | [遇到具体问题再联系我们](/docs/about#卡住了-直接问) |
+
+> 💡 这里推荐的是可直接阅读的教程、公开仓库和现有产品。先照教程试；需要结合你的环境判断时，再扫码找人。持续陪跑或定制服务会先沟通范围与费用。
+
+<div class="xb-cta">
+  <img class="xb-cta__qr" src="https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/xiaobai-kanban/support-qr.webp" alt="小白看板客服二维码：扫码咨询具体问题" />
+  <div>
+    <p class="xb-cta__title">选不出来？带着目标来问</p>
+    <p class="xb-cta__desc">扫码加客服，备注「小白看板 + 出图 / DSH / 本地网关 + 你想解决的问题」。先说目标和当前环境，我们才好推荐合适的入口。</p>
+    <p class="xb-cta__note">基础答疑免费；教程与开源工具无需加好友即可使用。需要持续陪跑时先确认服务范围与费用。</p>
+  </div>
+</div>
+
+> 💡 **为什么在这里放客服？** 出图要选网页还是 CLI、DSH 要装哪个插件、本地网关怎么接 Agent，都取决于你正在做的事和已有环境。把目标与卡点说清楚，比盲装一排工具更省事。
 
 ## 想找免费图床或开源工具？
 

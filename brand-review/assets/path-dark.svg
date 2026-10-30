@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 路径风格（深色）">
+  <title>小白看板 · 从起点到完成</title>
+  <circle cx="56" cy="69" r="16" fill="#FFA64D"/>
+  <path d="M89 69h80c25 0 40 13 40 35s-15 35-40 35H91c-25 0-40 13-40 35s15 35 40 35h47" fill="none" stroke="#FFA64D" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="185" cy="193" r="30" fill="none" stroke="#FFA64D" stroke-width="15"/>
+  <path d="m173 193 8 8 16-18" fill="none" stroke="#FFA64D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

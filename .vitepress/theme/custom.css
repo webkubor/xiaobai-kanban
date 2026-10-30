@@ -589,6 +589,14 @@ html.dark .VPFeature {
   color: transparent;
 }
 
+/* 渐变文字里的强调词在部分浏览器不生效，用描边兜底 */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .xb-mission__title em {
+    background: none;
+    color: var(--vp-c-brand-1);
+  }
+}
+
 .xb-mission__body {
   margin: 0;
   max-width: 46em;
@@ -604,7 +612,8 @@ html.dark .VPFeature {
   border-radius: 999px;
   font-weight: 700;
   font-size: 13.5px;
-  color: #fff;
+  /* VitePress 会给正文链接上色，这条按钮必须自己守住对比度 */
+  color: #fff !important;
   background: linear-gradient(135deg, var(--xb-orange) 0%, var(--xb-orange-deep) 100%);
   box-shadow: 0 6px 16px -8px rgba(217, 105, 11, 0.7);
   transition: transform 0.15s ease;

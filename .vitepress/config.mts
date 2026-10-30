@@ -37,6 +37,9 @@ export default defineConfig({
   // 会触发「Cannot find module .temp/catalog.md.js」的内部解析错误。
 
   head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg', media: '(prefers-color-scheme: light)' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#f5821f' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '小白看板 —— 让 Agent 帮你写代码' }],
@@ -58,6 +61,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    logo: { light: '/favicon.svg', dark: '/favicon-dark.svg' },
     outline: { level: [2, 3], label: '本页目录' },
     docFooter: { prev: '上一篇', next: '下一篇' },
     darkModeSwitchLabel: '主题',
@@ -72,6 +76,7 @@ export default defineConfig({
       { text: '💰 不花钱', link: '/docs/magpie' },
       { text: '💬 关于我们', link: '/docs/about' },
       { text: '🧰 工具箱', link: '/docs/tools/index' },
+      { text: '📝 博客', link: 'https://webkubor.online/articles' },
       { text: '📑 目录', link: '/catalog' }
     ],
 
@@ -127,6 +132,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '📦 工具总目录', link: '/docs/tools/index' },
+          { text: '🎨 出图：MUSE AV 与 CLI', link: '/docs/tools/museav-cli' },
+          { text: '🔌 DSH 模型管理插件', link: '/docs/tools/dsh-llm-hub' },
           { text: '🖼️ 免费图床', link: '/docs/tools/free-imgbed' },
           { text: '🔐 密钥库 kyvault', link: '/docs/tools/kyvault' },
           { text: '🔍 PATH 诊断', link: '/docs/tools/path-guard' },

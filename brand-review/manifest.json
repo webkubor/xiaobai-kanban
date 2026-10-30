@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": "xiaobai-board",
+      "name": "A · 看板清单",
+      "sources": [
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/README.md", "label": "项目定位与橙色 banner" },
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/.vitepress/theme/custom.css", "label": "生产主题 token" }
+      ],
+      "tokens": { "primary": "#F5821F", "accent": "#FFA64D", "onLight": "#D9690B", "onDark": "#FFA64D", "background": "transparent" },
+      "tokenSources": {
+        "primary": "项目既有：.vitepress/theme/custom.css 中 --xb-orange；与用户明确指定的橙色 banner 一致",
+        "accent": "项目既有：.vitepress/theme/custom.css 中 --xb-orange-light",
+        "onLight": "项目既有：.vitepress/theme/custom.css 中 --xb-orange-deep；本次应用于浅底前景",
+        "onDark": "项目既有：.vitepress/theme/custom.css 中 --xb-orange-light；本次应用于深底前景",
+        "background": "本次设计：透明画布，用于标签页与导航"
+      },
+      "rationale": "共同概念：小白沿着简单清晰的步骤，用 Agent 把想法做成、验收并发布。A 款以清单与对勾表达看板；此为本次设计解释，并非已获确认的品牌寓意。",
+      "userDecisions": ["用户要求浏览器标签和网站顶部有 logo，沿用橙色 banner 品牌色，并用同一理念做四种风格对比。"],
+      "recommendations": ["A 款偏具象任务看板，可作为基础方向；最终选择需看 32px 对比。"],
+      "asset": "assets/board.svg", "darkAsset": "assets/board-dark.svg", "oldAsset": null
+    },
+    {
+      "id": "xiaobai-path",
+      "name": "B · 路径线",
+      "sources": [
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/README.md", "label": "产品闭环定位" },
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/.vitepress/theme/custom.css", "label": "生产主题 token" }
+      ],
+      "tokens": { "primary": "#F5821F", "accent": "#FFA64D", "onLight": "#D9690B", "onDark": "#FFA64D", "background": "transparent" },
+      "tokenSources": {
+        "primary": "项目既有：.vitepress/theme/custom.css 的 --xb-orange",
+        "accent": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "onLight": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-deep",
+        "onDark": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "background": "本次设计：透明画布"
+      },
+      "rationale": "共同概念不变。B 款以连续路径、起点和完成标记表达‘从想法走到完成’，形态更抽象、线条感更强。",
+      "userDecisions": ["用户指定橙色主题、同一理念四种风格对比。"],
+      "recommendations": ["检查 32px 下路径是否仍可辨识。"],
+      "asset": "assets/path.svg", "darkAsset": "assets/path-dark.svg", "oldAsset": null
+    },
+    {
+      "id": "xiaobai-tiles",
+      "name": "C · 卡片网格",
+      "sources": [
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/README.md", "label": "看板产品定位" },
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/.vitepress/theme/custom.css", "label": "生产主题 token" }
+      ],
+      "tokens": { "primary": "#F5821F", "accent": "#FFA64D", "onLight": "#D9690B", "onDark": "#FFA64D", "background": "transparent" },
+      "tokenSources": {
+        "primary": "项目既有：.vitepress/theme/custom.css 的 --xb-orange",
+        "accent": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "onLight": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-deep",
+        "onDark": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "background": "本次设计：透明画布"
+      },
+      "rationale": "共同概念不变。C 款用四张卡片组织任务，最后一张已完成，整体是紧凑的应用图标风格。",
+      "userDecisions": ["用户指定橙色主题、同一理念四种风格对比。"],
+      "recommendations": ["适合检查与首页卡片式 UI 的一致性。"],
+      "asset": "assets/tiles.svg", "darkAsset": "assets/tiles-dark.svg", "oldAsset": null
+    },
+    {
+      "id": "xiaobai-steps",
+      "name": "D · 上升阶梯",
+      "sources": [
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/README.md", "label": "新手一步步走完闭环的定位" },
+        { "url": "https://github.com/webkubor/xiaobai-kanban/blob/main/.vitepress/theme/custom.css", "label": "生产主题 token" }
+      ],
+      "tokens": { "primary": "#F5821F", "accent": "#FFA64D", "onLight": "#D9690B", "onDark": "#FFA64D", "background": "transparent" },
+      "tokenSources": {
+        "primary": "项目既有：.vitepress/theme/custom.css 的 --xb-orange",
+        "accent": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "onLight": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-deep",
+        "onDark": "项目既有：.vitepress/theme/custom.css 的 --xb-orange-light",
+        "background": "本次设计：透明画布"
+      },
+      "rationale": "共同概念不变。D 款把学习路径做成上升阶梯，顶端的对勾表示一步步走到了可以发布的结果。",
+      "userDecisions": ["用户指定橙色主题、同一理念四种风格对比。"],
+      "recommendations": ["检查阶梯在浏览器标签页小尺寸是否过于细碎。"],
+      "asset": "assets/steps.svg", "darkAsset": "assets/steps-dark.svg", "oldAsset": null
+    }
+  ]
+}

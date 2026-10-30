@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 阶梯风格">
+  <title>小白看板 · 一步一步走到完成</title>
+  <path d="M41 208h45v-49h44v-48h44V63h43" fill="none" stroke="#D9690B" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="62" cy="207" r="13" fill="#D9690B"/>
+  <circle cx="194" cy="63" r="22" fill="none" stroke="#D9690B" stroke-width="13"/>
+  <path d="m185 63 7 7 13-16" fill="none" stroke="#D9690B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

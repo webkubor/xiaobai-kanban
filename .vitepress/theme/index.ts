@@ -56,8 +56,8 @@ const SupportFab = {
               h('button', { class: 'xb-fab__close', 'aria-label': '关闭', onClick: close }, '×'),
               h('img', { src: QR, alt: '客服二维码', class: 'xb-fab__qr', loading: 'lazy' }),
               h('p', { class: 'xb-fab__title' }, '扫码加客服'),
-              h('p', { class: 'xb-fab__desc' }, '装不上、跑不通、不知道该装哪个模型——直接问。'),
-              h('p', { class: 'xb-fab__hint' }, '加好友请注明：来自小白看板 + 你卡在哪一步')
+              h('p', { class: 'xb-fab__desc' }, '出图、DSH、本地网关或安装卡住？带着目标和截图来问。'),
+              h('p', { class: 'xb-fab__hint' }, '备注：小白看板 + 用途 + 具体问题；基础答疑免费')
             ])
           : null,
         h(
