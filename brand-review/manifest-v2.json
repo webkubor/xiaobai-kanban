@@ -1,0 +1,806 @@
+{
+  "version": 2,
+  "title": "小白看板第二轮品牌评审",
+  "currentCandidate": "B",
+  "brandReference": {
+    "source": "../.vitepress/theme/custom.css",
+    "tokens": {
+      "--xb-orange": "#F5821F",
+      "--xb-orange-light": "#FFA64D",
+      "--xb-orange-deep": "#D9690B"
+    },
+    "note": "既有 token 仅作为橙色品牌方向参考；第二轮 SVG 的实际十六进制色值均为本轮新增提案，详见各候选 tokenSources。"
+  },
+  "concept": {
+    "proposal": "把想法逐步推进到完成",
+    "status": "本轮共同方向提案，尚未正式确认",
+    "explorationCandidate": "D",
+    "note": "D 通过领航狐探索角色陪伴，与共同概念的关联仍需评审；不宣称四款同一概念已通过。"
+  },
+  "rendering": {
+    "renderer": "rsvg-convert / librsvg",
+    "rasterSize": [
+      32,
+      32
+    ],
+    "zoom": {
+      "factor": 6,
+      "resampling": "Pillow NEAREST",
+      "outputSize": [
+        192,
+        192
+      ]
+    },
+    "vectorComparisonSize": [
+      256,
+      256
+    ],
+    "backgrounds": {
+      "light": "#FFFFFF",
+      "dark": "#0D1117"
+    },
+    "dimensionMeaning": "完整画布尺寸，包含 SVG 留白",
+    "browserScreenshot": false
+  },
+  "projects": [
+    {
+      "id": "v2-folded-check",
+      "candidate": "A",
+      "name": "A · 折带完成标记",
+      "status": "review-candidate",
+      "statusDescription": "第二轮评审候选，未采用",
+      "rationale": "折带形成完成标记，表达任务走到结果；共同概念为本轮设计提案，尚未确认。",
+      "conceptApproval": "未确认",
+      "sources": [
+        {
+          "path": ".vitepress/theme/custom.css",
+          "label": "既有品牌色参考；不代表此 SVG 使用其精确色值"
+        },
+        {
+          "path": "docs/brand-design.md",
+          "label": "第二轮评审背景与当前暂用状态"
+        },
+        {
+          "path": "assets/v2-folded-check.svg",
+          "label": "第二轮浅色图形源码"
+        },
+        {
+          "path": "assets/v2-folded-check-dark.svg",
+          "label": "第二轮深色图形源码"
+        }
+      ],
+      "tokens": {
+        "background": "transparent",
+        "lightPalette": [
+          "#7C2D12",
+          "#C2410C",
+          "#EA580C",
+          "#FBBF24"
+        ],
+        "darkPalette": [
+          "#431407",
+          "#EA580C",
+          "#FB923C",
+          "#FDE68A"
+        ]
+      },
+      "tokenSources": {
+        "#431407": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        },
+        "#7C2D12": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "stroke",
+              "opacity": "0.9"
+            }
+          ]
+        },
+        "#C2410C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        },
+        "#EA580C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "stroke"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        },
+        "#FB923C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        },
+        "#FBBF24": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        },
+        "#FDE68A": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-folded-check.svg 与 assets/v2-folded-check-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        }
+      },
+      "asset": "assets/v2-folded-check.svg",
+      "darkAsset": "assets/v2-folded-check-dark.svg",
+      "oldAsset": null,
+      "recommendations": [
+        "保留独立的深浅底 32px 检查；未将新提案颜色锁定为站点品牌规范。"
+      ]
+    },
+    {
+      "id": "v2-canvas",
+      "candidate": "B",
+      "name": "B · 看板完成块",
+      "status": "currently-used-provisional",
+      "statusDescription": "当前站点暂用；正式品牌规范与共同理念未获确认",
+      "rationale": "折面构成看板外轮廓，完成标记对应验收；当前站点暂用，正式品牌理念仍待确认。",
+      "conceptApproval": "未确认",
+      "sources": [
+        {
+          "path": ".vitepress/theme/custom.css",
+          "label": "既有品牌色参考；不代表此 SVG 使用其精确色值"
+        },
+        {
+          "path": "docs/brand-design.md",
+          "label": "第二轮评审背景与当前暂用状态"
+        },
+        {
+          "path": "assets/v2-canvas.svg",
+          "label": "第二轮浅色图形源码"
+        },
+        {
+          "path": "assets/v2-canvas-dark.svg",
+          "label": "第二轮深色图形源码"
+        }
+      ],
+      "tokens": {
+        "background": "transparent",
+        "lightPalette": [
+          "#7C2D12",
+          "#B45309",
+          "#F59E0B",
+          "#F97316",
+          "#FCD34D",
+          "#FDE68A",
+          "#FFF7ED"
+        ],
+        "darkPalette": [
+          "#431407",
+          "#D97706",
+          "#FB923C",
+          "#FDE68A",
+          "#FED7AA",
+          "#FFF7ED"
+        ]
+      },
+      "tokenSources": {
+        "#431407": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.3"
+            }
+          ]
+        },
+        "#7C2D12": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.22"
+            }
+          ]
+        },
+        "#B45309": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#D97706": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#F59E0B": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color",
+              "opacity": "0.55"
+            }
+          ]
+        },
+        "#F97316": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FB923C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FCD34D": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FDE68A": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.85"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FED7AA": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color",
+              "opacity": "0.6"
+            }
+          ]
+        },
+        "#FFF7ED": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-canvas.svg 与 assets/v2-canvas-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "stroke"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.8"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "stroke"
+            }
+          ]
+        }
+      },
+      "asset": "assets/v2-canvas.svg",
+      "darkAsset": "assets/v2-canvas-dark.svg",
+      "oldAsset": null,
+      "recommendations": [
+        "保留独立的深浅底 32px 检查；未将新提案颜色锁定为站点品牌规范。"
+      ],
+      "productionAssets": [
+        "../public/favicon.svg",
+        "../public/favicon-dark.svg"
+      ]
+    },
+    {
+      "id": "v2-arrow",
+      "candidate": "C",
+      "name": "C · 前进路径",
+      "status": "review-candidate",
+      "statusDescription": "第二轮评审候选，未采用",
+      "rationale": "折线路径从起点通向目标，表达持续推进；共同概念为本轮设计提案，尚未确认。",
+      "conceptApproval": "未确认",
+      "sources": [
+        {
+          "path": ".vitepress/theme/custom.css",
+          "label": "既有品牌色参考；不代表此 SVG 使用其精确色值"
+        },
+        {
+          "path": "docs/brand-design.md",
+          "label": "第二轮评审背景与当前暂用状态"
+        },
+        {
+          "path": "assets/v2-arrow.svg",
+          "label": "第二轮浅色图形源码"
+        },
+        {
+          "path": "assets/v2-arrow-dark.svg",
+          "label": "第二轮深色图形源码"
+        }
+      ],
+      "tokens": {
+        "background": "transparent",
+        "lightPalette": [
+          "#7C2D12",
+          "#EA580C",
+          "#FDE68A"
+        ],
+        "darkPalette": [
+          "#EA580C",
+          "#FB923C",
+          "#FEF3C7"
+        ]
+      },
+      "tokenSources": {
+        "#7C2D12": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-arrow.svg 与 assets/v2-arrow-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#EA580C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-arrow.svg 与 assets/v2-arrow-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FB923C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-arrow.svg 与 assets/v2-arrow-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FDE68A": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-arrow.svg 与 assets/v2-arrow-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FEF3C7": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-arrow.svg 与 assets/v2-arrow-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        }
+      },
+      "asset": "assets/v2-arrow.svg",
+      "darkAsset": "assets/v2-arrow-dark.svg",
+      "oldAsset": null,
+      "recommendations": [
+        "保留独立的深浅底 32px 检查；未将新提案颜色锁定为站点品牌规范。"
+      ]
+    },
+    {
+      "id": "v2-fox",
+      "candidate": "D",
+      "name": "D · 陪伴角色",
+      "status": "exploration",
+      "statusDescription": "角色化探索方向，待验证与共同概念的关联及小尺寸辨识度",
+      "rationale": "以领航狐探索角色陪伴的表达，属于探索方向；与共同概念的关联仍待评审，未宣称同一概念已获确认。",
+      "conceptApproval": "未确认",
+      "sources": [
+        {
+          "path": ".vitepress/theme/custom.css",
+          "label": "既有品牌色参考；不代表此 SVG 使用其精确色值"
+        },
+        {
+          "path": "docs/brand-design.md",
+          "label": "第二轮评审背景与当前暂用状态"
+        },
+        {
+          "path": "assets/v2-fox.svg",
+          "label": "第二轮浅色图形源码"
+        },
+        {
+          "path": "assets/v2-fox-dark.svg",
+          "label": "第二轮深色图形源码"
+        }
+      ],
+      "tokens": {
+        "background": "transparent",
+        "lightPalette": [
+          "#7C2D12",
+          "#9A3412",
+          "#C2410C",
+          "#FB923C",
+          "#FCD34D",
+          "#FDBA74",
+          "#FED7AA",
+          "#FEF3C7"
+        ],
+        "darkPalette": [
+          "#431407",
+          "#7C2D12",
+          "#EA580C",
+          "#FB923C",
+          "#FCD34D",
+          "#FDBA74",
+          "#FFEDD5",
+          "#FFF7ED"
+        ]
+      },
+      "tokenSources": {
+        "#431407": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill"
+            }
+          ]
+        },
+        "#7C2D12": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill"
+            }
+          ]
+        },
+        "#9A3412": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill"
+            },
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill"
+            }
+          ]
+        },
+        "#C2410C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#EA580C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FB923C": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FCD34D": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FDBA74": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            },
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FED7AA": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.5"
+            }
+          ]
+        },
+        "#FEF3C7": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "light",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        },
+        "#FFEDD5": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "path",
+              "attribute": "fill",
+              "opacity": "0.45"
+            }
+          ]
+        },
+        "#FFF7ED": {
+          "origin": "本轮设计提案",
+          "source": "assets/v2-fox.svg 与 assets/v2-fox-dark.svg 的色面、阴影或渐变定义",
+          "existingBrandToken": null,
+          "uses": [
+            {
+              "theme": "dark",
+              "element": "stop",
+              "attribute": "stop-color"
+            }
+          ]
+        }
+      },
+      "asset": "assets/v2-fox.svg",
+      "darkAsset": "assets/v2-fox-dark.svg",
+      "oldAsset": null,
+      "recommendations": [
+        "保留独立的深浅底 32px 检查；未将新提案颜色锁定为站点品牌规范。"
+      ]
+    }
+  ]
+}

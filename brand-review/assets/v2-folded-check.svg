@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折面阶梯对勾">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="xbA1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2410C"/>
+      <stop offset="0.55" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#7C2D12" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#C2410C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FBBF24" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

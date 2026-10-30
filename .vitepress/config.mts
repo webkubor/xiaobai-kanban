@@ -132,6 +132,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '📦 工具总目录', link: '/docs/tools/index' },
+          { text: '品牌设计 Skill · 真实案例', link: '/docs/brand-design' },
           { text: '🎨 出图：MUSE AV 与 CLI', link: '/docs/tools/museav-cli' },
           { text: '🔌 DSH 模型管理插件', link: '/docs/tools/dsh-llm-hub' },
           { text: '🖼️ 免费图床', link: '/docs/tools/free-imgbed' },

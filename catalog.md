@@ -57,6 +57,10 @@
 | 14 | [Agent 配合手册](./AGENTS.md) | Agent 怎么读 AGENTS.md 执行任务 |
 | 15 | 自动化部署 | 代码推上去自动上线 | 📝 待写 |
 
+## 品牌设计 Skill 实战
+
+[看小白看板自己的标识设计过程](./docs/brand-design.md)：品牌色来源、四款方案、深浅 SVG 和小尺寸渲染对比；[开源 Skill](https://github.com/webkubor/logo-brand-designer) 可安装到自己的 Agent。
+
 ## 🧰 配套工具：遇到这个场景就装这个
 
 全部 38 个公开仓库、中文关键词和单独介绍页见 [开源工具箱](./docs/tools/index.md)。

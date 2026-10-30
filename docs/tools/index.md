@@ -15,6 +15,10 @@ head:
 
 ---
 
+## 看 Skill 的真实作品
+
+[品牌设计 Skill 实战](/docs/brand-design)：这个站的标识如何从品牌色、概念到四款候选，再到深浅 SVG 和小尺寸检查。可直接看成果，也可 [安装开源 Skill](https://github.com/webkubor/logo-brand-designer)。
+
 ## 先选方向：出图、DSH、本地网关
 
 | 你想做什么 | 推荐阅读顺序 |

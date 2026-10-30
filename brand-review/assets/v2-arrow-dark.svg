@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头（深色）">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="xbCd1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布（深色）">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="xbBd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#D97706"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="xbBd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FED7AA" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#xbBd1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FFF7ED" opacity="0.8"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#431407" opacity="0.3"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

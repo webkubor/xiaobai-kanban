@@ -322,7 +322,7 @@ DSH 的口号是 *Everything is a Plugin*，所以**先装「能装插件的插�
 |---|---|---|---|
 | 不知道自己的开源项目还缺什么 | [**scorecard**](https://scorecard.webkubor.online) | 粘个 GitHub 链接就出体检报告 | **不用装**，网页直接用 |
 | 代码写多了，死代码堆成山 | [**deadcode-reaper**](https://github.com/webkubor/deadcode-reaper-skill) | 扫出死代码并清理，还你干净的上下文 | 让 Agent 读仓库说明装 |
-| 想给项目做品牌标识 | [**logo-brand-designer**](https://github.com/webkubor/logo-brand-designer) | 设计 / 重设计 / 验收 logo，出透明底 SVG + 评审页 | Agent skill，见仓库 README |
+| 想给项目做品牌标识 | [**logo-brand-designer**](https://github.com/webkubor/logo-brand-designer) · [看实际设计案例](./docs/brand-design.md) | 品牌色来源、风格对比、透明底 SVG 与深浅小尺寸评审 | Agent skill，见仓库 README |
 | 界面好不好看，说不清 | [**facet**](https://github.com/webkubor/facet) | 把 Markdown 一键变成 PDF / 长图 / 演讲页，也能给界面做结构化体检 | `npx` 直接跑 |
 
 #### 🎨 场景三：出图、做封面、做表情

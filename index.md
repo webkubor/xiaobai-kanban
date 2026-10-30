@@ -89,6 +89,12 @@ features:
   <a class="xb-mission__link" href="/docs/about">了解我们与服务方式 →</a>
 </div>
 
+## 开源 Skill，也要看真实作品
+
+这个站的图标就是 [logo-brand-designer](https://github.com/webkubor/logo-brand-designer) 的实战案例：从品牌色来源、四款风格对比，到 SVG 深浅版本与小尺寸检查，都公开展示。
+
+**[看品牌设计过程与四款对比 →](/docs/brand-design)** · [查看 Skill 源码与安装方法](https://github.com/webkubor/logo-brand-designer)
+
 ## 下一步要做什么？按目标选入口
 
 | 你现在想做的事 | 从这里开始 | 需要人帮忙时 |

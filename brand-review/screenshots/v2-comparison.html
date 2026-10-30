@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小白看板 · 第二轮品牌方向对比</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px;
+    background: #FFF8F0; color: #2B2118;
+    font: 15px/1.6 "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+  }
+  h1 { margin: 0 0 6px; font-size: 28px; }
+  .sub { margin: 0 0 32px; color: #6B5B4B; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 1240px; }
+  .card { min-width: 0; background: #fff; border: 1px solid #E7C7A8; border-radius: 18px; padding: 20px 22px 18px; }
+  .card h2 { margin: 0 0 14px; font-size: 22px; }
+  .card .idea { margin: 12px 0 0; color: #6B5B4B; font-size: 13px; }
+  .panes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .pane { min-width: 0; border-radius: 12px; padding: 14px 10px 10px; text-align: center; overflow: hidden; }
+  .pane.light { background: #FFFFFF; border: 1px solid #E4DFDA; }
+  .pane.dark { background: #0D1117; }
+  .pane p { margin: 0 0 8px; font-size: 13px; color: #6B5B4B; }
+  .pane.dark p { color: #F2E9DF; }
+  .row { display: flex; align-items: flex-end; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .cell span { font-size: 12px; color: #8A7A68; }
+  .pane.dark .cell span { color: #C2B6A9; }
+  .cell svg { display: block; flex: none; }
+  .tokens { max-width: 1240px; margin: 0 0 28px; padding: 18px 22px; background: #fff; border: 1px solid #E7C7A8; border-radius: 16px; }
+  .tokens p { margin: 5px 0; }
+  code { color: #9A3412; }
+  @media (max-width: 950px) { body { padding: 24px; } .grid { grid-template-columns: 1fr; } }
+  @media (max-width: 580px) { .panes { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>小白看板 · 第二轮品牌方向</h1>
+<p class="sub">“把想法逐步推进到完成”是本轮共同方向提案，尚未正式确认。A / B / C 以完成标记或路径表达；D 探索角色陪伴，与共同概念的关联仍待评审。</p>
+<div class="tokens">
+<p><strong>品牌参考：</strong>站点既有橙色主题 <code>#F5821F</code>、浅底前景 <code>#D9690B</code>、深底前景 <code>#FFA64D</code> 来自 <code>.vitepress/theme/custom.css</code>。</p>
+<p><strong>本轮实际颜色：</strong>八份 SVG 的橙、琥珀、暖白与阴影均为新增设计提案，未直接使用上述三项 token 的精确色值。逐色来源记录于 <code>manifest-v2.json</code>，尚未锁定为品牌规范。</p>
+<p><strong>当前状态：</strong>B · 看板完成块为站点暂用标识，与当前 <code>public/favicon.svg</code> 和 <code>public/favicon-dark.svg</code> 一致；A / C 保留评审，D 为探索方向。暂用不等于正式品牌理念通过。</p>
+<p><strong>离线与尺寸：</strong>本页直接内嵌 SVG，无脚本、外链字体和图片依赖；32 / 64 / 128px 是完整 SVG 画布的 CSS 展示尺寸，由查看器独立栅格化。独立 PNG 拼图则由 librsvg 渲染；32px 位图以 Pillow 最近邻放大 6 倍至 192px。</p>
+</div>
+<div class="grid" id="grid"><section class="card"><h2>A · 折带完成标记</h2><div class="panes"><div class="pane light"><p>浅色背景 #FFFFFF</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折面阶梯对勾">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-light-32-xbA1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2410C"/>
+      <stop offset="0.55" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#7C2D12" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#C2410C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FBBF24" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折面阶梯对勾">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-light-64-xbA1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2410C"/>
+      <stop offset="0.55" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#7C2D12" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#C2410C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FBBF24" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折面阶梯对勾">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-light-128-xbA1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2410C"/>
+      <stop offset="0.55" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#7C2D12" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#C2410C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FBBF24" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div><div class="pane dark"><p>深色背景 #0D1117</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折带对勾（深色）">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-dark-32-xbAd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.55" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#431407" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#FB923C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FDE68A" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折带对勾（深色）">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-dark-64-xbAd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.55" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#431407" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#FB923C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FDE68A" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 折带对勾（深色）">
+  <title>小白看板 · 推进一步，完成一件事</title>
+  <defs>
+    <linearGradient id="v2-folded-check-dark-128-xbAd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.55" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M52 134 L110 192 L204 74" fill="none" stroke="#431407" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 130 L110 188" fill="none" stroke="#EA580C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188 L150 148" fill="none" stroke="#FB923C" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 148 L204 72" fill="none" stroke="#FDE68A" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div></div><p class="idea">折带形成完成标记，表达任务走到结果；共同概念为本轮设计提案，尚未确认。</p></section>
+<section class="card"><h2>B · 看板完成块 · 当前暂用</h2><div class="panes"><div class="pane light"><p>浅色背景 #FFFFFF</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-light-32-xbB1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#B45309"/>
+      <stop offset="0.5" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-light-32-xbB2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-light-32-xbB1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FDE68A" opacity="0.85"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#7C2D12" opacity="0.22"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-light-64-xbB1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#B45309"/>
+      <stop offset="0.5" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-light-64-xbB2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-light-64-xbB1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FDE68A" opacity="0.85"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#7C2D12" opacity="0.22"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-light-128-xbB1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#B45309"/>
+      <stop offset="0.5" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-light-128-xbB2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-light-128-xbB1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FDE68A" opacity="0.85"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#7C2D12" opacity="0.22"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div><div class="pane dark"><p>深色背景 #0D1117</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布（深色）">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-dark-32-xbBd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#D97706"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-dark-32-xbBd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FED7AA" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-dark-32-xbBd1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FFF7ED" opacity="0.8"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#431407" opacity="0.3"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布（深色）">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-dark-64-xbBd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#D97706"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-dark-64-xbBd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FED7AA" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-dark-64-xbBd1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FFF7ED" opacity="0.8"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#431407" opacity="0.3"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 光棱画布（深色）">
+  <title>小白看板 · 一张画布，推向完成</title>
+  <defs>
+    <linearGradient id="v2-canvas-dark-128-xbBd1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#D97706"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="v2-canvas-dark-128-xbBd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FED7AA" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 26 L214 66 L214 150 C214 190 178 220 128 234 C78 220 42 190 42 150 L42 66 Z" fill="url(#v2-canvas-dark-128-xbBd1)"/>
+  <path d="M128 26 L214 66 L128 106 L42 66 Z" fill="#FFF7ED" opacity="0.8"/>
+  <path d="M128 106 L214 66 L214 150 C214 190 178 220 128 234 Z" fill="#431407" opacity="0.3"/>
+  <path d="M78 150 L112 184 L178 112" fill="none" stroke="#FFF7ED" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div></div><p class="idea">折面构成看板外轮廓，完成标记对应验收；当前站点暂用，正式品牌理念仍待确认。</p></section>
+<section class="card"><h2>C · 前进路径</h2><div class="panes"><div class="pane light"><p>浅色背景 #FFFFFF</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-light-32-xbC1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#7C2D12"/>
+      <stop offset="0.5" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-light-32-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-light-32-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-light-64-xbC1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#7C2D12"/>
+      <stop offset="0.5" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-light-64-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-light-64-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-light-128-xbC1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#7C2D12"/>
+      <stop offset="0.5" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-light-128-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-light-128-xbC1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div><div class="pane dark"><p>深色背景 #0D1117</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头（深色）">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-dark-32-xbCd1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-dark-32-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-dark-32-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头（深色）">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-dark-64-xbCd1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-dark-64-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-dark-64-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 推进箭头（深色）">
+  <title>小白看板 · 一直推向前</title>
+  <defs>
+    <linearGradient id="v2-arrow-dark-128-xbCd1" x1="0" y1="1" x2="0.9" y2="0.1">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.5" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 168 L96 112 L140 150 L206 62" fill="none" stroke="url(#v2-arrow-dark-128-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 52 H212 V114" fill="none" stroke="url(#v2-arrow-dark-128-xbCd1)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>128 × 128px</span></div></div></div></div><p class="idea">折线路径从起点通向目标，表达持续推进；共同概念为本轮设计提案，尚未确认。</p></section>
+<section class="card"><h2>D · 陪伴角色 · 探索方向</h2><div class="panes"><div class="pane light"><p>浅色背景 #FFFFFF</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-light-32-xbD1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-light-32-xbD2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEF3C7"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <!-- 耳 -->
+  <path d="M46 96 L58 26 L106 60 Z" fill="#9A3412"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#9A3412"/>
+  <!-- 头 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-light-32-xbD1)"/>
+  <!-- 左侧受光面 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FED7AA" opacity="0.5"/>
+  <!-- 口鼻 -->
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-light-32-xbD2)"/>
+  <!-- 眼 -->
+  <path d="M82 96 L110 106 L82 116 Z" fill="#7C2D12"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#7C2D12"/>
+  <!-- 鼻 -->
+  <path d="M118 152 L138 152 L128 166 Z" fill="#9A3412"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-light-64-xbD1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-light-64-xbD2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEF3C7"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <!-- 耳 -->
+  <path d="M46 96 L58 26 L106 60 Z" fill="#9A3412"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#9A3412"/>
+  <!-- 头 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-light-64-xbD1)"/>
+  <!-- 左侧受光面 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FED7AA" opacity="0.5"/>
+  <!-- 口鼻 -->
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-light-64-xbD2)"/>
+  <!-- 眼 -->
+  <path d="M82 96 L110 106 L82 116 Z" fill="#7C2D12"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#7C2D12"/>
+  <!-- 鼻 -->
+  <path d="M118 152 L138 152 L128 166 Z" fill="#9A3412"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-light-128-xbD1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-light-128-xbD2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEF3C7"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <!-- 耳 -->
+  <path d="M46 96 L58 26 L106 60 Z" fill="#9A3412"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#9A3412"/>
+  <!-- 头 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-light-128-xbD1)"/>
+  <!-- 左侧受光面 -->
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FED7AA" opacity="0.5"/>
+  <!-- 口鼻 -->
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-light-128-xbD2)"/>
+  <!-- 眼 -->
+  <path d="M82 96 L110 106 L82 116 Z" fill="#7C2D12"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#7C2D12"/>
+  <!-- 鼻 -->
+  <path d="M118 152 L138 152 L128 166 Z" fill="#9A3412"/>
+</svg><span>128 × 128px</span></div></div></div><div class="pane dark"><p>深色背景 #0D1117</p><div class="row"><div class="cell"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐（深色）">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-dark-32-xbDd1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-dark-32-xbDd2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 96 L58 26 L106 60 Z" fill="#7C2D12"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#7C2D12"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-dark-32-xbDd1)"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FFEDD5" opacity="0.45"/>
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-dark-32-xbDd2)"/>
+  <path d="M82 96 L110 106 L82 116 Z" fill="#431407"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#431407"/>
+  <path d="M118 152 L138 152 L128 166 Z" fill="#7C2D12"/>
+</svg><span>32 × 32px</span></div><div class="cell"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐（深色）">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-dark-64-xbDd1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-dark-64-xbDd2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 96 L58 26 L106 60 Z" fill="#7C2D12"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#7C2D12"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-dark-64-xbDd1)"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FFEDD5" opacity="0.45"/>
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-dark-64-xbDd2)"/>
+  <path d="M82 96 L110 106 L82 116 Z" fill="#431407"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#431407"/>
+  <path d="M118 152 L138 152 L128 166 Z" fill="#7C2D12"/>
+</svg><span>64 × 64px</span></div><div class="cell"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐（深色）">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="v2-fox-dark-128-xbDd1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="v2-fox-dark-128-xbDd2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 96 L58 26 L106 60 Z" fill="#7C2D12"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#7C2D12"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#v2-fox-dark-128-xbDd1)"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FFEDD5" opacity="0.45"/>
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#v2-fox-dark-128-xbDd2)"/>
+  <path d="M82 96 L110 106 L82 116 Z" fill="#431407"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#431407"/>
+  <path d="M118 152 L138 152 L128 166 Z" fill="#7C2D12"/>
+</svg><span>128 × 128px</span></div></div></div></div><p class="idea">以领航狐探索角色陪伴的表达，属于探索方向；与共同概念的关联仍待评审，未宣称同一概念已获确认。</p></section></div>
+</body>
+</html>

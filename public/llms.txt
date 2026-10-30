@@ -11,6 +11,11 @@
 站点：https://xiaobai.webkubor.online
 仓库：https://github.com/webkubor/xiaobai-kanban
 
+## 品牌设计 Skill 实战
+
+- [品牌设计过程](/docs/brand-design.md): logo-brand-designer 的实际案例，含颜色来源、四款风格、深浅 SVG 与小尺寸检查。新渐变色是设计提案，尚非已批准品牌规范。
+- [品牌设计 Skill](https://github.com/webkubor/logo-brand-designer): 开源源码与安装方式。
+
 ## AI Agent 入口（首选）
 
 - [AGENTS.md](/AGENTS.md): Agent 操作手册。先自检你是哪个框架（Hermes / OpenCLAW / Claude Code / Codex），再装密钥工具 kyvault、跑前置自检、按平台（GitLab / GitHub）推送代码。**收到任务先读这份。**

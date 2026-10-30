@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 领航狐（深色）">
+  <title>小白看板 · 领路的狐狸，带你到完成</title>
+  <defs>
+    <linearGradient id="xbDd1" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="0.45" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="xbDd2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 96 L58 26 L106 60 Z" fill="#7C2D12"/>
+  <path d="M210 96 L198 26 L150 60 Z" fill="#7C2D12"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C168 212 200 170 200 126 C200 82 172 44 128 44 Z" fill="url(#xbDd1)"/>
+  <path d="M128 44 C84 44 56 82 56 126 C56 170 88 212 128 212 C110 190 100 156 100 124 C100 90 112 58 128 44 Z" fill="#FFEDD5" opacity="0.45"/>
+  <path d="M128 126 C106 126 92 144 92 162 C92 180 108 194 128 194 C148 194 164 180 164 162 C164 144 150 126 128 126 Z" fill="url(#xbDd2)"/>
+  <path d="M82 96 L110 106 L82 116 Z" fill="#431407"/>
+  <path d="M174 96 L146 106 L174 116 Z" fill="#431407"/>
+  <path d="M118 152 L138 152 L128 166 Z" fill="#7C2D12"/>
+</svg>
