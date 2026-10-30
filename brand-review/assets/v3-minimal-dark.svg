@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 极简（深色）">
+  <title>小白看板 · 极简方向</title>
+  <g fill="none" stroke="#FFA64D" stroke-width="18" stroke-linecap="square">
+    <path d="M40 94V58a18 18 0 0 1 18-18h36"/>
+    <path d="M162 216h36a18 18 0 0 0 18-18v-36"/>
+  </g>
+  <path d="M74 132l38 38 72-88" fill="none" stroke="#FFA64D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="小白看板标识 · 高级感（深色）">
+  <title>小白看板 · 高级感方向</title>
+  <circle cx="128" cy="128" r="90" fill="none" stroke="#FFA64D" stroke-width="5"/>
+  <circle cx="128" cy="128" r="70" fill="none" stroke="#FFA64D" stroke-width="2" opacity="0.4"/>
+  <path d="M128 70 L128 186" fill="none" stroke="#FFA64D" stroke-width="2" opacity="0.3"/>
+  <path d="M70 128 L186 128" fill="none" stroke="#FFA64D" stroke-width="2" opacity="0.3"/>
+  <path d="M92 130 L114 152 L166 96" fill="none" stroke="#FFA64D" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="166" cy="96" r="8" fill="#FFA64D"/>
+</svg>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小白看板 · 四种视觉体系对比</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 44px;
+    background: #FFF8F0; color: #2B2118;
+    font: 15px/1.65 "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+  }
+  h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -0.02em; }
+  .sub { margin: 0 0 14px; color: #6B5B4B; max-width: 900px; }
+  .note {
+    margin: 0 0 34px; padding: 16px 20px; max-width: 900px;
+    background: #fff; border: 1px solid #E7C7A8; border-radius: 14px;
+  }
+  .note p { margin: 6px 0; }
+  .note strong { color: #9A3412; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; max-width: 1280px; }
+  .card { min-width: 0; background: #fff; border: 1px solid #E7C7A8; border-radius: 20px; padding: 22px 24px 20px; }
+  .card header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .card h2 { margin: 0; font-size: 23px; }
+  .card .tag {
+    font-size: 12px; padding: 2px 9px; border-radius: 999px;
+    background: #FFF1E2; color: #9A3412; border: 1px solid #F0C79A; white-space: nowrap;
+  }
+  .card .sys { margin: 0 0 14px; color: #6B5B4B; font-size: 14px; }
+  .panes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .pane { min-width: 0; border-radius: 14px; padding: 12px 10px 12px; text-align: center; }
+  .pane.light { background: #FFFFFF; border: 1px solid #E4DFDA; }
+  .pane.dark { background: #0D1117; }
+  .pane p { margin: 0 0 10px; font-size: 12.5px; color: #6B5B4B; }
+  .pane.dark p { color: #C2B6A9; }
+  .row { display: flex; align-items: flex-end; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .cell span { font-size: 11.5px; color: #8A7A68; }
+  .pane.dark .cell span { color: #C2B6A9; }
+  .cell svg { display: block; }
+  .note-final { margin: 30px 0 0; max-width: 900px; color: #6B5B4B; font-size: 14px; }
+  @media (max-width: 1000px) { body { padding: 26px; } .grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .panes { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>小白看板 · 四种视觉体系</h1>
+<p class="sub">同一个理念：把想法推进到完成。四款分别落在四种不同的视觉体系上，用来比较品牌气质，而不是比较同一个风格里的造型。</p>
+
+<div class="note">
+  <p><strong>品牌色：</strong>全部沿用站点现有橙色 token——主色 <code>#F5821F</code>，浅底前景 <code>#D9690B</code>，深底前景 <code>#FFA64D</code>。</p>
+  <p><strong>本页全部为矢量 SVG：</strong>直接内嵌渲染，缩放不重新采样，因此看到的即是 SVG 的真实效果，没有位图转换。</p>
+  <p><strong>尚未锁定：</strong>四种体系与配色细节都是候选，最终标识待选定后再固化为品牌规范。</p>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<p class="note-final">参考说明：折面构造参考 GitLab 的多色面构成与负空间手法；渐变动势参考 Vite 的能量感方向。均为构造方法参考，不使用其图形、名称或识别形状。</p>
+
+<script>
+const SVG = {
+  'v3-minimal': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="极简">
+    <g fill="none" stroke="COLOR" stroke-width="18" stroke-linecap="square">
+      <path d="M40 94V58a18 18 0 0 1 18-18h36"/>
+      <path d="M162 216h36a18 18 0 0 0 18-18v-36"/>
+    </g>
+    <path d="M74 132l38 38 72-88" fill="none" stroke="COLOR" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+
+  'v3-gradient': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="渐变">
+    <defs>
+      <linearGradient id="gA" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="CA"/>
+        <stop offset="0.45" stop-color="CB"/>
+        <stop offset="1" stop-color="CC"/>
+      </linearGradient>
+    </defs>
+    <path d="M28 188 L92 120 L142 164 L226 52" fill="none" stroke="url(#gA)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M158 40 H228 V110" fill="none" stroke="url(#gA)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+
+  'v3-faceted': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="折面质感">
+    <defs>
+      <linearGradient id="fA" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="CA"/>
+        <stop offset="0.5" stop-color="CB"/>
+        <stop offset="1" stop-color="CC"/>
+      </linearGradient>
+    </defs>
+    <path d="M128 20 L206 58 L232 138 L182 202 L74 202 L24 138 L50 58 Z" fill="url(#fA)"/>
+    <path d="M128 20 L206 58 L128 96 L50 58 Z" fill="HA"/>
+    <path d="M128 96 L206 58 L232 138 L128 176 Z" fill="SA" opacity="0.22"/>
+    <path d="M24 138 L50 58 L128 96 L128 176 Z" fill="LA" opacity="0.22"/>
+    <path d="M74 202 L128 176 L182 202 Z" fill="SA" opacity="0.3"/>
+    <path d="M78 148 L112 182 L178 108" fill="none" stroke="MA" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+
+  'v3-refined': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="高级感">
+    <circle cx="128" cy="128" r="90" fill="none" stroke="COLOR" stroke-width="5"/>
+    <circle cx="128" cy="128" r="70" fill="none" stroke="COLOR" stroke-width="2" opacity="0.4"/>
+    <path d="M128 70 L128 186" fill="none" stroke="COLOR" stroke-width="2" opacity="0.3"/>
+    <path d="M70 128 L186 128" fill="none" stroke="COLOR" stroke-width="2" opacity="0.3"/>
+    <path d="M92 130 L114 152 L166 96" fill="none" stroke="COLOR" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="166" cy="96" r="8" fill="COLOR"/>
+  </svg>`
+};
+
+const PALETTE = {
+  light: { COLOR: '#F5821F', CA: '#FDBA74', CB: '#F97316', CC: '#C2410C',
+           HA: '#FDBA74', TA: '#FED7AA', SA: '#431407', LA: '#FFF7ED', MA: '#FFF7ED' },
+  dark:  { COLOR: '#FFA64D', CA: '#FDBA74', CB: '#FB923C', CC: '#EA580C',
+           HA: '#FED7AA', TA: '#FFEDD5', SA: '#431407', LA: '#FFF7ED', MA: '#FFF7ED' }
+};
+
+const STYLES = [
+  { key: 'v3-minimal', name: 'A · 极简', tag: '单色平涂',
+    sys: '瑞士平面设计 · 负空间与强轮廓', note: '单色、无渐变，靠断开的角标与一根完成线说话。气质干净直接。' },
+  { key: 'v3-gradient', name: 'B · 渐变', tag: '高饱和光感',
+    sys: 'Vite 式能量方向 · 锐角与流线', note: '一条带箭头的折线贯穿画面，渐变制造速度与推动感。' },
+  { key: 'v3-faceted', name: 'C · 质感', tag: '折面材质',
+    sys: 'GitLab 式构造 · 多色面与阴影', note: '折面构成完整外形，高光与暗面制造实体感，中央是完成标记。' },
+  { key: 'v3-refined', name: 'D · 高级感', tag: '细线克制',
+    sys: '奢侈品牌与精密仪器 · 留白与细线', note: '同心圆与十字准星般的定位线，末端一个实心点。克制、冷静。' }
+];
+
+function render(key, mode, size) {
+  let svg = SVG[key];
+  const p = PALETTE[mode];
+  svg = svg.replace(/COLOR/g, p.COLOR).replace(/CA"/g, p.CA + '"').replace(/CB"/g, p.CB + '"')
+           .replace(/CC"/g, p.CC + '"').replace(/HA"/g, p.HA + '"').replace(/SA"/g, p.SA + '"')
+           .replace(/LA"/g, p.LA + '"').replace(/TA"/g, p.TA + '"').replace(/MA"/g, p.MA + '"');
+  svg = svg.replace('<svg ', `<svg width="${size}" height="${size}" `);
+  return svg;
+}
+
+document.getElementById('grid').innerHTML = STYLES.map(s => `
+  <section class="card">
+    <header><h2>${s.name}</h2><span class="tag">${s.tag}</span></header>
+    <p class="sys">${s.sys}</p>
+    <div class="panes">
+      ${['light','dark'].map(mode => `
+        <div class="pane ${mode}">
+          <p>${mode === 'light' ? '浅色背景' : '深色背景'}</p>
+          <div class="row">
+            ${[32, 64, 128].map(size => `
+              <div class="cell">
+                ${render(s.key, mode, size)}
+                <span>${size}px</span>
+              </div>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+  </section>`).join('');
+</script>
+</body>
+</html>
